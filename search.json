@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Grundlagen der Ökonometrie",
+    "title": "Einführung in die mathematische Optimierung",
     "section": "",
     "text": "Setup\nIn den Übungen werden wir die Programmiersprache Python verwenden, um die in der Vorlesung behandelten Themen zu erklären und an realen Daten zu üben. Die Übungen werden in Form von Jupyter Notebooks bereitgestellt, die Sie in Ihrer eigenen Umgebung ausführen können.\nDeswegen ist es notwendig, zuerst eine Arbeitsumgebung einzurichten.",
     "crumbs": [
@@ -12,7 +12,7 @@
   {
     "objectID": "index.html#git",
     "href": "index.html#git",
-    "title": "Grundlagen der Ökonometrie",
+    "title": "Einführung in die mathematische Optimierung",
     "section": "Git",
     "text": "Git\nDie Übungen werden in einem Git-Repository auf GitHub bereitgestellt. Git ist ein Versionskontrollsystem, das die Änderungen an Dateien verfolgt und es ermöglicht, verschiedene Versionen von Dateien zu speichern. GitHub ist eine Plattform, die auf Git basiert und es ermöglicht, Git-Repositories zu hosten und zu teilen.\nWir werden Git verwenden, um die Übungen herunterzuladen und um Ihre Lösungen hochzuladen.\nInstallieren Sie Git von https://git-scm.com/downloads. Wählen Sie die Version, die zu Ihrem Betriebssystem passt und folgen Sie den Anweisungen. Lassen Sie die Standardeinstellungen unverändert, es sei denn, Sie wissen ganz genau, was Sie tun.",
     "crumbs": [
@@ -22,7 +22,7 @@
   {
     "objectID": "index.html#github-account",
     "href": "index.html#github-account",
-    "title": "Grundlagen der Ökonometrie",
+    "title": "Einführung in die mathematische Optimierung",
     "section": "GitHub Account",
     "text": "GitHub Account\nFür die Übungen brauchen Sie ein GitHub.com Konto:\n\nErstellen Sie ein Konto auf https://github.com/signup.\nBei der Registrierung wählen Sie ein Passwort, das Sie nirgendwo anders verwenden. Am Ende des Semesters können Sie Ihr Passwort ändern.\nEmpfehlung: Aktivieren Sie die Zwei-Faktor-Authentifizierung (2FA) in den Einstellungen Ihres GitHub-Kontos.\nEmpfehlung: Beantragen Sie die Studentenvorteile, um kostenlosen Zugang zu GitHub Copilot zu erhalten, einem KI-gestützten Code-Completion- und Chat-Tool.",
     "crumbs": [
@@ -32,7 +32,7 @@
   {
     "objectID": "index.html#visual-studio-code",
     "href": "index.html#visual-studio-code",
-    "title": "Grundlagen der Ökonometrie",
+    "title": "Einführung in die mathematische Optimierung",
     "section": "Visual Studio Code",
     "text": "Visual Studio Code\nVisual Studio Code (VSC) ist ein Open-Source-Code-Editor, den wir für die Arbeit mit Python benutzen werden.\nInstallieren Sie Visual Studio Code von https://code.visualstudio.com/. Wählen Sie die Version, die zu Ihrem Betriebssystem passt und folgen Sie den Anweisungen.",
     "crumbs": [
@@ -42,7 +42,7 @@
   {
     "objectID": "index.html#kursrepository-klonen",
     "href": "index.html#kursrepository-klonen",
-    "title": "Grundlagen der Ökonometrie",
+    "title": "Einführung in die mathematische Optimierung",
     "section": "Kursrepository klonen",
     "text": "Kursrepository klonen\nÖffnen Sie VSC und drücken Sie Ctrl+Shift+P. Suchen Sie nach “Git: Clone” und drücken Sie Enter. Geben Sie die URL des Kursrepositories ein:\nhttp://github.com/febse/econ2024-de.git\nWählen Sie einen Ordner auf Ihrem Computer, in dem Sie das Repository speichern möchten. VSC wird das Repository herunterladen und fragen, ob Sie es öffnen möchten. Klicken Sie auf “Open”.\nWarten Sie einen Moment, bis VSC das Repository geöffnet hat. Sie sollten eine Ordnerstruktur sehen, die den Inhalt des Repositories darstellt. VSC wird Sie fragen, ob Sie die empfohlenen Erweiterungen installieren möchten. Klicken Sie auf “Install All”.\nAm Ende sollten Sie die folgenden Erweiterungen installiert haben:\n\nms-python.autopep8\nms-python.python\nms-python.debugpy\nms-vscode-remote.remote-containers\nms-toolsai.jupyter\ngithub.codespaces\ngithub.copilot\n\nDrucken Sie Ctrl+Shift+X. Dieses wird die Erweiterungsansicht öffnen. Überprüfen Sie ob alle Erweiterungen installiert sind. Falls nicht, kopieren Sie die Kennzeichen (z.B. ms-python.autopep8) der fehlenden Erweiterungen von der Liste (oben), finden Sie die Erweiterungen in der Erweiterungsansicht und installieren Sie sie manuell.",
     "crumbs": [
@@ -52,7 +52,7 @@
   {
     "objectID": "index.html#python",
     "href": "index.html#python",
-    "title": "Grundlagen der Ökonometrie",
+    "title": "Einführung in die mathematische Optimierung",
     "section": "Python",
     "text": "Python\nPython ist zurzeit eine der meistbenutzten Programmiersprachen in der Welt. Es ist einfach zu lernen und hat eine große Community, die viele Bibliotheken und Frameworks entwickelt hat. In der Welt der Datenwissenschaft werden meistens Python und R benutzt. In den letzten Jahren stieg die Popularität von Python.\n\nCodespaces (empfohlen)\nUm die Konfiguration zu vereinfachen, können Sie Codespaces benutzen. In den ersten Übungen werden wir eine Anleitung zeigen, wie Sie Codespaces benutzen können.\n\n\nMiniconda\nEs gibt viele Möglichkeiten, wie Sie Python local auf Ihrem Rechner installieren können. Hier zeigen wir die Installation mit Miniconda. Conda ist ein Paketmanager, der es ermöglicht, Python-Umgebungen zu verwalten. Eine Python-Umgebung ist eine isolierte Instanz von Python, die es ermöglicht, verschiedene Versionen von Python und verschiedenen Bibliotheken zu verwenden, ohne dass sie sich gegenseitig beeinflussen. Das ist vor allem dann nützlich, wenn Sie an verschiedenen Projekten arbeiten, die unterschiedliche Anforderungen an Python und Bibliotheken haben.\n\nLaden Sie das Miniconda Installationspaket von https://docs.conda.io/en/latest/miniconda.html für Ihr Betriebssystem.\nStarten Sie das Packet und folgen Sie den Anweisungen. Lassen Sie die Standardeinstellungen unverändert, es sei denn, Sie wissen was Sie tun.\nInstallieren Sie Conda in einem Ordner ohne Leerzeichen und nur mit ASCII Zeichen im Pfad (d.h. keine Kyrillischen Zeichen, keine Umlaute, etc.), z.B. C:\\Miniconda3 oder C:\\Users\\boyko\\Miniconda3.\nNachdem Miniconda installiert ist, öffnen Sie VSC. Drücken Sie Ctrl+Shift+P und starten Sie zu schreiben: “Python: Create environment”. Wenn die Option in dem Dropdown-Menü erscheint, wählen Sie sie und drucken Sie Enter.\nWählen Sie “Conda”.\nWählen Sie die Python-3.11 Version.\nDieses wird einen Order namens .conda erstellen.\nFalls Sie diese Schritte in dem Order des Kursrepositories gemacht haben, werden dann automatisch die notwendingen Bibliotheken installiert.",
     "crumbs": [
@@ -62,7 +62,7 @@
   {
     "objectID": "index.html#pycharm-optional",
     "href": "index.html#pycharm-optional",
-    "title": "Grundlagen der Ökonometrie",
+    "title": "Einführung in die mathematische Optimierung",
     "section": "Pycharm (optional)",
     "text": "Pycharm (optional)\nStatt VSC können Sie auch PyCharm oder DataSpell benutzen. PyCharm ist eine integrierte Entwicklungsumgebung (IDE) für Python, die von JetBrains entwickelt wurde. PyCharm ist eine der beliebtesten Python-IDEs und bietet viele Funktionen, die die Entwicklung von Python-Programmen erleichtern. Falls Sie mit PyCharm oder DataSpell experimentieren möchten, bieten wir für die Übungen kostenfreie Lizenzen an.\n\nRegistrieren Sie sich auf https://account.jetbrains.com/signup mit Ihrer Universitäts-E-Mail-Adresse (muss auf feb.uni-sofia.bg oder feba.uni-sofia.bg enden).\nLaden Sie Pycharm von https://www.jetbrains.com/pycharm/download/ herunter und installieren Sie es.\nBeim Aktivierungsdialog wählen Sie “Licence Server” und geben Sie https://febs.fls.jetbrains.com/ ein.",
     "crumbs": [
@@ -250,7 +250,7 @@
     "href": "Literature.html",
     "title": "Literatur",
     "section": "",
-    "text": "James u. a. (2023)\n\nDas Lehrbuch ist eine Einführung in die statistische Lerntheorie und behandelt das lineare Regressionsmodell, das der Kern des Kurses ist. Enthalten sind Beispielanwendungen in Python.\n\nMcKinney (2022)\n\nDas Buch ist eine Einführung in die Datenanalyse mit Python und behandelt die Grundlagen der Programmiersprache und der Datenanalyse. Es ist ein guter Einstieg in die Programmierung mit Python.\n\nGelman, Hill, und Vehtari (2021):\n\nRegression and other stories. Cambridge New York, NY Port Melbourne, VIC New Delhi Singapore: Cambridge University Press (Analytical methods for social research). Available at: https://doi.org/10.1017/9781139161879.\n\n\n\n\nGelman, Andrew, Jennifer Hill, und Aki Vehtari. 2021. Regression and Other Stories. Analytical Methods for Social Research. Cambridge New York, NY Port Melbourne, VIC New Delhi Singapore: Cambridge University Press. https://doi.org/10.1017/9781139161879.\n\n\nJames, Gareth, Daniela Witten, Trevor Hastie, Robert Tibshirani, und Jonathan Taylor. 2023. An Introduction to Statistical Learning with Applications in Python. Cham: Springer International Publishing.\n\n\nMcKinney, Wes. 2022. Python for Data Analysis: Data Wrangling with Pandas, NumPy, and Jupyter. Third edition. Beijing Boston Farnham Sebastopol Tokyo: O’Reilly.",
+    "text": "Dietz und Dietz (2019) (Deutsch): Kapitel 23 und 24\nSchwenkert und Stry (2015) (Deutsch): Teil 1\nWilliams (2013) (English)\nTaha (2017) (English)\n\n\n\n\n\nDietz, Hans M., und Hans M. Dietz. 2019. Lineare Algebra und Optimierung. 3. Auflage. Mathematik für Wirtschaftswissenschaftler / Hans M. Dietz, Band 2. Berlin [Heidelberg]: Springer Spektrum. https://doi.org/10.1007/978-3-662-58702-7.\n\n\nSchwenkert, Rainer, und Yvonne Stry. 2015. Operations Research kompakt: Eine an Beispielen orientierte Einführung. 1. Aufl. 2015. Operations Research kompakt. Berlin: Gabler.\n\n\nTaha, Hamdy A. 2017. Operations Research. 10th ed. Harlow, United Kingdom: Pearson Education Limited.\n\n\nWilliams, Hilary P. 2013. Model Building in Mathematical Programming. Fifth Edition. Chichester: John Wiley & Sons Ltd.",
     "crumbs": [
       "Literatur"
     ]
@@ -258,11 +258,11 @@
   {
     "objectID": "references.html",
     "href": "references.html",
-    "title": "References",
+    "title": "Literaturverzeichnis",
     "section": "",
-    "text": "Gelman, Andrew, Jennifer Hill, and Aki Vehtari. 2021. Regression and\nOther Stories. Analytical Methods for Social Research.\nCambridge New York, NY Port Melbourne, VIC New Delhi\nSingapore: Cambridge University Press. https://doi.org/10.1017/9781139161879.\n\n\nJames, Gareth, Daniela Witten, Trevor Hastie, Robert Tibshirani, and\nJonathan Taylor. 2023. An Introduction to\nStatistical Learning with Applications in\nPython. Cham: Springer\nInternational Publishing.\n\n\nMcKinney, Wes. 2022. Python for Data Analysis: Data Wrangling with\nPandas, NumPy, and Jupyter.\nThird edition. Beijing Boston Farnham Sebastopol Tokyo:\nO’Reilly.",
+    "text": "Dietz, Hans M., and Hans M. Dietz. 2019. Lineare Algebra und\nOptimierung. 3. Auflage. Mathematik für\nWirtschaftswissenschaftler / Hans M. Dietz, Band 2. Berlin\n[Heidelberg]: Springer Spektrum. https://doi.org/10.1007/978-3-662-58702-7.\n\n\nSchwenkert, Rainer, and Yvonne Stry. 2015. Operations Research\nkompakt: Eine an Beispielen orientierte Einführung. 1. Aufl.\n2015. Operations Research kompakt. Berlin:\nGabler.\n\n\nTaha, Hamdy A. 2017. Operations Research. 10th ed.\nHarlow, United Kingdom: Pearson Education\nLimited.\n\n\nWilliams, Hilary P. 2013. Model Building in Mathematical\nProgramming. Fifth Edition. Chichester: John\nWiley & Sons Ltd.",
     "crumbs": [
-      "References"
+      "Literaturverzeichnis"
     ]
   }
 ]
