@@ -1,0 +1,14 @@
+
+# Literatur {.unnumbered}
+
+1. @JAMES2023IntroductionStatisticalLearning
+
+Das Lehrbuch ist eine Einführung in die statistische Lerntheorie und behandelt das lineare Regressionsmodell, das der Kern des Kurses ist. Enthalten sind Beispielanwendungen in Python.
+
+2. @MCKINNEY2022PythonDataAnalysis
+
+Das Buch ist eine Einführung in die Datenanalyse mit Python und behandelt die Grundlagen der Programmiersprache und der Datenanalyse. Es ist ein guter Einstieg in die Programmierung mit Python.
+
+3. @GELMAN2021RegressionOtherStories: 
+
+Regression and other stories. Cambridge New York, NY Port Melbourne, VIC New Delhi Singapore: Cambridge University Press (Analytical methods for social research). Available at: https://doi.org/10.1017/9781139161879.

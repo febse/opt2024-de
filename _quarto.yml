@@ -1,0 +1,34 @@
+project:
+  type: book
+
+lang: de
+book:
+  title: "Grundlagen der Ökonometrie"
+  author: "Boyko Amarov"
+  date: "4/11/2023"
+  chapters:
+    - index.qmd
+    - 00-01-Basics.ipynb
+    - 00-02-Basics-Ex.ipynb
+    - 00-03-Numpy.ipynb
+    - 00-04-Pandas.ipynb
+    - 00-05-Pandas-Ex.ipynb
+
+    # - 00-Homework-Instructions.qmd
+    # - 02-Statistics-Review.qmd
+    # - 01-Introduction-to-R.qmd
+    # - 02a-Continuous-Distributions.qmd
+    # - 03-Simple-Linear-Model.qmd
+    # - 04-Simple-ANOVA.qmd
+    # - 05-Hypothesis-Testing-and-CI.qmd
+    - 00-Recommended-Literature.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+    html-math-method: katex
+
+editor: visual
