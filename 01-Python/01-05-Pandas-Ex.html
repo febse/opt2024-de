@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Grundlagen der Ökonometrie - 2&nbsp; Übung</title>
+<title>Grundlagen der Ökonometrie - 5&nbsp; Übung zu Pandas</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./00-03-Numpy.html" rel="next">
-<link href="./00-01-Basics.html" rel="prev">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../Literature.html" rel="next">
+<link href="../01-Python/01-04-Pandas.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -81,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./00-02-Basics-Ex.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Übung</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../01-Python/index.html">Einführung in Python</a></li><li class="breadcrumb-item"><a href="../01-Python/01-05-Pandas-Ex.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Übung zu Pandas</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -96,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Grundlagen der Ökonometrie</a> 
+      <a href="../">Grundlagen der Ökonometrie</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -108,49 +142,60 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setup</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../01-Python/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Einführung in Python</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./00-01-Basics.html" class="sidebar-item-text sidebar-link">
+  <a href="../01-Python/01-01-Basics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Jupyter Notebooks in VS Code</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./00-02-Basics-Ex.html" class="sidebar-item-text sidebar-link active">
+  <a href="../01-Python/01-02-Basics-Ex.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Übung</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./00-03-Numpy.html" class="sidebar-item-text sidebar-link">
+  <a href="../01-Python/01-03-Numpy.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">NumPy</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./00-04-Pandas.html" class="sidebar-item-text sidebar-link">
+  <a href="../01-Python/01-04-Pandas.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Pandas</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./00-05-Pandas-Ex.html" class="sidebar-item-text sidebar-link">
+  <a href="../01-Python/01-05-Pandas-Ex.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Übung zu Pandas</span></span></a>
   </div>
 </li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./00-Recommended-Literature.html" class="sidebar-item-text sidebar-link">
+  <a href="../Literature.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Literatur</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -164,22 +209,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#aufgabe-1" id="toc-aufgabe-1" class="nav-link active" data-scroll-target="#aufgabe-1"><span class="header-section-number">2.1</span> Aufgabe 1</a></li>
-  <li><a href="#aufgabe-2" id="toc-aufgabe-2" class="nav-link" data-scroll-target="#aufgabe-2"><span class="header-section-number">2.2</span> Aufgabe 2</a></li>
-  <li><a href="#aufgabe-3" id="toc-aufgabe-3" class="nav-link" data-scroll-target="#aufgabe-3"><span class="header-section-number">2.3</span> Aufgabe 3</a></li>
-  <li><a href="#aufgabe-4" id="toc-aufgabe-4" class="nav-link" data-scroll-target="#aufgabe-4"><span class="header-section-number">2.4</span> Aufgabe 4</a></li>
-  <li><a href="#aufgabe-5" id="toc-aufgabe-5" class="nav-link" data-scroll-target="#aufgabe-5"><span class="header-section-number">2.5</span> Aufgabe 5</a></li>
-  <li><a href="#aufgabe-6" id="toc-aufgabe-6" class="nav-link" data-scroll-target="#aufgabe-6"><span class="header-section-number">2.6</span> Aufgabe 6</a></li>
-  <li><a href="#aufgabe-7" id="toc-aufgabe-7" class="nav-link" data-scroll-target="#aufgabe-7"><span class="header-section-number">2.7</span> Aufgabe 7</a></li>
+  <li><a href="#aufgabe-1" id="toc-aufgabe-1" class="nav-link active" data-scroll-target="#aufgabe-1"><span class="header-section-number">6</span> Aufgabe 1</a></li>
+  <li><a href="#aufgabe-2" id="toc-aufgabe-2" class="nav-link" data-scroll-target="#aufgabe-2"><span class="header-section-number">7</span> Aufgabe 2</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../01-Python/index.html">Einführung in Python</a></li><li class="breadcrumb-item"><a href="../01-Python/01-05-Pandas-Ex.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Übung zu Pandas</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Übung</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Übung zu Pandas</span></h1>
 </div>
 
 
@@ -196,50 +236,38 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>test</p>
-<section id="aufgabe-1" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="aufgabe-1"><span class="header-section-number">2.1</span> Aufgabe 1</h2>
+<p>Für den Zweck der Buchhaltung in einem Unternehmen soll ein DataFrame erstellt werden, welches die folgenden Spalten enthält:</p>
 <ul>
-<li>Berechnen Sie die Summe der Zahlen 32.8 und 45.1</li>
-<li>Berechnen Sie die Differenz der Zahlen 32.8 und 45.1</li>
-<li>Speichern Sie die Zahl 32.8 in der Variable <code>a</code> und die Zahl 45.1 in der Variable <code>b</code>. Berechnen Sie das Verhältnis von <code>a</code> zu <code>b</code> und speichern Sie das Ergebnis in der Variable <code>c</code>.</li>
+<li>Position: Die Position im Unternehmen</li>
+<li>Arbeitszeit: Die Arbeitszeit pro Woche</li>
+<li>Lohn: Der wöchentliche Lohn in Euro</li>
+</ul>
+<p>Die Werte für die Position sollen aus der folgenden Liste entnommen werden:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Position: [<span class="st">'CEO'</span>, <span class="st">'CFO'</span>, <span class="st">'CTO'</span>, <span class="st">'CIO'</span>, <span class="st">'COO'</span>, <span class="st">'CDO'</span>, <span class="st">'CMO'</span>, <span class="st">'CRO'</span>, <span class="st">'CSO'</span>, <span class="st">'CPO'</span>]</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>Arbeitszeit: [<span class="dv">40</span>, <span class="dv">40</span>, <span class="dv">20</span>, <span class="dv">40</span>, <span class="dv">20</span>, <span class="dv">40</span>, <span class="dv">10</span>, <span class="dv">40</span>, <span class="dv">40</span>, <span class="dv">60</span>]</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Gehalt: [<span class="dv">10000</span>, <span class="dv">8500</span>, <span class="dv">2000</span>, <span class="dv">3022</span>, <span class="dv">1039</span>, <span class="dv">2500</span>, <span class="dv">3000</span>, <span class="dv">1800</span>, <span class="dv">20000</span>, <span class="dv">10000</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="aufgabe-1" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Aufgabe 1</h1>
+<ul>
+<li>Nennen Sie den DataFrame <code>df</code> und geben Sie ihn aus.</li>
+<li>Geben Sie die Spalte <code>Position</code> aus.</li>
+<li>Geben Sie die ersten 3 Zeilen des DataFrames aus.</li>
+<li>Geben Sie die letzten 3 Zeilen des DataFrames aus.</li>
+<li>Geben Sie die ersten 3 Zeilen der Spalte <code>Position</code> aus.</li>
+<li>Geben Sie die letzten 3 Zeilen der Spalte <code>Position</code> aus.</li>
+<li>Geben Sie die ersten 3 Zeilen der Spalten <code>Position</code> und <code>Gehalt</code> aus.</li>
 </ul>
 </section>
-<section id="aufgabe-2" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="aufgabe-2"><span class="header-section-number">2.2</span> Aufgabe 2</h2>
-<p>Erstellen Sie eine Liste mit den Zahlen 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 und speichern Sie diese in der Variable <code>numbers</code>. - Geben Sie die Liste aus (mit <code>print()</code>) - Geben Sie das erste Element der Liste aus - Geben Sie das letzte Element der Liste aus - Geben Sie das dritte Element der Liste aus - Geben Sie das dritte und das siebte Element der Liste aus - Ersetzen Sie das vierte Element der Liste durch die Zahl 42</p>
-</section>
-<section id="aufgabe-3" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="aufgabe-3"><span class="header-section-number">2.3</span> Aufgabe 3</h2>
-<p>Estellen Sie zwei Listen <code>names</code> und <code>ages</code> mit den folgenden Elementen: - <code>names</code>: “Alice”, “Bob”, “Charlie”, “Dave”, “Eve” - <code>ages</code>: 17, 42, 30, 37, 21</p>
+<section id="aufgabe-2" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Aufgabe 2</h1>
 <ul>
-<li>Geben Sie die Liste <code>names</code> aus</li>
-<li>Schreiben Sie eine <code>for</code>-Schleife, die die Namen und das Alter der Personen ausdruckt. Die Ausgabe soll folgendermaßen aussehen: “Alice ist 23 Jahre alt”</li>
-<li>Sie möchten nur die Namen der Personen ausdrucken, die älter als 30 Jahre sind. Schreiben Sie eine <code>for</code>-Schleife, die das tut.</li>
-<li>Sie möchten eine neue Liste erstellen, die nur die Namen der Personen enthält, die älter als 30 Jahre sind. Schreiben Sie eine Listenabstraktion, die das tut. ```</li>
-</ul>
-</section>
-<section id="aufgabe-4" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="aufgabe-4"><span class="header-section-number">2.4</span> Aufgabe 4</h2>
-<p>In dieser Aufgabe werden wir eine Funktion <code>is_in_list</code> schreiben, die einen Namen als Argument annimmt und <code>True</code> oder <code>False</code> zurückgibt, falls der Name einer Person entspricht, die in der Liste <code>names</code> aus Aufgabe 3 enthalten ist.</p>
-</section>
-<section id="aufgabe-5" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="aufgabe-5"><span class="header-section-number">2.5</span> Aufgabe 5</h2>
-<p>In dieser Aufgabe werden wir eine Funktion <code>get_age</code> schreiben, die einen Namen als Argument annimmt und das Alter der Person zurückgibt, falls der Name einer Person entspricht, die in der Liste <code>names</code> aus Aufgabe 3 enthalten ist. Falls der Name nicht in der Liste enthalten ist, soll die Funktion <code>None</code> zurückgeben.</p>
-</section>
-<section id="aufgabe-6" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="aufgabe-6"><span class="header-section-number">2.6</span> Aufgabe 6</h2>
-<p>In dieser Aufgabe werden wir eine Funktion <code>is_eligible</code> schreiben, die <code>True</code>, <code>False</code> oder <code>None</code> zurückgibt, jenachdem ob eine Person wahlberechtigt ist oder nicht. Die Funktion soll einen Namen als Argument annehmen und das Alter der Person zurückgeben, falls der Name einer Person entspricht, die in der Liste <code>names</code> aus Aufgabe 3 enthalten ist. Falls der Name nicht in der Liste enthalten ist, soll die Funktion <code>None</code> zurückgeben. Falls der Name in der Liste enthalten ist, soll die Funktion <code>True</code> zurückgeben, falls die Person älter als 18 Jahre ist, andernfalls soll die Funktion <code>False</code> zurückgeben.</p>
-</section>
-<section id="aufgabe-7" class="level2" data-number="2.7">
-<h2 data-number="2.7" class="anchored" data-anchor-id="aufgabe-7"><span class="header-section-number">2.7</span> Aufgabe 7</h2>
-<p>In dieser Aufgabe werden wir ein Dictionary erstellen, das die Namen aus Aufgabe 3 als Schlüssel und die Alter aus Aufgabe 3 als Werte enthält. Speichern Sie das Dictionary in der Variable <code>persons</code>.</p>
-<ul>
-<li>Benutzen Sie das Dictionary, um das Alter von Bob auszudrucken.</li>
-<li>Ändern Sie das Alter von Alice auf 43 Jahre.</li>
-<li>Fügen Sie eine neue Person “Frank” mit dem Alter 33 Jahre hinzu.</li>
-<li>Schreiben Sie eine <code>for</code>-Schleife, die die Namen und das Alter der Personen ausdruckt. Die Ausgabe soll folgendermaßen aussehen: “Alice ist 23 Jahre alt”</li>
-<li>Sie möchten nur die Namen der Personen ausdrucken, die mit “A” anfangen. Schreiben Sie eine <code>for</code>-Schleife, die über <code>persons</code> iteriert und das tut.</li>
+<li>Berechnen Sie den durchschnittlichen Gehalt im Unternehmen.</li>
+<li>Berechnen Sie den Stundenlohn für jede Personen im Unternehmen.</li>
+<li>Berechnen Sie den durchschnittlichen Stundenlohn im Unternehmen.</li>
+<li>Berechnen Sie den durchschnittlichen Stundenlohn für jede Position im Unternehmen.</li>
+<li>Finden Sie den niedrigsten Stundenlohn im Unternehmen.</li>
+<li>Finden Sie die Position mit dem niedrigsten Stundenlohn im Unternehmen.</li>
+<li>Finden Sie den höchsten Stundenlohn im Unternehmen.</li>
 </ul>
 
 
@@ -635,13 +663,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./00-01-Basics.html" class="pagination-link" aria-label="Jupyter Notebooks in VS Code">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Jupyter Notebooks in VS Code</span></span>
+      <a href="../01-Python/01-04-Pandas.html" class="pagination-link" aria-label="Pandas">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Pandas</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./00-03-Numpy.html" class="pagination-link" aria-label="NumPy">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">NumPy</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../Literature.html" class="pagination-link" aria-label="Literatur">
+        <span class="nav-page-text">Literatur</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
