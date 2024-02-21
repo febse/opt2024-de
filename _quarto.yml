@@ -3,9 +3,9 @@ project:
 
 lang: de
 book:
-  title: "Grundlagen der Ökonometrie"
+  title: "Einführung in die mathematische Optimierung"
   author: "Boyko Amarov"
-  date: "4/11/2023"
+  date: "4/02/2024"
   chapters:
     - index.qmd
     - part: 01-Python/index.qmd
