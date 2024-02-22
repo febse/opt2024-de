@@ -113,8 +113,45 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Einführung in Python</span></span>
+      <div class="sidebar-item-container"> 
+            <a href="./01-Python/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Einführung in Python</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-Python/01-01-Basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Jupyter Notebooks in VS Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-Python/01-02-Basics-Ex.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Übung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-Python/01-03-Numpy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">NumPy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-Python/01-04-Pandas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Pandas</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-Python/01-05-Pandas-Ex.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Übung zu Pandas</span></span></a>
+  </div>
+</li>
+      </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
@@ -149,7 +186,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#codespaces-empfohlen" id="toc-codespaces-empfohlen" class="nav-link" data-scroll-target="#codespaces-empfohlen">Codespaces (empfohlen)</a></li>
   <li><a href="#miniconda" id="toc-miniconda" class="nav-link" data-scroll-target="#miniconda">Miniconda</a></li>
   </ul></li>
-  <li><a href="#pycharm-optional" id="toc-pycharm-optional" class="nav-link" data-scroll-target="#pycharm-optional">Pycharm (optional)</a></li>
+  <li><a href="#pycharm-optional" id="toc-pycharm-optional" class="nav-link" data-scroll-target="#pycharm-optional">PyCharm (optional)</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -216,7 +253,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="kursrepository-klonen" class="level2">
 <h2 class="anchored" data-anchor-id="kursrepository-klonen">Kursrepository klonen</h2>
 <p>Öffnen Sie VSC und drücken Sie <code>Ctrl+Shift+P</code>. Suchen Sie nach “Git: Clone” und drücken Sie Enter. Geben Sie die URL des Kursrepositories ein:</p>
-<pre class="plaintext"><code>http://github.com/febse/econ2024-de.git</code></pre>
+<pre class="plaintext"><code>http://github.com/febse/opt2024-de.git</code></pre>
 <p>Wählen Sie einen Ordner auf Ihrem Computer, in dem Sie das Repository speichern möchten. VSC wird das Repository herunterladen und fragen, ob Sie es öffnen möchten. Klicken Sie auf “Open”.</p>
 <p>Warten Sie einen Moment, bis VSC das Repository geöffnet hat. Sie sollten eine Ordnerstruktur sehen, die den Inhalt des Repositories darstellt. VSC wird Sie fragen, ob Sie die empfohlenen Erweiterungen installieren möchten. Klicken Sie auf “Install All”.</p>
 <p>Am Ende sollten Sie die folgenden Erweiterungen installiert haben:</p>
@@ -254,7 +291,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </section>
 <section id="pycharm-optional" class="level2">
-<h2 class="anchored" data-anchor-id="pycharm-optional">Pycharm (optional)</h2>
+<h2 class="anchored" data-anchor-id="pycharm-optional">PyCharm (optional)</h2>
 <p>Statt VSC können Sie auch PyCharm oder DataSpell benutzen. PyCharm ist eine integrierte Entwicklungsumgebung (IDE) für Python, die von JetBrains entwickelt wurde. PyCharm ist eine der beliebtesten Python-IDEs und bietet viele Funktionen, die die Entwicklung von Python-Programmen erleichtern. Falls Sie mit PyCharm oder DataSpell experimentieren möchten, bieten wir für die Übungen kostenfreie Lizenzen an.</p>
 <ul>
 <li>Registrieren Sie sich auf <a href="https://account.jetbrains.com/signup">https://account.jetbrains.com/signup</a> mit Ihrer Universitäts-E-Mail-Adresse (muss auf <code>feb.uni-sofia.bg</code> oder <code>feba.uni-sofia.bg</code> enden).</li>

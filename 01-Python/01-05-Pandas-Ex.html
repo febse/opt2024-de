@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Einführung in die mathematische Optimierung - Literatur</title>
+<title>Einführung in die mathematische Optimierung - 5&nbsp; Übung zu Pandas</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,47 +20,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
-<link href="./01-Python/01-05-Pandas-Ex.html" rel="prev">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../Literature.html" rel="next">
+<link href="../01-Python/01-04-Pandas.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -101,7 +115,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Literature.html">Literatur</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../01-Python/index.html">Einführung in Python</a></li><li class="breadcrumb-item"><a href="../01-Python/01-05-Pandas-Ex.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Übung zu Pandas</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -116,7 +130,7 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Einführung in die mathematische Optimierung</a> 
+      <a href="../">Einführung in die mathematische Optimierung</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -128,13 +142,13 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setup</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./01-Python/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../01-Python/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Einführung in Python</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -143,31 +157,31 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01-Python/01-01-Basics.html" class="sidebar-item-text sidebar-link">
+  <a href="../01-Python/01-01-Basics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Jupyter Notebooks in VS Code</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01-Python/01-02-Basics-Ex.html" class="sidebar-item-text sidebar-link">
+  <a href="../01-Python/01-02-Basics-Ex.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Übung</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01-Python/01-03-Numpy.html" class="sidebar-item-text sidebar-link">
+  <a href="../01-Python/01-03-Numpy.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">NumPy</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01-Python/01-04-Pandas.html" class="sidebar-item-text sidebar-link">
+  <a href="../01-Python/01-04-Pandas.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Pandas</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01-Python/01-05-Pandas-Ex.html" class="sidebar-item-text sidebar-link">
+  <a href="../01-Python/01-05-Pandas-Ex.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Übung zu Pandas</span></span></a>
   </div>
 </li>
@@ -175,13 +189,13 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Literature.html" class="sidebar-item-text sidebar-link active">
+  <a href="../Literature.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Literatur</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Literaturverzeichnis</span></a>
   </div>
 </li>
@@ -191,14 +205,21 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#aufgabe-1" id="toc-aufgabe-1" class="nav-link active" data-scroll-target="#aufgabe-1"><span class="header-section-number">6</span> Aufgabe 1</a></li>
+  <li><a href="#aufgabe-2" id="toc-aufgabe-2" class="nav-link" data-scroll-target="#aufgabe-2"><span class="header-section-number">7</span> Aufgabe 2</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../01-Python/index.html">Einführung in Python</a></li><li class="breadcrumb-item"><a href="../01-Python/01-05-Pandas-Ex.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Übung zu Pandas</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Literatur</h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Übung zu Pandas</span></h1>
 </div>
 
 
@@ -215,28 +236,42 @@ div.csl-indent {
 </header>
 
 
-<ol type="1">
-<li><span class="citation" data-cites="DIETZ2019LineareAlgebraUnd">Dietz und Dietz (<a href="references.html#ref-DIETZ2019LineareAlgebraUnd" role="doc-biblioref">2019</a>)</span> (Deutsch): Kapitel 23 und 24</li>
-<li><span class="citation" data-cites="SCHWENKERT2015OperationsResearchKompakt">Schwenkert und Stry (<a href="references.html#ref-SCHWENKERT2015OperationsResearchKompakt" role="doc-biblioref">2015</a>)</span> (Deutsch): Teil 1</li>
-<li><span class="citation" data-cites="WILLIAMS2013ModelBuildingMathematical">Williams (<a href="references.html#ref-WILLIAMS2013ModelBuildingMathematical" role="doc-biblioref">2013</a>)</span> (English)</li>
-<li><span class="citation" data-cites="TAHA2017OperationsResearch">Taha (<a href="references.html#ref-TAHA2017OperationsResearch" role="doc-biblioref">2017</a>)</span> (English)</li>
-</ol>
+<p>Für den Zweck der Buchhaltung in einem Unternehmen soll ein DataFrame erstellt werden, welches die folgenden Spalten enthält:</p>
+<ul>
+<li>Position: Die Position im Unternehmen</li>
+<li>Arbeitszeit: Die Arbeitszeit pro Woche</li>
+<li>Lohn: Der wöchentliche Lohn in Euro</li>
+</ul>
+<p>Die Werte für die Position sollen aus der folgenden Liste entnommen werden:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Position: [<span class="st">'CEO'</span>, <span class="st">'CFO'</span>, <span class="st">'CTO'</span>, <span class="st">'CIO'</span>, <span class="st">'COO'</span>, <span class="st">'CDO'</span>, <span class="st">'CMO'</span>, <span class="st">'CRO'</span>, <span class="st">'CSO'</span>, <span class="st">'CPO'</span>]</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>Arbeitszeit: [<span class="dv">40</span>, <span class="dv">40</span>, <span class="dv">20</span>, <span class="dv">40</span>, <span class="dv">20</span>, <span class="dv">40</span>, <span class="dv">10</span>, <span class="dv">40</span>, <span class="dv">40</span>, <span class="dv">60</span>]</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Gehalt: [<span class="dv">10000</span>, <span class="dv">8500</span>, <span class="dv">2000</span>, <span class="dv">3022</span>, <span class="dv">1039</span>, <span class="dv">2500</span>, <span class="dv">3000</span>, <span class="dv">1800</span>, <span class="dv">20000</span>, <span class="dv">10000</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="aufgabe-1" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Aufgabe 1</h1>
+<ul>
+<li>Nennen Sie den DataFrame <code>df</code> und geben Sie ihn aus.</li>
+<li>Geben Sie die Spalte <code>Position</code> aus.</li>
+<li>Geben Sie die ersten 3 Zeilen des DataFrames aus.</li>
+<li>Geben Sie die letzten 3 Zeilen des DataFrames aus.</li>
+<li>Geben Sie die ersten 3 Zeilen der Spalte <code>Position</code> aus.</li>
+<li>Geben Sie die letzten 3 Zeilen der Spalte <code>Position</code> aus.</li>
+<li>Geben Sie die ersten 3 Zeilen der Spalten <code>Position</code> und <code>Gehalt</code> aus.</li>
+</ul>
+</section>
+<section id="aufgabe-2" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Aufgabe 2</h1>
+<ul>
+<li>Berechnen Sie den durchschnittlichen Gehalt im Unternehmen.</li>
+<li>Berechnen Sie den Stundenlohn für jede Personen im Unternehmen.</li>
+<li>Berechnen Sie den durchschnittlichen Stundenlohn im Unternehmen.</li>
+<li>Berechnen Sie den durchschnittlichen Stundenlohn für jede Position im Unternehmen.</li>
+<li>Finden Sie den niedrigsten Stundenlohn im Unternehmen.</li>
+<li>Finden Sie die Position mit dem niedrigsten Stundenlohn im Unternehmen.</li>
+<li>Finden Sie den höchsten Stundenlohn im Unternehmen.</li>
+</ul>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-DIETZ2019LineareAlgebraUnd" class="csl-entry" role="listitem">
-Dietz, Hans M., und Hans M. Dietz. 2019. <em><span>Lineare Algebra und Optimierung</span></em>. 3. Auflage. <span>Mathematik für Wirtschaftswissenschaftler / Hans M. Dietz</span>, Band 2. <span>Berlin [Heidelberg]</span>: <span>Springer Spektrum</span>. <a href="https://doi.org/10.1007/978-3-662-58702-7">https://doi.org/10.1007/978-3-662-58702-7</a>.
-</div>
-<div id="ref-SCHWENKERT2015OperationsResearchKompakt" class="csl-entry" role="listitem">
-Schwenkert, Rainer, und Yvonne Stry. 2015. <em><span>Operations Research kompakt: Eine an Beispielen orientierte Einführung</span></em>. 1. Aufl. 2015. <span>Operations Research kompakt</span>. <span>Berlin</span>: <span>Gabler</span>.
-</div>
-<div id="ref-TAHA2017OperationsResearch" class="csl-entry" role="listitem">
-Taha, Hamdy A. 2017. <em>Operations <span>Research</span></em>. 10th ed. <span>Harlow, United Kingdom</span>: <span>Pearson Education Limited</span>.
-</div>
-<div id="ref-WILLIAMS2013ModelBuildingMathematical" class="csl-entry" role="listitem">
-Williams, Hilary P. 2013. <em>Model Building in Mathematical Programming</em>. Fifth Edition. <span>Chichester</span>: <span>John Wiley &amp; Sons Ltd</span>.
-</div>
-</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -628,13 +663,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./01-Python/01-05-Pandas-Ex.html" class="pagination-link" aria-label="Übung zu Pandas">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Übung zu Pandas</span></span>
+      <a href="../01-Python/01-04-Pandas.html" class="pagination-link" aria-label="Pandas">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Pandas</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="Literaturverzeichnis">
-        <span class="nav-page-text">Literaturverzeichnis</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../Literature.html" class="pagination-link" aria-label="Literatur">
+        <span class="nav-page-text">Literatur</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
