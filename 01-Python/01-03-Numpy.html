@@ -158,13 +158,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../01-Python/01-01-Basics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Jupyter Notebooks in VS Code</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Python Basics</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../01-Python/01-02-Basics-Ex.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Übung</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Übung: Python Basics</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -205,7 +205,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#slicing" id="toc-slicing" class="nav-link active" data-scroll-target="#slicing"><span class="header-section-number">3.0.1</span> Slicing</a></li>
+  <li><a href="#arrays-und-listen-zuweisung" id="toc-arrays-und-listen-zuweisung" class="nav-link" data-scroll-target="#arrays-und-listen-zuweisung"><span class="header-section-number">3.0.2</span> Arrays und Listen Zuweisung</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -231,167 +238,242 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>In der vorherigen Lektion haben wir uns mit Listen beschäftigt. Diese sind sehr flexibel, aber auch sehr langsam. Mit kleinen Listen werden wir das nicht merken, aber wenn wir mit großen Datenmengen arbeiten, dann кönnen lange Laufzeiten zum Problem werden.</p>
 <p>NumPy (Numerical Python) ist ein Paket, das viele Funktionen enthält, die wir für die Arbeit mit großen Datenmengen geeignet sind.</p>
-<div id="initial_id" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:29:54.349176183Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:29:54.339771398Z&quot;}" data-execution_count="5">
+<div id="initial_id" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:29:54.349176183Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:29:54.339771398Z&quot;}" data-execution_count="37">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> time <span class="im">import</span> process_time</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="9a68cec80ed53375" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:29:55.958053740Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:29:55.915456071Z&quot;}" data-execution_count="6">
+<div id="9a68cec80ed53375" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:29:55.958053740Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:29:55.915456071Z&quot;}" data-execution_count="38">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Wir können eine Liste in ein NumPy-Array umwandeln</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>a_list <span class="op">=</span> <span class="bu">range</span>(<span class="bu">int</span>(<span class="fl">1e6</span>))</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>a_array <span class="op">=</span> np.array(a_list)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>python_list <span class="op">=</span> <span class="bu">range</span>(<span class="bu">int</span>(<span class="fl">1e6</span>))</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>numpy_array <span class="op">=</span> np.array(python_list)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="7abbacb502c3ffa4" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:29:58.245510074Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:29:57.533901745Z&quot;}" data-execution_count="7">
+<div id="7abbacb502c3ffa4" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:29:58.245510074Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:29:57.533901745Z&quot;}" data-execution_count="39">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>start_zeit <span class="op">=</span> process_time()</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>a_list_plus_2 <span class="op">=</span> [i <span class="op">+</span> <span class="dv">2</span> <span class="cf">for</span> i <span class="kw">in</span> a_list]</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>a_list_plus_2 <span class="op">=</span> [i <span class="op">+</span> <span class="dv">2</span> <span class="cf">for</span> i <span class="kw">in</span> python_list]</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>end_zeit <span class="op">=</span> process_time()</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">round</span>(end_zeit <span class="op">-</span> start_zeit, <span class="dv">5</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
-<pre><code>0.72373</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="39">
+<pre><code>0.03355</code></pre>
 </div>
 </div>
-<div id="6daef4bf6d2b5ab8" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:30:00.767921523Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:30:00.735087638Z&quot;}" data-execution_count="8">
+<div id="6daef4bf6d2b5ab8" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:30:00.767921523Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:30:00.735087638Z&quot;}" data-execution_count="40">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>start_zeit_1 <span class="op">=</span> process_time()</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>a_array_plus_2 <span class="op">=</span> a_array <span class="op">+</span> <span class="dv">2</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>a_array_plus_2 <span class="op">=</span> numpy_array <span class="op">+</span> <span class="dv">2</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>end_zeit_1 <span class="op">=</span> process_time()</span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="bu">round</span>(end_zeit_1 <span class="op">-</span> start_zeit_1, <span class="dv">5</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="8">
-<pre><code>0.01351</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="40">
+<pre><code>0.0017</code></pre>
 </div>
 </div>
-<div id="41c5c07e9de7bd4" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:33:02.667922877Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:33:02.635396512Z&quot;}" data-execution_count="14">
+<div id="41c5c07e9de7bd4" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:33:02.667922877Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:33:02.635396512Z&quot;}" data-execution_count="41">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array([<span class="dv">2</span>, <span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">2</span>])</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.ones(<span class="dv">4</span>)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>y</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="14">
+<div class="cell-output cell-output-display" data-execution_count="41">
 <pre><code>array([1., 1., 1., 1.])</code></pre>
 </div>
 </div>
 <p>NumPy-Arrays sind sehr ähnlich zu Listen, aber sie haben einige zusätzliche Eigenschaften. Zum Beispiel können wir mit NumPy-Arrays rechnen. Wenn wir zwei NumPy-Arrays addieren, dann werden die Elemente an der gleichen Stelle addiert. Diese Syntax ist sehr intuitiv und einfach zu lesen.</p>
-<div id="103508432468940a" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:33:08.850239308Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:33:08.840508861Z&quot;}" data-execution_count="15">
+<div id="103508432468940a" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:33:08.850239308Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:33:08.840508861Z&quot;}" data-execution_count="42">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>z1 <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span> </span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>z2 <span class="op">=</span> x <span class="op">+</span> y</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>z1</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="15">
+<div class="cell-output cell-output-display" data-execution_count="42">
 <pre><code>array([3, 8, 6, 3])</code></pre>
 </div>
 </div>
-<div id="4a78461f96d415cb" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:33:11.038533803Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:33:11.032833822Z&quot;}" data-execution_count="16">
+<div id="4a78461f96d415cb" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:33:11.038533803Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:33:11.032833822Z&quot;}" data-execution_count="43">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>z2</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="16">
+<div class="cell-output cell-output-display" data-execution_count="43">
 <pre><code>array([3., 8., 6., 3.])</code></pre>
 </div>
 </div>
 <p>Dasselbe funktioniert mit Python-Listen nicht. Wenn wir zwei Listen addieren, dann werden die Elemente an der gleichen Stelle nicht addiert, sondern die Listen werden aneinander gehängt.</p>
-<div id="8238f77bff4e06d8" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:33:29.091072754Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:33:29.041344389Z&quot;}" data-execution_count="17">
+<div id="8238f77bff4e06d8" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:33:29.091072754Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:33:29.041344389Z&quot;}" data-execution_count="44">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>x_list <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">2</span>]</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>y_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>]</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>x_list <span class="op">+</span> y_list</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="17">
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>x_plus_y_list <span class="op">=</span> x_list <span class="op">+</span> y_list</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>x_plus_y_list</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="44">
 <pre><code>[2, 7, 5, 2, 1, 1, 1, 1]</code></pre>
 </div>
 </div>
-<div id="ca93c52ab1e9beb5" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:33:44.680301381Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:33:44.606103755Z&quot;}" data-execution_count="18">
+<div id="ca93c52ab1e9beb5" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:33:44.680301381Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:33:44.606103755Z&quot;}" data-execution_count="45">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>x_list <span class="op">+</span> <span class="dv">1</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <pre><code>TypeError: can only concatenate list (not "int") to list</code></pre>
 </div>
 </div>
 <p>NumPy-Arrays haben auch einige Methoden, die wir mit Listen nicht haben. Zum Beispiel können wir die Summe aller Elemente eines Arrays berechnen.</p>
-<div id="b4f1c863d071be31" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:34:16.462615208Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:34:16.415193125Z&quot;}" data-execution_count="19">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>x.<span class="bu">sum</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="19">
+<div id="b4f1c863d071be31" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:34:16.462615208Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:34:16.415193125Z&quot;}">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Summe der Elemente</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>x.<span class="bu">sum</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="20">
 <pre><code>16</code></pre>
 </div>
 </div>
-<div id="9fd27821a15fa09c" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:34:23.758686996Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:34:23.749056123Z&quot;}" data-execution_count="20">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>x.mean()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="20">
+<div id="9fd27821a15fa09c" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:34:23.758686996Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:34:23.749056123Z&quot;}">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Durchschnitt der Elemente (Arithmetischer Mittelwert)</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>x.mean()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="21">
 <pre><code>4.0</code></pre>
 </div>
 </div>
-<div id="690eace8cca0f0e3" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:34:28.778738929Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:34:28.735085968Z&quot;}" data-execution_count="21">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>x.std()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="21">
+<div id="690eace8cca0f0e3" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:34:28.778738929Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:34:28.735085968Z&quot;}">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Standardabweichung</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>x.std()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="22">
 <pre><code>2.1213203435596424</code></pre>
 </div>
 </div>
-<div id="9f04389c844c5d0b" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:35:48.306704045Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:35:48.262077443Z&quot;}" data-execution_count="22">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>x.<span class="bu">min</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="22">
+<div id="9f04389c844c5d0b" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:35:48.306704045Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:35:48.262077443Z&quot;}">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Minimum</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>x.<span class="bu">min</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="23">
 <pre><code>2</code></pre>
 </div>
 </div>
 <div id="c0a15217f08e2c38" class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>x.<span class="bu">max</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Maximum</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>x.<span class="bu">max</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="686a7d13caab9e30" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:35:55.738423504Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:35:55.692970343Z&quot;}" data-execution_count="23">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>x.argmin()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="686a7d13caab9e30" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:35:55.738423504Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:35:55.692970343Z&quot;}">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Der Index des Minimums</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>x.argmin()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="23">
 <pre><code>0</code></pre>
 </div>
 </div>
-<div id="c73cc98f94f76d61" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:35:59.946077017Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:35:59.923555482Z&quot;}" data-execution_count="24">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>x.argmax()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="c73cc98f94f76d61" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:35:59.946077017Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:35:59.923555482Z&quot;}">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Der Index des Maximums</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>x.argmax()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="24">
 <pre><code>1</code></pre>
 </div>
 </div>
+<section id="slicing" class="level3" data-number="3.0.1">
+<h3 data-number="3.0.1" class="anchored" data-anchor-id="slicing"><span class="header-section-number">3.0.1</span> Slicing</h3>
 <p>Wir können auch auf die Elemente eines Arrays zugreifen, indem wir einen Index angeben. Der Index beginnt bei 0.</p>
-<div id="72e5f25f2eb01a2" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:36:43.266713224Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:36:43.260188393Z&quot;}" data-execution_count="25">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">0</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="439bd3c7" class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> np.array([<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"d"</span>, <span class="st">"e"</span>])</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="72e5f25f2eb01a2" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:36:43.266713224Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:36:43.260188393Z&quot;}">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Das erste Element</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>z[<span class="dv">0</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="25">
 <pre><code>2</code></pre>
 </div>
 </div>
-<div id="d3296f86a9e55029" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:36:51.782503290Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:36:51.776577486Z&quot;}" data-execution_count="26">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>x[:<span class="dv">2</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="26">
+<div id="d3296f86a9e55029" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:36:51.782503290Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:36:51.776577486Z&quot;}">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Alle Elemente bis zur Indexposition 2 (exklusive)</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Achten Sie darauf, dass der Index 0-basiert ist und daher das dritte Element ist eine Indexposition 2 hat</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>z[:<span class="dv">2</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="33">
 <pre><code>array([2, 7])</code></pre>
 </div>
 </div>
-<div id="1bfeee24cf7bd00d" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:37:17.679613708Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:37:17.631610036Z&quot;}" data-execution_count="29">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>x[<span class="op">-</span><span class="dv">3</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="1bfeee24cf7bd00d" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:37:17.679613708Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:37:17.631610036Z&quot;}">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>z[<span class="op">-</span><span class="dv">3</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="29">
 <pre><code>array([7, 5, 2])</code></pre>
 </div>
 </div>
-<div id="3ccb0f83eb72615c" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:37:30.907200360Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:37:30.851992922Z&quot;}" data-execution_count="30">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>x[<span class="op">-</span><span class="dv">3</span>:]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="30">
+<div id="3ccb0f83eb72615c" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:37:30.907200360Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:37:30.851992922Z&quot;}">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>z[<span class="op">-</span><span class="dv">3</span>:]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="35">
 <pre><code>array([7, 5, 2])</code></pre>
 </div>
 </div>
-<div id="5b7fe6cc241f2a08" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:37:35.356379796Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:37:35.348763718Z&quot;}" data-execution_count="31">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">1</span>:<span class="dv">3</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="5b7fe6cc241f2a08" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:37:35.356379796Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:37:35.348763718Z&quot;}">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>z[<span class="dv">1</span>:<span class="dv">3</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="31">
 <pre><code>array([7, 5])</code></pre>
 </div>
 </div>
-<div id="42a909040be2b299" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:37:41.720021982Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:37:41.715397012Z&quot;}" data-execution_count="32">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>x[::<span class="dv">2</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="42a909040be2b299" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:37:41.720021982Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:37:41.715397012Z&quot;}">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>z[::<span class="dv">2</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="32">
 <pre><code>array([2, 5])</code></pre>
 </div>
 </div>
-<div id="3fec08723e2bd67e" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:37:46.345871775Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:37:46.338597679Z&quot;}" data-execution_count="33">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>x[::<span class="op">-</span><span class="dv">1</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="3fec08723e2bd67e" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:37:46.345871775Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:37:46.338597679Z&quot;}">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>z[::<span class="op">-</span><span class="dv">1</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="33">
 <pre><code>array([2, 5, 7, 2])</code></pre>
 </div>
 </div>
-<div id="85f9e88bc0569a4d" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:37:55.010524431Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:37:55.002336505Z&quot;}" data-execution_count="35">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">1</span>] <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="35">
-<pre><code>array([ 2, 10,  5,  2])</code></pre>
+</section>
+<section id="arrays-und-listen-zuweisung" class="level3" data-number="3.0.2">
+<h3 data-number="3.0.2" class="anchored" data-anchor-id="arrays-und-listen-zuweisung"><span class="header-section-number">3.0.2</span> Arrays und Listen Zuweisung</h3>
+<p>Eine zugängige Erläuterung, wie Werte im Speicher des Rechners gespeichert werden, finden Sie in <a href="https://mvschamanth.medium.com/inside-python-are-variables-memory-references-a7522808be93">hier</a>.</p>
+<div id="85f9e88bc0569a4d" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T16:37:55.010524431Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T16:37:55.002336505Z&quot;}" data-execution_count="46">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>z[<span class="dv">1</span>] <span class="op">=</span> <span class="st">"x"</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>z</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="46">
+<pre><code>array(['a', 'x', 'c', 'd', 'e'], dtype='&lt;U1')</code></pre>
+</div>
+</div>
+<div id="b9cbe174" class="cell" data-execution_count="47">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>z1 <span class="op">=</span> z</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="07a6f3ea" class="cell" data-execution_count="48">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>z[<span class="dv">0</span>] <span class="op">=</span> <span class="st">"X"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="b71acf77" class="cell" data-execution_count="49">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>z1</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="49">
+<pre><code>array(['X', 'x', 'c', 'd', 'e'], dtype='&lt;U1')</code></pre>
+</div>
+</div>
+<div id="1196a576" class="cell" data-execution_count="50">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>z1 <span class="op">==</span> z</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="50">
+<pre><code>array([ True,  True,  True,  True,  True])</code></pre>
+</div>
+</div>
+<div id="cc97c091" class="cell" data-execution_count="51">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">id</span>(z1))</span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">id</span>(z))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>139824494266384
+139824494266384</code></pre>
+</div>
+</div>
+<div id="b9e1d154" class="cell" data-execution_count="52">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>l1 <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>l2 <span class="op">=</span> l1</span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">id</span>(l1))</span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">id</span>(l2))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>139824456337984
+139824456337984</code></pre>
+</div>
+</div>
+<div id="1b009755" class="cell" data-execution_count="54">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>s1 <span class="op">=</span> <span class="st">"Some string"</span></span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>s2 <span class="op">=</span> s1</span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">id</span>(s1))</span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">id</span>(s2))</span>
+<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a>s1[<span class="dv">0</span>] <span class="op">=</span> <span class="st">"X"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>139824494250288
+139824494250288</code></pre>
+</div>
+<div class="cell-output cell-output-error">
+<pre><code>TypeError: 'str' object does not support item assignment</code></pre>
 </div>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -783,8 +865,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../01-Python/01-02-Basics-Ex.html" class="pagination-link" aria-label="Übung">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Übung</span></span>
+      <a href="../01-Python/01-02-Basics-Ex.html" class="pagination-link" aria-label="Übung: Python Basics">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Übung: Python Basics</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
