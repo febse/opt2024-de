@@ -1,6 +1,7 @@
-name: econ2024
+name: opt2024
 channels:
   - defaults
+  - gurobi
 dependencies:
   - python=3.11
   - pandas
@@ -10,4 +11,5 @@ dependencies:
   - matplotlib
   - statsmodels
   - seaborn
-prefix: /home/amarov/anaconda3/envs/econ2024
+  - gurobi=11.0.0
+prefix: /home/amarov/anaconda3/envs/opt2024

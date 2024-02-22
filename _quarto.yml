@@ -9,12 +9,12 @@ book:
   chapters:
     - index.qmd
     - part: 01-Python/index.qmd
-      # chapters:
-      #   - 01-Python/01-01-Basics.ipynb
-      #   - 01-Python/01-02-Basics-Ex.ipynb
-      #   - 01-Python/01-03-Numpy.ipynb
-      #   - 01-Python/01-04-Pandas.ipynb
-      #   - 01-Python/01-05-Pandas-Ex.ipynb        
+      chapters:
+        - 01-Python/01-01-Basics.ipynb
+        - 01-Python/01-02-Basics-Ex.ipynb
+        - 01-Python/01-03-Numpy.ipynb
+        - 01-Python/01-04-Pandas.ipynb
+        - 01-Python/01-05-Pandas-Ex.ipynb    
     # - 00-Homework-Instructions.qmd
     # - 02-Statistics-Review.qmd
     # - 01-Introduction-to-R.qmd
