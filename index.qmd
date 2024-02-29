@@ -3,7 +3,7 @@
 :::{.callout-note}
 ## Website URL
 
-[https://febse.github.io/opt2024-de/](https://febse.github.io/opt2024-de/)
+<span style="font-size:2em">[https://febse.github.io/opt2024-de/](https://febse.github.io/opt2024-de/)</span>
 
 ![](images/qrcode.png)
 
