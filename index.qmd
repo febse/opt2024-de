@@ -1,5 +1,14 @@
 # Setup {.unnumbered}
 
+:::{.callout-note}
+## Website URL
+
+[https://febse.github.io/opt2024-de/](https://febse.github.io/opt2024-de/)
+
+![](images/qrcode.png)
+
+:::
+
 In den Übungen werden wir die Programmiersprache Python verwenden, um
 die in der Vorlesung behandelten Themen zu erklären und an realen Daten
 zu üben. Die Übungen werden in Form von Jupyter Notebooks bereitgestellt,
