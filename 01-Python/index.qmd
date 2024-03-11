@@ -1,3 +1,0 @@
-# Einführung in Python
-
-Github Classroom Link: [https://classroom.github.com/a/NF7qSSTn](https://classroom.github.com/a/NF7qSSTn)
