@@ -20,7 +20,7 @@ book:
         - 01-Python/01-05-Pandas-Ex.ipynb    
     - part: "Die graphische Methode"
       chapters:
-        - 03-Graphical-Method/00-Burritos.ipynb
+        # - 03-Graphical-Method/00-Burritos.ipynb
         - 03-Graphical-Method/01-Berlin-Airlift.ipynb
         - 03-Graphical-Method/02-Blending.ipynb
         # - 02-GraphischeMethode/02-Sensitivity.ipynb
