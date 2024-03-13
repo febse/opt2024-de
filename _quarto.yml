@@ -14,14 +14,12 @@ book:
         - 01-Python/01-02-Basics-Ex.ipynb
         - 01-Python/01-03-Numpy.ipynb
         - 01-Python/01-04-Pandas.ipynb
-        - 01-Python/01-05-Pandas-Ex.ipynb        
-    # - 00-Homework-Instructions.qmd
-    # - 02-Statistics-Review.qmd
-    # - 01-Introduction-to-R.qmd
-    # - 02a-Continuous-Distributions.qmd
-    # - 03-Simple-Linear-Model.qmd
-    # - 04-Simple-ANOVA.qmd
-    # - 05-Hypothesis-Testing-and-CI.qmd
+        - 01-Python/01-05-Pandas-Ex.ipynb    
+    - part: "Die graphische Methode"
+      chapters:
+        - 03-Graphical-Method/01-Berlin-Airlift.ipynb
+        - 03-Graphical-Method/02-Blending.ipynb
+        # - 02-GraphischeMethode/02-Sensitivity.ipynb
     - Literature.qmd
     - references.qmd
 
