@@ -76,7 +76,7 @@
     "section": "",
     "text": "1.0.1 Jupyter Notebooks in VS Code\nHäufig verwendete Tastenkombinationen\nShortcuts für den Kommando-Modus (Edit Mode)\nShortcuts für den Edit Modus - Alt + Shift + ↑: Die aktuelle Zeile nach oben kopieren (Fokus bleibt auf der aktuellen Zeile) - Alt + Shift + ↓: Die aktuelle Zeile nach unten kopieren (Fokus verlagert sich zur nächsten Zeile) - Ctrl+Enter/Shift+Enter: Markierte Zelle ausführen und Fokus auf die nächste Zelle setzen\nShortcuts für beide Modi",
     "crumbs": [
-      "01-Python/index.qmd",
+      "Einführung in Python",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python Basics</span>"
     ]
   },
@@ -87,7 +87,7 @@
     "section": "5.1 Klassen und Objekte",
     "text": "5.1 Klassen und Objekte\nBisher haben wir verschiedene Datentypen gesehen, drei verschiedene Datenstrukturen (Listen, Tupel und Dictionaries) und Funktionen gesehen. In Python gibt es auch Objekte, die Daten und Funktionen zusammenbinden. Funktionen, die zu einem Objekt gehören, nennen wir Methoden. Objekte werden aus Klassen erstellt. Klassen sind wie Baupläne für Objekte. In den Übungen werden wir keine Klassen selber definieren, allerdings werden wir Objekte wie DataFrame, Series, etc. verwenden, die aus Klassen erstellt wurden. Deswegen ist es wichtig, dass Sie wissen, wie Sie mit Objekten umgehen können.\nZuerst definieren wir eine Klasse Person. Diese hat zwei Attribute: name und age. Die Klasse erlaubt uns, ein Objekt zu erstellen, das diese beiden Attribute hat. Wir können auch eine Methode say_hello definieren, die uns erlaubt, “Hallo” und den Namen der Person auszugeben. Alle Methoden, wie z.B. say_hello erhalten das Argument self, das das Objekt selbst ist. Dadurch können wir über Methoden auf die Eigenschaften des Objekts zugreifen.\n\nclass Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n\n    def say_hello(self):\n        print(\"Hi, my name is\", self.name, \"and I am\", self.age, \"years old.\")\n\n\nivan = Person(\"Ivan\", 20)\n\nprint(ivan.name)\nprint(ivan.age)\n\nIvan\n20\n\n\n\nivan.say_hello()\n\nHi, my name is Ivan and I am 20 years old.\n\n\n\n5.1.1 Lambdafunktionen\nManchmal möchten wir eine Funktion nur einmal verwenden. Dafür können wir Lambda Funktionen verwenden. Diese Funktionen haben keinen Namen. Wir können sie mit dem Schlüsselwort lambda erstellen. Die Argumente der Funktion werden durch ein Komma getrennt hinter dem Schlüsselwort lambda geschrieben. Der Rückgabewert der Funktion wird nach einem Doppelpunkt geschrieben.\nZum Beispiel können wir eine Lambdafunktion verwenden, um den Stromverbrauch in BGN zu berechnen.\n\nstromverbrauch_bgn = map(lambda x: x * 1.955, stromverbrauch)",
     "crumbs": [
-      "01-Python/index.qmd",
+      "Einführung in Python",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python Basics</span>"
     ]
   },
@@ -98,7 +98,7 @@
     "section": "",
     "text": "2.0.1 Aufgabe 1\n\nBerechnen Sie die Summe der Zahlen 32.8 und 45.1\nBerechnen Sie die Differenz der Zahlen 32.8 und 45.1\nSpeichern Sie die Zahl 32.8 in a und die Zahl 45.1 in b. Berechnen Sie das Verhältnis von a zu b und speichern Sie das Ergebnis in c.\n\n\n\n2.0.2 Aufgabe 2\nErstellen Sie eine Liste mit den Zahlen 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 und speichern Sie diese in der Variable numbers. - Geben Sie die Liste aus (mit print()) - Geben Sie das erste Element der Liste aus - Geben Sie das letzte Element der Liste aus - Geben Sie das dritte Element der Liste aus - Geben Sie das dritte und das siebte Element der Liste aus - Ersetzen Sie das vierte Element der Liste durch die Zahl 42\n\n\n2.0.3 Aufgabe 3\nErstellen Sie zwei Listen names und ages mit den folgenden Elementen: - names: “Alice”, “Bob”, “Charlie”, “Dave”, “Eve” - ages: 17, 42, 30, 37, 21\n\nGeben Sie die Liste names aus\nSchreiben Sie eine for-Schleife, die die Namen und das Alter der Personen ausdruckt. Die Ausgabe soll folgendermaßen aussehen: “Alice ist 23 Jahre alt”\nSie möchten nur die Namen der Personen ausdrucken, die älter als 30 Jahre sind. Schreiben Sie eine for-Schleife, die das tut.\nSie möchten eine neue Liste erstellen, die nur die Namen der Personen enthält, die älter als 30 Jahre sind. Schreiben Sie eine Listenabstraktion, die das tut.\n\n\n\n2.0.4 Aufgabe 4\nIn dieser Aufgabe werden wir eine Funktion is_in_list schreiben, die einen Namen als Argument annimmt und True oder False zurückgibt, falls der Name einer Person entspricht, die in der Liste names aus Aufgabe 3 enthalten ist.\n\n\n2.0.5 Aufgabe 5\nIn dieser Aufgabe werden wir eine Funktion get_age schreiben, die einen Namen als Argument annimmt und das Alter der Person zurückgibt, falls der Name einer Person entspricht, die in der Liste names aus Aufgabe 3 enthalten ist. Falls der Name nicht in der Liste enthalten ist, soll die Funktion None zurückgeben.\n\n\n2.0.6 Aufgabe 6\nIn dieser Aufgabe werden wir eine Funktion is_eligible schreiben, die True, False oder None zurückgibt, je nachdem ob eine Person wahlberechtigt ist oder nicht. Die Funktion soll einen Namen als Argument annehmen und das Alter der Person zurückgeben, falls der Name einer Person entspricht, die in der Liste names aus Aufgabe 3 enthalten ist. Falls der Name nicht in der Liste enthalten ist, soll die Funktion None zurückgeben. Falls der Name in der Liste enthalten ist, soll die Funktion True zurückgeben, falls die Person älter als 18 Jahre ist, andernfalls soll die Funktion False zurückgeben.\n\n\n2.0.7 Aufgabe 7\nIn dieser Aufgabe werden wir ein Dictionary erstellen, das die Namen aus Aufgabe 3 als Schlüssel und die Alter aus Aufgabe 3 als Werte enthält. Speichern Sie das Dictionary in der Variable persons.\n\nBenutzen Sie das Dictionary, um das Alter von Bob auszudrucken.\nÄndern Sie das Alter von Alice auf 43 Jahre.\nFügen Sie eine neue Person “Frank” mit dem Alter 33 Jahre hinzu.\nSchreiben Sie eine for-Schleife, die die Namen und das Alter der Personen ausdruckt. Die Ausgabe soll folgendermaßen aussehen: “Alice ist 23 Jahre alt”\nSie möchten nur die Namen der Personen ausdrucken, die mit “A” anfangen. Schreiben Sie eine for-Schleife, die über persons iteriert und das tut.",
     "crumbs": [
-      "01-Python/index.qmd",
+      "Einführung in Python",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Übung: Python Basics</span>"
     ]
   },
@@ -109,7 +109,7 @@
     "section": "",
     "text": "In der vorherigen Lektion haben wir uns mit Listen beschäftigt. Diese sind sehr flexibel, aber auch sehr langsam. Mit kleinen Listen werden wir das nicht merken, aber wenn wir mit großen Datenmengen arbeiten, dann können lange Laufzeiten zum Problem werden.\nNumPy (Numerical Python) ist ein Paket, das viele Funktionen enthält, die für die Arbeit mit großen Datenmengen geeignet sind.\n\nimport numpy as np\nfrom time import process_time\n\n\n# Wir können eine Liste in ein NumPy-Array umwandeln\npython_list = range(int(1e6))\nnumpy_array = np.array(python_list)\n\n\nstart_zeit = process_time()\n\na_list_plus_2 = [i + 2 for i in python_list]\n\nend_zeit = process_time()\nround(end_zeit - start_zeit, 5)\n\n0.03289\n\n\n\nstart_zeit_1 = process_time()\n\na_array_plus_2 = numpy_array + 2\n\nend_zeit_1 = process_time()\nround(end_zeit_1 - start_zeit_1, 5)\n\n0.00139\n\n\n\nx = np.array([2, 7, 5, 2])\ny = np.ones(4)\ny\n\narray([1., 1., 1., 1.])\n\n\nNumPy-Arrays sind sehr ähnlich zu Listen, aber sie haben einige zusätzliche Eigenschaften. Zum Beispiel können wir mit NumPy-Arrays rechnen. Wenn wir zwei NumPy-Arrays addieren, dann werden die Elemente an der gleichen Stelle addiert. Diese Syntax ist sehr intuitiv und einfach zu lesen.\n\nz1 = x + 1 \nz2 = x + y\nz1\n\narray([3, 8, 6, 3])\n\n\n\nz2\n\narray([3., 8., 6., 3.])\n\n\nDasselbe funktioniert mit Python-Listen nicht. Wenn wir zwei Listen addieren, dann werden die Elemente an der gleichen Stelle nicht addiert, sondern die Listen werden aneinander gehängt.\n\nx_list = [2, 7, 5, 2]\ny_list = [1, 1, 1, 1]\nx_plus_y_list = x_list + y_list\nx_plus_y_list\n\n[2, 7, 5, 2, 1, 1, 1, 1]\n\n\n\n# x_list + 1\n\nNumPy-Arrays haben auch einige Methoden, die wir mit Listen nicht haben. Zum Beispiel können wir die Summe aller Elemente eines Arrays berechnen.\n\n# Summe der Elemente\nx.sum()\n\n16\n\n\n\n# Durchschnitt der Elemente (Arithmetischer Mittelwert)\n\nx.mean()\n\n4.0\n\n\n\n# Standardabweichung\nx.std()\n\n2.1213203435596424\n\n\n\n# Minimum\nx.min()\n\n2\n\n\n\n# Maximum\nx.max()\n\n7\n\n\n\n# Der Index des Minimums\nx.argmin()\n\n0\n\n\n\n# Der Index des Maximums\nx.argmax()\n\n1\n\n\n\n3.0.1 Slicing\nWir können auch auf die Elemente eines Arrays zugreifen, indem wir einen Index angeben. Der Index beginnt bei 0.\n\nz = np.array([\"a\", \"b\", \"c\", \"d\", \"e\"])\n\n\n# Das erste Element\nz[0]\n\n'a'\n\n\n\n# Alle Elemente bis zur Indexposition 2 (exklusive)\n# Achten Sie darauf, dass der Index 0-basiert ist und daher das dritte Element ist eine Indexposition 2 hat\nz[:2]\n\narray(['a', 'b'], dtype='&lt;U1')\n\n\n\nz[-3]\n\n'c'\n\n\n\nz[-3:]\n\narray(['c', 'd', 'e'], dtype='&lt;U1')\n\n\n\nz[1:3]\n\narray(['b', 'c'], dtype='&lt;U1')\n\n\n\nz[::2]\n\narray(['a', 'c', 'e'], dtype='&lt;U1')\n\n\n\nz[::-1]\n\narray(['e', 'd', 'c', 'b', 'a'], dtype='&lt;U1')\n\n\n\n\n3.0.2 Arrays und Listen Zuweisung\nEine zugängige Erläuterung, wie Werte im Speicher des Rechners gespeichert werden, finden Sie in hier.\n\nz[1] = \"x\"\nz\n\narray(['a', 'x', 'c', 'd', 'e'], dtype='&lt;U1')\n\n\n\nz1 = z\n\n\nz[0] = \"X\"\n\n\nz1\n\narray(['X', 'x', 'c', 'd', 'e'], dtype='&lt;U1')\n\n\n\nz1 == z\n\narray([ True,  True,  True,  True,  True])\n\n\n\nprint(id(z1))\nprint(id(z))\n\n140127257256336\n140127257256336\n\n\n\nl1 = [1, 2, 3]\nl2 = l1\n\nprint(id(l1))\nprint(id(l2))\n\n140128207961984\n140128207961984\n\n\n\ns1 = \"Some string\"\ns2 = s1\n\nprint(id(s1))\nprint(id(s2))\n\n# s1[0] = \"X\"\n\n140128207997680\n140128207997680",
     "crumbs": [
-      "01-Python/index.qmd",
+      "Einführung in Python",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>NumPy</span>"
     ]
   },
@@ -120,7 +120,7 @@
     "section": "",
     "text": "4.1 Series\nDie einfachste Datenstruktur in Pandas ist die Series. Eine Series ist eine eindimensionale Datenstruktur, die mit einem NumPy-Array vergleichbar ist. Eine Series kann mit der Funktion pd.Series() erstellt werden. Als Argument wird ein Array übergeben. Die Series hat einen Index, der standardmäßig mit 0 beginnt. Der Index kann mit dem Argument index angepasst werden. Der Index kann ein Array von Strings sein, um die Elemente der Series zu benennen.\n# Erstellen einer Series\ns = pd.Series([1, 2, 3, 4, 5])\ns\n\n0    1\n1    2\n2    3\n3    4\n4    5\ndtype: int64\n# Erstellen einer Series mit Index\ns1 = pd.Series([1, 2, 3, 4, 5], index=['a', 'b', 'c', 'd', 'e'])\ns1\n\na    1\nb    2\nc    3\nd    4\ne    5\ndtype: int64\nDie Series hat eine Reihe von Methoden, die aufgerufen werden können. Eine Übersicht über die Methoden kann mit help(pd.Series) aufgerufen werden. Die wichtigsten Methoden sind:\n# Zugriff auf den Index\ns1.index\n\nIndex(['a', 'b', 'c', 'd', 'e'], dtype='object')\n# Zugriff auf die Werte\ns1.values\n\narray([1, 2, 3, 4, 5])\n# Zugriff auf ein Element\ns1['a']\n\n1\n# Zugriff auf mehrere Elemente\ns1[['a', 'c', 'e']]\n\na    1\nc    3\ne    5\ndtype: int64\n# Zugriff auf ein Element mit dem Ganzzahl-Index\ns1.iloc[0]\n\n1\n# Zugriff auf mehrere Elemente mit dem Index\ns1.loc[\"a\"]\n\n1\ns1.loc[[\"a\", \"c\", \"e\"]]\n\na    1\nc    3\ne    5\ndtype: int64\ns1.sum()\n\n15\ns1.mean()\n\n3.0\ns1.std()\n\n1.5811388300841898",
     "crumbs": [
-      "01-Python/index.qmd",
+      "Einführung in Python",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Pandas</span>"
     ]
   },
@@ -131,7 +131,7 @@
     "section": "4.2 DataFrame",
     "text": "4.2 DataFrame\nDas wichtigste Datenobjekt in Pandas ist der DataFrame. Ein DataFrame ist eine zweidimensionale Datenstruktur, die mit einer Tabelle vergleichbar ist. Ein DataFrame kann mit der Funktion pd.DataFrame() erstellt werden. Als Argument wird ein Array übergeben. Der DataFrame hat einen Index, der standardmäßig mit 0 beginnt. Der Index kann mit dem Argument index angepasst werden. Der Index kann ein Array von Strings sein, um die Zeilen des DataFrame zu benennen. Die Spalten des DataFrame können mit dem Argument columns benannt werden.\n\ndf = pd.DataFrame([[1, 2, 3], [4, 5, 6], [7, 7, 9], [10, 11, 12]], columns=['A', 'B', 'C'])\ndf\n\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n2\n3\n\n\n1\n4\n5\n6\n\n\n2\n7\n7\n9\n\n\n3\n10\n11\n12\n\n\n\n\n\n\n\n\n\ndf1 = pd.DataFrame([[1, 2, 3], [4, 5, 6], [7, 7, 9], [10, 11, 12]],\n                   index=['a', 'b', 'c', 'd'],\n                   columns=['X', 'Y', 'Z']\n                   )\ndf1\n\n\n\n\n\n\n\n\n\nX\nY\nZ\n\n\n\n\na\n1\n2\n3\n\n\nb\n4\n5\n6\n\n\nc\n7\n7\n9\n\n\nd\n10\n11\n12\n\n\n\n\n\n\n\n\nDie DataFrame hat eine Reihe von Methoden, die aufgerufen werden können. Eine Übersicht über die Methoden kann mit help(pd.DataFrame) aufgerufen werden. Die wichtigsten Methoden sind:\n\ndf1[\"X\"].sum()\n\n22\n\n\n\ndf1[\"X\"].mean()\n\n5.5\n\n\n\ndf1[\"X\"].std()\n\n3.872983346207417\n\n\n\ndf1[\"X\"].describe()\n\ncount     4.000000\nmean      5.500000\nstd       3.872983\nmin       1.000000\n25%       3.250000\n50%       5.500000\n75%       7.750000\nmax      10.000000\nName: X, dtype: float64",
     "crumbs": [
-      "01-Python/index.qmd",
+      "Einführung in Python",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Pandas</span>"
     ]
   },
@@ -142,7 +142,7 @@
     "section": "4.3 Axes",
     "text": "4.3 Axes\nDie axes eines DataFrame sind die Zeilen und Spalten des DataFrame. Die Zeilen können mit df.index und die Spalten mit df.columns abgerufen werden. Die Eigenschaft (property) shape gibt die Anzahl der Zeilen und Spalten des DataFrame zurück.\n\ndf1.shape\n\n(4, 3)\n\n\nViele Methoden können auf die Zeilen und Spalten des DataFrame angewendet werden.\n\ndf1\n\n\n\n\n\n\n\n\n\nX\nY\nZ\n\n\n\n\na\n1\n2\n3\n\n\nb\n4\n5\n6\n\n\nc\n7\n7\n9\n\n\nd\n10\n11\n12\n\n\n\n\n\n\n\n\n\ndf1.mean(axis=0)\n\nX    5.50\nY    6.25\nZ    7.50\ndtype: float64\n\n\n\ndf1.mean(axis=1)\n\na     2.000000\nb     5.000000\nc     7.666667\nd    11.000000\ndtype: float64\n\n\n\ndf1.mean()\n\nX    5.50\nY    6.25\nZ    7.50\ndtype: float64",
     "crumbs": [
-      "01-Python/index.qmd",
+      "Einführung in Python",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Pandas</span>"
     ]
   },
@@ -153,7 +153,7 @@
     "section": "4.4 Neue Spalte hinzufügen",
     "text": "4.4 Neue Spalte hinzufügen\nEine neue Spalte kann zu einem DataFrame hinzugefügt werden, indem ein neues Array als Wert der neuen Spalte zugewiesen wird. Die neue Spalte wird automatisch an das Ende des DataFrame hinzugefügt.\n\ndf1[\"New\"] = [1, 2, 3, 4]\ndf1.head()\n\n\n\n\n\n\n\n\n\nX\nY\nZ\nNew\n\n\n\n\na\n1\n2\n3\n1\n\n\nb\n4\n5\n6\n2\n\n\nc\n7\n7\n9\n3\n\n\nd\n10\n11\n12\n4\n\n\n\n\n\n\n\n\nHäufig wird eine neue Spalte aus bestehenden Spalten berechnet. Dazu können die bestehenden Spalten wie normale Arrays verwendet werden. Die neue Spalte wird automatisch an das Ende des DataFrame hinzugefügt.\n\ndf1[\"X_min_Y\"] = df1[\"X\"] - df1[\"Y\"]\ndf1.head()\n\n\n\n\n\n\n\n\n\nX\nY\nZ\nNew\nX_min_Y\n\n\n\n\na\n1\n2\n3\n1\n-1\n\n\nb\n4\n5\n6\n2\n-1\n\n\nc\n7\n7\n9\n3\n0\n\n\nd\n10\n11\n12\n4\n-1\n\n\n\n\n\n\n\n\n\ndf1[\"X_2\"] = 2 *df1[\"X\"]\ndf1.head()\n\n\n\n\n\n\n\n\n\nX\nY\nZ\nNew\nX_min_Y\nX_2\n\n\n\n\na\n1\n2\n3\n1\n-1\n2\n\n\nb\n4\n5\n6\n2\n-1\n8\n\n\nc\n7\n7\n9\n3\n0\n14\n\n\nd\n10\n11\n12\n4\n-1\n20",
     "crumbs": [
-      "01-Python/index.qmd",
+      "Einführung in Python",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Pandas</span>"
     ]
   },
@@ -164,7 +164,7 @@
     "section": "4.5 Selektieren von Zeilen",
     "text": "4.5 Selektieren von Zeilen\nHäufig möchten wir nur eine Teilmenge der Zeilen eines DataFrame selektieren, z.B. die ersten 5 Zeilen oder die Zeilen, die eine bestimmte Bedingung erfüllen (z.B. Männer/Frauen, beschäftigt/arbeitslos, etc.).\n\n# Als Beispiel wählen wir die ersten drei Zeilen\n\ndf1.iloc[0:2]\n\n\n\n\n\n\n\n\n\nX\nY\nZ\nNew\nX_min_Y\nX_2\n\n\n\n\na\n1\n2\n3\n1\n-1\n2\n\n\nb\n4\n5\n6\n2\n-1\n8\n\n\n\n\n\n\n\n\n\n# Als anderes Beispiel wählen wir die Zeilen, für die X größer als 3 ist\n\ndf1[df1[\"X\"] &gt; 3]\n\n\n\n\n\n\n\n\n\nX\nY\nZ\nNew\nX_min_Y\nX_2\n\n\n\n\nb\n4\n5\n6\n2\n-1\n8\n\n\nc\n7\n7\n9\n3\n0\n14\n\n\nd\n10\n11\n12\n4\n-1\n20",
     "crumbs": [
-      "01-Python/index.qmd",
+      "Einführung in Python",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Pandas</span>"
     ]
   },
@@ -175,7 +175,7 @@
     "section": "4.6 Selektieren von Spalten",
     "text": "4.6 Selektieren von Spalten\nHäufig möchten wir nur eine Teilmenge der Spalten eines DataFrame selektieren, z.B. die Spalten, die für eine bestimmte Analyse relevant sind.\n\ndf1[[\"X\", \"Y\"]]\n\n\n\n\n\n\n\n\n\nX\nY\n\n\n\n\na\n1\n2\n\n\nb\n4\n5\n\n\nc\n7\n7\n\n\nd\n10\n11",
     "crumbs": [
-      "01-Python/index.qmd",
+      "Einführung in Python",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Pandas</span>"
     ]
   },
@@ -186,7 +186,7 @@
     "section": "4.7 GroupBy",
     "text": "4.7 GroupBy\nMit der Funktion groupby() können die Daten in einem DataFrame gruppiert werden. Die Funktion groupby() gibt ein DataFrameGroupBy-Objekt zurück. Mit diesem Objekt können verschiedene Aggregationsfunktionen aufgerufen werden. Die wichtigsten Aggregationsfunktionen sind: - count(): Anzahl der Elemente - sum(): Summe der Elemente - mean(): Mittelwert der Elemente - median(): Median der Elemente - min(): Minimum der Elemente - max(): Maximum der Elemente - std(): Standardabweichung der Elemente - var(): Varianz der Elemente - describe(): Statistische Kennzahlen der Elemente - first(): Erstes Element - last(): Letztes Element - nth(): n-tes Element\n\ndf2 = pd.DataFrame({\n    \"Name\": [\"Alice\", \"Bob\", \"Mallory\", \"Mallory\", \"Bob\", \"Mallory\"],\n    \"Gender\": [\"f\", \"m\", \"f\", \"f\", \"m\", \"f\"],\n    \"YearOfBirth\": [1999, 1985, 1997, 1990, 1987, 1990],\n}\n)\ndf2[\"Age\"] = 2024 - df2[\"YearOfBirth\"]\ndf2.head()\n\n\n\n\n\n\n\n\n\nName\nGender\nYearOfBirth\nAge\n\n\n\n\n0\nAlice\nf\n1999\n25\n\n\n1\nBob\nm\n1985\n39\n\n\n2\nMallory\nf\n1997\n27\n\n\n3\nMallory\nf\n1990\n34\n\n\n4\nBob\nm\n1987\n37\n\n\n\n\n\n\n\n\n\ndf2_by_gender = df2.groupby(\"Gender\")\ndf2_by_gender\n\n&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x7f4ed345be50&gt;\n\n\n\ndf2_by_gender[\"Age\"].mean()\n\nGender\nf    30.0\nm    38.0\nName: Age, dtype: float64",
     "crumbs": [
-      "01-Python/index.qmd",
+      "Einführung in Python",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Pandas</span>"
     ]
   },
@@ -197,18 +197,18 @@
     "section": "",
     "text": "Für den Zweck der Buchhaltung in einem Unternehmen soll ein DataFrame erstellt werden, welches die folgenden Spalten enthält:\n\nPosition: Die Position im Unternehmen\nArbeitszeit: Die Arbeitszeit pro Woche\nLohn: Der wöchentliche Lohn in Euro\n\nDie Werte für die Position sollen aus der folgenden Liste entnommen werden:\nPosition: ['CEO', 'CFO', 'CTO', 'CIO', 'COO', 'CDO', 'CMO', 'CRO', 'CSO', 'CPO']\nArbeitszeit: [40, 40, 20, 40, 20, 40, 10, 40, 40, 60]\nGehalt: [10000, 8500, 2000, 3022, 1039, 2500, 3000, 1800, 20000, 10000]\n\n6 Aufgabe 1\n\nNennen Sie den DataFrame df und geben Sie ihn aus.\nGeben Sie die Spalte Position aus.\nGeben Sie die ersten 3 Zeilen des DataFrames aus.\nGeben Sie die letzten 3 Zeilen des DataFrames aus.\nGeben Sie die ersten 3 Zeilen der Spalte Position aus.\nGeben Sie die letzten 3 Zeilen der Spalte Position aus.\nGeben Sie die ersten 3 Zeilen der Spalten Position und Gehalt aus.\n\n\n\n7 Aufgabe 2\n\nBerechnen Sie den durchschnittlichen Gehalt im Unternehmen.\nBerechnen Sie den Stundenlohn für jede Personen im Unternehmen.\nBerechnen Sie den durchschnittlichen Stundenlohn im Unternehmen.\nBerechnen Sie den durchschnittlichen Stundenlohn für jede Position im Unternehmen.\nFinden Sie den niedrigsten Stundenlohn im Unternehmen.\nFinden Sie die Position mit dem niedrigsten Stundenlohn im Unternehmen.\nFinden Sie den höchsten Stundenlohn im Unternehmen.",
     "crumbs": [
-      "01-Python/index.qmd",
+      "Einführung in Python",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Übung zu Pandas</span>"
     ]
   },
   {
     "objectID": "Literature.html",
     "href": "Literature.html",
-    "title": "Literatur",
+    "title": "Emfohlene Literatur",
     "section": "",
     "text": "Dietz und Dietz (2019) (Deutsch): Kapitel 23 und 24\nSchwenkert und Stry (2015) (Deutsch): Teil 1\nWilliams (2013) (English)\nTaha (2017) (English)\n\n\n\n\n\nDietz, Hans M., und Hans M. Dietz. 2019. Lineare Algebra und Optimierung. 3. Auflage. Mathematik für Wirtschaftswissenschaftler / Hans M. Dietz, Band 2. Berlin [Heidelberg]: Springer Spektrum. https://doi.org/10.1007/978-3-662-58702-7.\n\n\nSchwenkert, Rainer, und Yvonne Stry. 2015. Operations Research kompakt: Eine an Beispielen orientierte Einführung. 1. Aufl. 2015. Operations Research kompakt. Berlin: Gabler.\n\n\nTaha, Hamdy A. 2017. Operations Research. 10th ed. Harlow, United Kingdom: Pearson Education Limited.\n\n\nWilliams, Hilary P. 2013. Model Building in Mathematical Programming. Fifth Edition. Chichester: John Wiley & Sons Ltd.",
     "crumbs": [
-      "Literatur"
+      "Emfohlene Literatur"
     ]
   },
   {
