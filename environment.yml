@@ -11,4 +11,7 @@ dependencies:
   - jupyter
   - seaborn
   - gurobi=11.0.0
+  - pip
+  - pip:
+    - polytope
 prefix: /home/amarov/anaconda3/envs/opt2024
