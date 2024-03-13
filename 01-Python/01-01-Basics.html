@@ -573,41 +573,36 @@ t
 <pre><code>[90, 110, 100]</code></pre>
 </div>
 </div>
-<div id="79e20c85" class="cell" data-execution_count="38">
-<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>stromverbrauch[<span class="dv">3</span>:<span class="dv">6</span>] <span class="op">==</span> stromverbrauch[<span class="dv">3</span>:<span class="op">-</span><span class="dv">6</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Wir können einzelne Elemente einer Liste verändern.</p>
+<div id="001c6e12" class="cell" data-execution_count="38">
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>stromverbrauch[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>stromverbrauch</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="38">
-<pre><code>True</code></pre>
-</div>
-</div>
-<p>Wir können diese Schreibweise auch verwenden, um einzelne Elemente einer Liste zu verändern.</p>
-<div id="001c6e12" class="cell" data-execution_count="39">
-<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>stromverbrauch[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a>stromverbrauch</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="39">
 <pre><code>[1, 120, 80, 90, 110, 100, 120, 80, 90.12, 110, 100, 120.22]</code></pre>
 </div>
 </div>
-<div id="52a25838" class="cell" data-execution_count="40">
-<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>stromverbrauch[<span class="dv">0</span>:<span class="dv">3</span>] <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">8</span>]</span>
-<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a>stromverbrauch</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="40">
+<p>Wir können auch mehrere Elemente einer Liste verändern.</p>
+<div id="52a25838" class="cell" data-execution_count="39">
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>stromverbrauch[<span class="dv">0</span>:<span class="dv">3</span>] <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">8</span>]</span>
+<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a>stromverbrauch</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="39">
 <pre><code>[5, 5, 8, 90, 110, 100, 120, 80, 90.12, 110, 100, 120.22]</code></pre>
 </div>
 </div>
 <p>Tuple sind wie Listen, nur dass sie nicht verändert werden können. Wir können sie mit runden Klammern erstellen. Im folgenden Beispiel erstellen wir ein Tuple mit den Monatsnamen. Dann versuchen wir, das erste Element zu verändern. Das funktioniert nicht.</p>
-<div id="40b54446" class="cell" data-execution_count="41">
-<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a>monatsnamen <span class="op">=</span> (<span class="st">"Januar"</span>, <span class="st">"Februar"</span>, <span class="st">"März"</span>, <span class="st">"April"</span>, <span class="st">"Mai"</span>, <span class="st">"Juni"</span>, <span class="st">"Juli"</span>,</span>
-<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a>               <span class="st">"August"</span>, <span class="st">"September"</span>, <span class="st">"Oktober"</span>, <span class="st">"November"</span>, <span class="st">"Dezember"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="40b54446" class="cell" data-execution_count="40">
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>monatsnamen <span class="op">=</span> (<span class="st">"Januar"</span>, <span class="st">"Februar"</span>, <span class="st">"März"</span>, <span class="st">"April"</span>, <span class="st">"Mai"</span>, <span class="st">"Juni"</span>, <span class="st">"Juli"</span>,</span>
+<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a>               <span class="st">"August"</span>, <span class="st">"September"</span>, <span class="st">"Oktober"</span>, <span class="st">"November"</span>, <span class="st">"Dezember"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="a3832d40" class="cell" data-execution_count="42">
-<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="co"># monatsnamen[0] = "Jänner"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="a3832d40" class="cell" data-execution_count="41">
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="co"># monatsnamen[0] = "Jänner"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="schleifen" class="level3" data-number="1.3.1">
 <h3 data-number="1.3.1" class="anchored" data-anchor-id="schleifen"><span class="header-section-number">1.3.1</span> Schleifen</h3>
 <p>In vielen Fällen wollen wir eine Operation auf alle Elemente einer Liste anwenden. Dafür können wir Schleifen verwenden.</p>
-<div id="3ebe5f20" class="cell" data-execution_count="43">
-<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> g <span class="kw">in</span> stromverbrauch:</span>
-<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Der Stromverbrauch war </span><span class="sc">{</span>g<span class="sc">}</span><span class="ss"> EUR"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="3ebe5f20" class="cell" data-execution_count="42">
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> g <span class="kw">in</span> stromverbrauch:</span>
+<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Der Stromverbrauch war </span><span class="sc">{</span>g<span class="sc">}</span><span class="ss"> EUR"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Der Stromverbrauch war 5 EUR
 Der Stromverbrauch war 5 EUR
@@ -623,9 +618,9 @@ Der Stromverbrauch war 100 EUR
 Der Stromverbrauch war 120.22 EUR</code></pre>
 </div>
 </div>
-<div id="0eeeb980" class="cell" data-execution_count="44">
-<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> idx, g <span class="kw">in</span> <span class="bu">enumerate</span>(stromverbrauch):</span>
-<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Der Stromverbrauch im Monat </span><span class="sc">{</span>monatsnamen[idx]<span class="sc">}</span><span class="ss"> war </span><span class="sc">{</span>g<span class="sc">}</span><span class="ss"> EUR."</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="0eeeb980" class="cell" data-execution_count="43">
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> idx, g <span class="kw">in</span> <span class="bu">enumerate</span>(stromverbrauch):</span>
+<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Der Stromverbrauch im Monat </span><span class="sc">{</span>monatsnamen[idx]<span class="sc">}</span><span class="ss"> war </span><span class="sc">{</span>g<span class="sc">}</span><span class="ss"> EUR."</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Der Stromverbrauch im Monat Januar war 5 EUR.
 Der Stromverbrauch im Monat Februar war 5 EUR.
@@ -642,9 +637,9 @@ Der Stromverbrauch im Monat Dezember war 120.22 EUR.</code></pre>
 </div>
 </div>
 <p>Die Namen der Variablen in der <code>for</code>-Schleife können wir frei wählen (diese müssen allerdings valide Variablennamen sein).</p>
-<div id="dabb5cce" class="cell" data-execution_count="45">
-<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, verbrauch <span class="kw">in</span> <span class="bu">enumerate</span>(stromverbrauch):</span>
-<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Der Stromverbrauch im Monat </span><span class="sc">{</span>monatsnamen[i]<span class="sc">}</span><span class="ss"> war </span><span class="sc">{</span>verbrauch<span class="sc">}</span><span class="ss"> EUR."</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="dabb5cce" class="cell" data-execution_count="44">
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, verbrauch <span class="kw">in</span> <span class="bu">enumerate</span>(stromverbrauch):</span>
+<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Der Stromverbrauch im Monat </span><span class="sc">{</span>monatsnamen[i]<span class="sc">}</span><span class="ss"> war </span><span class="sc">{</span>verbrauch<span class="sc">}</span><span class="ss"> EUR."</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Der Stromverbrauch im Monat Januar war 5 EUR.
 Der Stromverbrauch im Monat Februar war 5 EUR.
@@ -665,10 +660,10 @@ Der Stromverbrauch im Monat Dezember war 120.22 EUR.</code></pre>
 <section id="listenabstraktionen-list-comprehensions" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Listenabstraktionen (List Comprehensions)</h1>
 <p>In vielen Fällen wollen wir eine Liste oder ein Dictionary erstellen, indem wir eine Operation auf alle Elemente einer anderen Liste anwenden. Dafür können wir Comprehensions verwenden. Last uns zum Beispiel eine Liste mit den Stromverbräuchen in BGN (Lev) erstellen.</p>
-<div id="c2a8b231" class="cell" data-execution_count="46">
-<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a>stromverbrauch_bgn <span class="op">=</span> [<span class="fl">1.955</span> <span class="op">*</span> g <span class="cf">for</span> g <span class="kw">in</span> stromverbrauch]</span>
-<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a>stromverbrauch_bgn</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="46">
+<div id="c2a8b231" class="cell" data-execution_count="45">
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>stromverbrauch_bgn <span class="op">=</span> [<span class="fl">1.955</span> <span class="op">*</span> g <span class="cf">for</span> g <span class="kw">in</span> stromverbrauch]</span>
+<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a>stromverbrauch_bgn</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="45">
 <pre><code>[9.775,
  9.775,
  15.64,
@@ -684,10 +679,10 @@ Der Stromverbrauch im Monat Dezember war 120.22 EUR.</code></pre>
 </div>
 </div>
 <p>In der Listenabstraktion können wir auch Bedingungen formulieren. Zum Beispiel können wir nur die Werte aus der ursprünglichen Liste übernehmen, die größer als 100 sind.</p>
-<div id="60ae230a" class="cell" data-execution_count="47">
-<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a>stromverbrauch_gt_100 <span class="op">=</span> [g <span class="cf">for</span> g <span class="kw">in</span> stromverbrauch <span class="cf">if</span> g <span class="op">&gt;</span> <span class="dv">100</span>]</span>
-<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a>stromverbrauch_gt_100</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="47">
+<div id="60ae230a" class="cell" data-execution_count="46">
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a>stromverbrauch_gt_100 <span class="op">=</span> [g <span class="cf">for</span> g <span class="kw">in</span> stromverbrauch <span class="cf">if</span> g <span class="op">&gt;</span> <span class="dv">100</span>]</span>
+<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a>stromverbrauch_gt_100</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="46">
 <pre><code>[110, 120, 110, 120.22]</code></pre>
 </div>
 </div>
@@ -695,30 +690,30 @@ Der Stromverbrauch im Monat Dezember war 120.22 EUR.</code></pre>
 <section id="bedingte-ausführung-conditionals" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Bedingte Ausführung (Conditionals)</h1>
 <p>In vielen Fällen wollen wir eine Operation nur unter bestimmten Bedingungen ausführen. Dafür können wir <code>if</code>-Statements verwenden.</p>
-<div id="4b6f5cca" class="cell" data-execution_count="48">
-<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="dv">1</span> <span class="op">&gt;</span> <span class="dv">2</span>:</span>
-<span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"1 ist größer als 2"</span>)</span>
-<span id="cb90-3"><a href="#cb90-3" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb90-4"><a href="#cb90-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"1 ist nicht größer als 2"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="4b6f5cca" class="cell" data-execution_count="47">
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="dv">1</span> <span class="op">&gt;</span> <span class="dv">2</span>:</span>
+<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"1 ist größer als 2"</span>)</span>
+<span id="cb88-3"><a href="#cb88-3" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb88-4"><a href="#cb88-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"1 ist nicht größer als 2"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1 ist nicht größer als 2</code></pre>
 </div>
 </div>
-<div id="bed83391" class="cell" data-execution_count="49">
-<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="dv">1</span> <span class="op">&gt;</span> <span class="dv">2</span>:</span>
-<span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"1 ist größer als 2"</span>)</span>
-<span id="cb92-3"><a href="#cb92-3" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> <span class="dv">1</span> <span class="op">&lt;</span> <span class="dv">2</span>:</span>
-<span id="cb92-4"><a href="#cb92-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"1 ist kleiner als 2"</span>)</span>
-<span id="cb92-5"><a href="#cb92-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb92-6"><a href="#cb92-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"1 ist gleich 2"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="bed83391" class="cell" data-execution_count="48">
+<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="dv">1</span> <span class="op">&gt;</span> <span class="dv">2</span>:</span>
+<span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"1 ist größer als 2"</span>)</span>
+<span id="cb90-3"><a href="#cb90-3" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> <span class="dv">1</span> <span class="op">&lt;</span> <span class="dv">2</span>:</span>
+<span id="cb90-4"><a href="#cb90-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"1 ist kleiner als 2"</span>)</span>
+<span id="cb90-5"><a href="#cb90-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb90-6"><a href="#cb90-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"1 ist gleich 2"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1 ist kleiner als 2</code></pre>
 </div>
 </div>
-<div id="f9791a46" class="cell" data-execution_count="50">
-<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, g <span class="kw">in</span> <span class="bu">enumerate</span>(stromverbrauch):</span>
-<span id="cb94-2"><a href="#cb94-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> g <span class="op">&gt;</span> <span class="dv">100</span>:</span>
-<span id="cb94-3"><a href="#cb94-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Der Stromverbrauch im"</span>, monatsnamen[i], <span class="st">"war"</span>, g, <span class="st">"EUR und damit höher als 100 EUR."</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="f9791a46" class="cell" data-execution_count="49">
+<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, g <span class="kw">in</span> <span class="bu">enumerate</span>(stromverbrauch):</span>
+<span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> g <span class="op">&gt;</span> <span class="dv">100</span>:</span>
+<span id="cb92-3"><a href="#cb92-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Der Stromverbrauch im"</span>, monatsnamen[i], <span class="st">"war"</span>, g, <span class="st">"EUR und damit höher als 100 EUR."</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Der Stromverbrauch im Mai war 110 EUR und damit höher als 100 EUR.
 Der Stromverbrauch im Juli war 120 EUR und damit höher als 100 EUR.
@@ -726,12 +721,12 @@ Der Stromverbrauch im Oktober war 110 EUR und damit höher als 100 EUR.
 Der Stromverbrauch im Dezember war 120.22 EUR und damit höher als 100 EUR.</code></pre>
 </div>
 </div>
-<div id="48e4778f" class="cell" data-execution_count="51">
-<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, g <span class="kw">in</span> <span class="bu">enumerate</span>(stromverbrauch):</span>
-<span id="cb96-2"><a href="#cb96-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> g <span class="op">&gt;</span> <span class="dv">100</span>:</span>
-<span id="cb96-3"><a href="#cb96-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Der Stromverbrauch im"</span>, monatsnamen[i], <span class="st">"war"</span>, g, <span class="st">"EUR und damit höher als 100 EUR."</span>)</span>
-<span id="cb96-4"><a href="#cb96-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb96-5"><a href="#cb96-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Der Stromverbrauch im"</span>, monatsnamen[i], <span class="st">"war"</span>, g, <span class="st">"EUR und damit niedriger als 100 EUR."</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="48e4778f" class="cell" data-execution_count="50">
+<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, g <span class="kw">in</span> <span class="bu">enumerate</span>(stromverbrauch):</span>
+<span id="cb94-2"><a href="#cb94-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> g <span class="op">&gt;</span> <span class="dv">100</span>:</span>
+<span id="cb94-3"><a href="#cb94-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Der Stromverbrauch im"</span>, monatsnamen[i], <span class="st">"war"</span>, g, <span class="st">"EUR und damit höher als 100 EUR."</span>)</span>
+<span id="cb94-4"><a href="#cb94-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb94-5"><a href="#cb94-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Der Stromverbrauch im"</span>, monatsnamen[i], <span class="st">"war"</span>, g, <span class="st">"EUR und damit niedriger als 100 EUR."</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Der Stromverbrauch im Januar war 5 EUR und damit niedriger als 100 EUR.
 Der Stromverbrauch im Februar war 5 EUR und damit niedriger als 100 EUR.
@@ -751,45 +746,45 @@ Der Stromverbrauch im Dezember war 120.22 EUR und damit höher als 100 EUR.</cod
 <h2 data-number="3.1" class="anchored" data-anchor-id="dictionaries"><span class="header-section-number">3.1</span> Dictionaries</h2>
 <p>Es is sehr häufig, dass wir nicht nur einzelne Werte, sondern ganze Datensätze verwenden wollen. Dafür können wir Dictionaries verwenden. Dictionaries sind wie Listen, nur dass wir nicht mit Indizes, sondern mit Schlüsseln auf die Elemente zugreifen. Schlüssel können beliebige unveränderbare Datentypen sein (z.B. Strings, Zahlen, Tupel). Werte können beliebige Datentypen sein. Wir können Dictionaries mit geschweiften Klammern erstellen. Die Werte in einem Dictionary werden mit einem Doppelpunkt vom Schlüssel getrennt. Die einzelnen Elemente werden mit Kommas getrennt.</p>
 <p>Die Ordnung der Elemente ist nicht definiert.</p>
-<div id="7097fc414d80b65a" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T15:48:34.424030415Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T15:48:34.415470007Z&quot;}" data-execution_count="52">
-<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a>stromverbrauch_dict <span class="op">=</span> {</span>
-<span id="cb98-2"><a href="#cb98-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Januar"</span>: <span class="dv">100</span>,</span>
-<span id="cb98-3"><a href="#cb98-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Februar"</span>: <span class="dv">120</span>,</span>
-<span id="cb98-4"><a href="#cb98-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"März"</span>: <span class="dv">80</span>,</span>
-<span id="cb98-5"><a href="#cb98-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"April"</span>: <span class="dv">90</span>,</span>
-<span id="cb98-6"><a href="#cb98-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Mai"</span>: <span class="dv">110</span>,</span>
-<span id="cb98-7"><a href="#cb98-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Juni"</span>: <span class="dv">100</span>,</span>
-<span id="cb98-8"><a href="#cb98-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Juli"</span>: <span class="dv">120</span>,</span>
-<span id="cb98-9"><a href="#cb98-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"August"</span>: <span class="dv">80</span>,</span>
-<span id="cb98-10"><a href="#cb98-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"September"</span>: <span class="fl">90.12</span>,</span>
-<span id="cb98-11"><a href="#cb98-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Oktober"</span>: <span class="dv">110</span>,</span>
-<span id="cb98-12"><a href="#cb98-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"November"</span>: <span class="dv">100</span>,</span>
-<span id="cb98-13"><a href="#cb98-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Dezember"</span>: <span class="fl">120.22</span></span>
-<span id="cb98-14"><a href="#cb98-14" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="7097fc414d80b65a" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T15:48:34.424030415Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T15:48:34.415470007Z&quot;}" data-execution_count="51">
+<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a>stromverbrauch_dict <span class="op">=</span> {</span>
+<span id="cb96-2"><a href="#cb96-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Januar"</span>: <span class="dv">100</span>,</span>
+<span id="cb96-3"><a href="#cb96-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Februar"</span>: <span class="dv">120</span>,</span>
+<span id="cb96-4"><a href="#cb96-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"März"</span>: <span class="dv">80</span>,</span>
+<span id="cb96-5"><a href="#cb96-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"April"</span>: <span class="dv">90</span>,</span>
+<span id="cb96-6"><a href="#cb96-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Mai"</span>: <span class="dv">110</span>,</span>
+<span id="cb96-7"><a href="#cb96-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Juni"</span>: <span class="dv">100</span>,</span>
+<span id="cb96-8"><a href="#cb96-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Juli"</span>: <span class="dv">120</span>,</span>
+<span id="cb96-9"><a href="#cb96-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"August"</span>: <span class="dv">80</span>,</span>
+<span id="cb96-10"><a href="#cb96-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"September"</span>: <span class="fl">90.12</span>,</span>
+<span id="cb96-11"><a href="#cb96-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Oktober"</span>: <span class="dv">110</span>,</span>
+<span id="cb96-12"><a href="#cb96-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"November"</span>: <span class="dv">100</span>,</span>
+<span id="cb96-13"><a href="#cb96-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Dezember"</span>: <span class="fl">120.22</span></span>
+<span id="cb96-14"><a href="#cb96-14" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="71bd71b230479043" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T15:48:36.902682539Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T15:48:36.848636624Z&quot;}" data-execution_count="53">
-<div class="sourceCode cell-code" id="cb99"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a>stromverbrauch_dict[<span class="st">"Januar"</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="53">
+<div id="71bd71b230479043" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T15:48:36.902682539Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T15:48:36.848636624Z&quot;}" data-execution_count="52">
+<div class="sourceCode cell-code" id="cb97"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a>stromverbrauch_dict[<span class="st">"Januar"</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="52">
 <pre><code>100</code></pre>
 </div>
 </div>
-<div id="956457f38fc052c3" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T15:49:13.186752055Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T15:49:13.139386651Z&quot;}" data-execution_count="54">
-<div class="sourceCode cell-code" id="cb101"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="co"># stromverbrauch_dict["FDFFF"]</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="956457f38fc052c3" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T15:49:13.186752055Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T15:49:13.139386651Z&quot;}" data-execution_count="53">
+<div class="sourceCode cell-code" id="cb99"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="co"># stromverbrauch_dict["FDFFF"]</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Wir können auf</p>
-<div id="aceadff0e31fc93" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T15:49:57.982474954Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T15:49:57.966445829Z&quot;}" data-execution_count="55">
-<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a>stromverbrauch_dict.get(<span class="st">"Januar"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="55">
+<div id="aceadff0e31fc93" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T15:49:57.982474954Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T15:49:57.966445829Z&quot;}" data-execution_count="54">
+<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a>stromverbrauch_dict.get(<span class="st">"Januar"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="54">
 <pre><code>100</code></pre>
 </div>
 </div>
-<div id="13266bc864c0ec3" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T15:50:07.475056350Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T15:50:07.388153791Z&quot;}" data-execution_count="56">
-<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="co"># stromverbrauch_dict.get("FDFF") == None</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="13266bc864c0ec3" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T15:50:07.475056350Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T15:50:07.388153791Z&quot;}" data-execution_count="55">
+<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="co"># stromverbrauch_dict.get("FDFF") == None</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Wir können über die Schlüssel eines Dictionaries iterieren.</p>
-<div id="a8e97f6d9b59e7cd" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T15:50:32.769654293Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T15:50:32.728876254Z&quot;}" data-execution_count="57">
-<div class="sourceCode cell-code" id="cb105"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key <span class="kw">in</span> stromverbrauch_dict:</span>
-<span id="cb105-2"><a href="#cb105-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(key)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="a8e97f6d9b59e7cd" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T15:50:32.769654293Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T15:50:32.728876254Z&quot;}" data-execution_count="56">
+<div class="sourceCode cell-code" id="cb103"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key <span class="kw">in</span> stromverbrauch_dict:</span>
+<span id="cb103-2"><a href="#cb103-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(key)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Januar
 Februar
@@ -806,9 +801,9 @@ Dezember</code></pre>
 </div>
 </div>
 <p>Wir können auch über die Schlüssel und Werte eines Dictionaries iterieren.</p>
-<div id="b10d3cd398661a52" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T15:51:05.584479706Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T15:51:05.515882003Z&quot;}" data-execution_count="58">
-<div class="sourceCode cell-code" id="cb107"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key, value <span class="kw">in</span> stromverbrauch_dict.items():</span>
-<span id="cb107-2"><a href="#cb107-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Im </span><span class="sc">{</span>key<span class="sc">}</span><span class="ss"> war der Stromverbrauch </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss"> EUR."</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="b10d3cd398661a52" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T15:51:05.584479706Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T15:51:05.515882003Z&quot;}" data-execution_count="57">
+<div class="sourceCode cell-code" id="cb105"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key, value <span class="kw">in</span> stromverbrauch_dict.items():</span>
+<span id="cb105-2"><a href="#cb105-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Im </span><span class="sc">{</span>key<span class="sc">}</span><span class="ss"> war der Stromverbrauch </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss"> EUR."</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Im Januar war der Stromverbrauch 100 EUR.
 Im Februar war der Stromverbrauch 120 EUR.
@@ -829,10 +824,10 @@ Im Dezember war der Stromverbrauch 120.22 EUR.</code></pre>
 <section id="dictionaryabstraktionen-dictionary-comprehensions" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Dictionaryabstraktionen (Dictionary Comprehensions)</h1>
 <p>In vielen Fällen wollen wir ein Dictionary erstellen, indem wir eine Operation auf alle Elemente eines anderen Dictionaries anwenden. Dafür können wir Comprehensions verwenden. Last uns zum Beispiel ein Dictionary mit den Stromverbräuchen in BGN (Lev) erstellen.</p>
-<div id="cc9dd4f5b479ee6" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T15:51:54.663055454Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T15:51:54.653711872Z&quot;}" data-execution_count="59">
-<div class="sourceCode cell-code" id="cb109"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb109-1"><a href="#cb109-1" aria-hidden="true" tabindex="-1"></a>stromverbrauch_bgn_dict <span class="op">=</span> {key: <span class="fl">1.955</span> <span class="op">*</span> value <span class="cf">for</span> key, value <span class="kw">in</span> stromverbrauch_dict.items()}</span>
-<span id="cb109-2"><a href="#cb109-2" aria-hidden="true" tabindex="-1"></a>stromverbrauch_bgn_dict</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="59">
+<div id="cc9dd4f5b479ee6" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T15:51:54.663055454Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T15:51:54.653711872Z&quot;}" data-execution_count="58">
+<div class="sourceCode cell-code" id="cb107"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a>stromverbrauch_bgn_dict <span class="op">=</span> {key: <span class="fl">1.955</span> <span class="op">*</span> value <span class="cf">for</span> key, value <span class="kw">in</span> stromverbrauch_dict.items()}</span>
+<span id="cb107-2"><a href="#cb107-2" aria-hidden="true" tabindex="-1"></a>stromverbrauch_bgn_dict</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="58">
 <pre><code>{'Januar': 195.5,
  'Februar': 234.60000000000002,
  'März': 156.4,
@@ -848,9 +843,9 @@ Im Dezember war der Stromverbrauch 120.22 EUR.</code></pre>
 </div>
 </div>
 <p>Mit der Funktion <code>zip</code> können wir zwei Listen zu einem Dictionary zusammenfügen.</p>
-<div id="8e0016fdb68dc900" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T15:52:33.198034623Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T15:52:33.147232845Z&quot;}" data-execution_count="60">
-<div class="sourceCode cell-code" id="cb111"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb111-1"><a href="#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="bu">dict</span>(<span class="bu">zip</span>(monatsnamen, stromverbrauch))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="60">
+<div id="8e0016fdb68dc900" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-19T15:52:33.198034623Z&quot;,&quot;start_time&quot;:&quot;2024-01-19T15:52:33.147232845Z&quot;}" data-execution_count="59">
+<div class="sourceCode cell-code" id="cb109"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb109-1"><a href="#cb109-1" aria-hidden="true" tabindex="-1"></a><span class="bu">dict</span>(<span class="bu">zip</span>(monatsnamen, stromverbrauch))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="59">
 <pre><code>{'Januar': 5,
  'Februar': 5,
  'März': 8,
@@ -869,22 +864,22 @@ Im Dezember war der Stromverbrauch 120.22 EUR.</code></pre>
 <h3 data-number="4.0.1" class="anchored" data-anchor-id="funktionen"><span class="header-section-number">4.0.1</span> Funktionen</h3>
 <p>Sehr häufig möchten wir ein und dieselbe Operation mit verschiedenen Daten (Argumenten) ausführen, ohne dass wir den Code jedes Mal neu schreiben zu müssen. Dafür können wir Funktionen verwenden. In Python definieren wir eine Funktion mit dem Schlüsselwort <code>def</code> gefolgt von dem Namen der Funktion und den Argumenten in runden Klammern. Der Funktionskörper wird eingerückt. Mit dem Schlüsselwort <code>return</code> geben wir das Ergebnis der Funktion zurück.</p>
 <p>Als Beispiel nehmen wir eine Funktion, die einen numerischen Wert als Argument nimmt, es mit 1.955 multipliziert und das Ergebnis zurückgibt. Die Funktion nennen wir <code>eur_to_bgn</code>.</p>
-<div id="d9876d0a" class="cell" data-execution_count="61">
-<div class="sourceCode cell-code" id="cb113"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb113-1"><a href="#cb113-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> eur_to_bgn(x):</span>
-<span id="cb113-2"><a href="#cb113-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fl">1.955</span> <span class="op">*</span> x</span>
-<span id="cb113-3"><a href="#cb113-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb113-4"><a href="#cb113-4" aria-hidden="true" tabindex="-1"></a>eur_to_bgn(<span class="dv">100</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="61">
+<div id="d9876d0a" class="cell" data-execution_count="60">
+<div class="sourceCode cell-code" id="cb111"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb111-1"><a href="#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> eur_to_bgn(x):</span>
+<span id="cb111-2"><a href="#cb111-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fl">1.955</span> <span class="op">*</span> x</span>
+<span id="cb111-3"><a href="#cb111-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-4"><a href="#cb111-4" aria-hidden="true" tabindex="-1"></a>eur_to_bgn(<span class="dv">100</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="60">
 <pre><code>195.5</code></pre>
 </div>
 </div>
 <p>Funktionen können auch mehrere Argumente haben. Die Argumente werden durch Kommas getrennt.</p>
-<div id="1ed0eb71" class="cell" data-execution_count="62">
-<div class="sourceCode cell-code" id="cb115"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb115-1"><a href="#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> my_simple_sum(x, y):</span>
-<span id="cb115-2"><a href="#cb115-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span>
-<span id="cb115-3"><a href="#cb115-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb115-4"><a href="#cb115-4" aria-hidden="true" tabindex="-1"></a>my_simple_sum(<span class="dv">1</span>, <span class="dv">2</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="62">
+<div id="1ed0eb71" class="cell" data-execution_count="61">
+<div class="sourceCode cell-code" id="cb113"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb113-1"><a href="#cb113-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> my_simple_sum(x, y):</span>
+<span id="cb113-2"><a href="#cb113-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span>
+<span id="cb113-3"><a href="#cb113-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb113-4"><a href="#cb113-4" aria-hidden="true" tabindex="-1"></a>my_simple_sum(<span class="dv">1</span>, <span class="dv">2</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="61">
 <pre><code>3</code></pre>
 </div>
 </div>
@@ -895,34 +890,34 @@ Im Dezember war der Stromverbrauch 120.22 EUR.</code></pre>
 <h2 data-number="4.1" class="anchored" data-anchor-id="klassen-und-objekte"><span class="header-section-number">4.1</span> Klassen und Objekte</h2>
 <p>Bisher haben wir verschiedene Datentypen gesehen, drei verschiedene Datenstrukturen (Listen, Tupel und Dictionaries) und Funktionen gesehen. In Python gibt es auch Objekte, die Daten und Funktionen zusammenbinden. Funktionen, die zu einem Objekt gehören, nennen wir Methoden. Objekte werden aus Klassen erstellt. Klassen sind wie Baupläne für Objekte. In den Übungen werden wir keine Klassen selber definieren, allerdings werden wir Objekte wie DataFrame, Series, etc. verwenden, die aus Klassen erstellt wurden. Deswegen ist es wichtig, dass Sie wissen, wie Sie mit Objekten umgehen können.</p>
 <p>Zuerst definieren wir eine Klasse <code>Person</code>. Diese hat zwei Attribute: <code>name</code> und <code>age</code>. Die Klasse erlaubt uns, ein Objekt zu erstellen, das diese beiden Attribute hat. Wir können auch eine Methode <code>say_hello</code> definieren, die uns erlaubt, “Hallo” und den Namen der Person auszugeben. Alle Methoden, wie z.B. <code>say_hello</code> erhalten das Argument <code>self</code>, das das Objekt selbst ist. Dadurch können wir über Methoden auf die Eigenschaften des Objekts zugreifen.</p>
-<div id="4a774b97" class="cell" data-execution_count="64">
-<div class="sourceCode cell-code" id="cb117"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb117-1"><a href="#cb117-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Person:</span>
-<span id="cb117-2"><a href="#cb117-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, age):</span>
-<span id="cb117-3"><a href="#cb117-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
-<span id="cb117-4"><a href="#cb117-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.age <span class="op">=</span> age</span>
-<span id="cb117-5"><a href="#cb117-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb117-6"><a href="#cb117-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> say_hello(<span class="va">self</span>):</span>
-<span id="cb117-7"><a href="#cb117-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Hi, my name is"</span>, <span class="va">self</span>.name, <span class="st">"and I am"</span>, <span class="va">self</span>.age, <span class="st">"years old."</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="4a774b97" class="cell" data-execution_count="63">
+<div class="sourceCode cell-code" id="cb115"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb115-1"><a href="#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Person:</span>
+<span id="cb115-2"><a href="#cb115-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, age):</span>
+<span id="cb115-3"><a href="#cb115-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb115-4"><a href="#cb115-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.age <span class="op">=</span> age</span>
+<span id="cb115-5"><a href="#cb115-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb115-6"><a href="#cb115-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> say_hello(<span class="va">self</span>):</span>
+<span id="cb115-7"><a href="#cb115-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Hi, my name is"</span>, <span class="va">self</span>.name, <span class="st">"and I am"</span>, <span class="va">self</span>.age, <span class="st">"years old."</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="0657506f" class="cell" data-execution_count="65">
-<div class="sourceCode cell-code" id="cb118"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb118-1"><a href="#cb118-1" aria-hidden="true" tabindex="-1"></a>ivan <span class="op">=</span> Person(<span class="st">"Ivan"</span>, <span class="dv">20</span>)</span>
-<span id="cb118-2"><a href="#cb118-2" aria-hidden="true" tabindex="-1"></a>betty <span class="op">=</span> Person(<span class="st">"Betty"</span>, <span class="dv">25</span>)</span>
-<span id="cb118-3"><a href="#cb118-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb118-4"><a href="#cb118-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ivan.name)</span>
-<span id="cb118-5"><a href="#cb118-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ivan.age)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="0657506f" class="cell" data-execution_count="64">
+<div class="sourceCode cell-code" id="cb116"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a>ivan <span class="op">=</span> Person(<span class="st">"Ivan"</span>, <span class="dv">20</span>)</span>
+<span id="cb116-2"><a href="#cb116-2" aria-hidden="true" tabindex="-1"></a>betty <span class="op">=</span> Person(<span class="st">"Betty"</span>, <span class="dv">25</span>)</span>
+<span id="cb116-3"><a href="#cb116-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb116-4"><a href="#cb116-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ivan.name)</span>
+<span id="cb116-5"><a href="#cb116-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ivan.age)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Ivan
 20</code></pre>
 </div>
 </div>
-<div id="dd716bc6" class="cell" data-execution_count="66">
-<div class="sourceCode cell-code" id="cb120"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb120-1"><a href="#cb120-1" aria-hidden="true" tabindex="-1"></a>ivan.say_hello()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="dd716bc6" class="cell" data-execution_count="65">
+<div class="sourceCode cell-code" id="cb118"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb118-1"><a href="#cb118-1" aria-hidden="true" tabindex="-1"></a>ivan.say_hello()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hi, my name is Ivan and I am 20 years old.</code></pre>
 </div>
 </div>
-<div id="8e766aa1" class="cell" data-execution_count="67">
-<div class="sourceCode cell-code" id="cb122"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb122-1"><a href="#cb122-1" aria-hidden="true" tabindex="-1"></a>betty.say_hello()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="8e766aa1" class="cell" data-execution_count="66">
+<div class="sourceCode cell-code" id="cb120"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb120-1"><a href="#cb120-1" aria-hidden="true" tabindex="-1"></a>betty.say_hello()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hi, my name is Betty and I am 25 years old.</code></pre>
 </div>
@@ -931,8 +926,8 @@ Im Dezember war der Stromverbrauch 120.22 EUR.</code></pre>
 <h3 data-number="4.1.1" class="anchored" data-anchor-id="lambdafunktionen"><span class="header-section-number">4.1.1</span> Lambdafunktionen</h3>
 <p>Manchmal möchten wir eine Funktion nur einmal verwenden. Dafür können wir Lambda Funktionen verwenden. Diese Funktionen haben keinen Namen. Wir können sie mit dem Schlüsselwort <code>lambda</code> erstellen. Die Argumente der Funktion werden durch ein Komma getrennt hinter dem Schlüsselwort <code>lambda</code> geschrieben. Der Rückgabewert der Funktion wird nach einem Doppelpunkt geschrieben.</p>
 <p>Zum Beispiel können wir eine Lambdafunktion verwenden, um den Stromverbrauch in BGN zu berechnen.</p>
-<div id="29a4a6d0" class="cell" data-execution_count="68">
-<div class="sourceCode cell-code" id="cb124"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb124-1"><a href="#cb124-1" aria-hidden="true" tabindex="-1"></a>stromverbrauch_bgn <span class="op">=</span> <span class="bu">map</span>(<span class="kw">lambda</span> x: x <span class="op">*</span> <span class="fl">1.955</span>, stromverbrauch)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="29a4a6d0" class="cell" data-execution_count="67">
+<div class="sourceCode cell-code" id="cb122"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb122-1"><a href="#cb122-1" aria-hidden="true" tabindex="-1"></a>stromverbrauch_bgn <span class="op">=</span> <span class="bu">map</span>(<span class="kw">lambda</span> x: x <span class="op">*</span> <span class="fl">1.955</span>, stromverbrauch)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
