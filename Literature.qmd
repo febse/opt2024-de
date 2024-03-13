@@ -1,5 +1,5 @@
 
-# Literatur {.unnumbered}
+# Emfohlene Literatur {.unnumbered}
 
 1) @DIETZ2019LineareAlgebraUnd (Deutsch): Kapitel 23 und 24
 2) @SCHWENKERT2015OperationsResearchKompakt (Deutsch): Teil 1

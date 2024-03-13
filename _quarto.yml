@@ -8,7 +8,7 @@ book:
   date: "4/02/2024"
   chapters:
     - index.qmd
-    - part: 01-Python/index.qmd
+    - part: "Einführung in Python"
       chapters:
         - 01-Python/01-01-Basics.ipynb
         - 01-Python/01-02-Basics-Ex.ipynb
