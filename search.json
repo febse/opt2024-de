@@ -246,6 +246,138 @@
     ]
   },
   {
+    "objectID": "03-Graphical-Method/01-Berlin-Airlift.html",
+    "href": "03-Graphical-Method/01-Berlin-Airlift.html",
+    "title": "6  Einführung",
+    "section": "",
+    "text": "6.1 Das Burrito Spiel\nhttps://www.gurobi.com/burrito-optimization-game/",
+    "crumbs": [
+      "Die graphische Methode",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "03-Graphical-Method/01-Berlin-Airlift.html#die-berliner-luftbrücke",
+    "href": "03-Graphical-Method/01-Berlin-Airlift.html#die-berliner-luftbrücke",
+    "title": "6  Einführung",
+    "section": "6.2 Die Berliner Luftbrücke",
+    "text": "6.2 Die Berliner Luftbrücke\nNach dem Ende des Zweiten Weltkriegs wurde Deutschland in vier Besatzungszonen aufgeteilt: Amerikanisch, Britisch, Französisch und Sowjetisch. Berlin wurde ebenfalls in vier Zonen aufgeteilt, aber der Zugang zu ihm erfolgte ausschließlich über das Gebiet der sowjetischen Besatzungszone.\n\n\n\nBesatzungszonen in Deutschland nach dem 2-ten Weltkrieg. Quelle: Wikipedia.\n\n\nAm 24-ten Juni 1948 blockierte die Sowjetunion den Zugang zu West-Berlin, was zu einer der bedeutendsten Konfrontationen des Kalten Krieges führte. Ohne Zugang über Land oder Wasser begannen die westlichen Alliierten, die Stadt von der Luft aus zu versorgen (Berliner Luftbrücke).\n\n\n\nLandung einer C-54 am Flughafen Tempelhof. Quelle: Wikipedia.",
+    "crumbs": [
+      "Die graphische Methode",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "03-Graphical-Method/01-Berlin-Airlift.html#problembeschreibung",
+    "href": "03-Graphical-Method/01-Berlin-Airlift.html#problembeschreibung",
+    "title": "6  Einführung",
+    "section": "6.3 Problembeschreibung",
+    "text": "6.3 Problembeschreibung\nDer Einfachheit halber nehmen wir an, dass die Lieferungen nach Berlin mit zwei Arten von Flugzeugen erfolgen: amerikanischen, die bis zu 30.000 Kubikfuß Fracht (\\approx 849 m^3) aufnehmen können, und britischen Flugzeugen mit einer Kapazität von bis zu 20.000 Kubikfuß (\\approx 566 m^3).\n\nAufgrund von Einschränkungen in der Infrastruktur können an einem Tag maximal 48 Flugzeuge (unabhängig von der Art) fliegen.\nFür jeden Flug eines amerikanischen Flugzeugs sind 16 Personen erforderlich, doppelt so viele wie für britische Flugzeuge. Insgesamt stehen 512 Personen pro Tag zur Verfügung.\nDie Kosten für Treibstoff und Wartung der Flugzeuge betragen 9000 Dollar pro Flug für amerikanische Flugzeuge und 5000 Dollar pro Flug für britische Flugzeuge. Aufgrund von Budgetbeschränkungen dürfen die Gesamtkosten 300.000 Dollar nicht überschreiten.\n\nWie viele Flugzeuge jeder Art sollten eingesetzt werden, um das Frachtvolumen zu maximieren?",
+    "crumbs": [
+      "Die graphische Methode",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "03-Graphical-Method/01-Berlin-Airlift.html#das-mathematische-modell",
+    "href": "03-Graphical-Method/01-Berlin-Airlift.html#das-mathematische-modell",
+    "title": "6  Einführung",
+    "section": "6.4 Das mathematische Modell",
+    "text": "6.4 Das mathematische Modell\n\n\n\n\n\n\nZielvariablen\n\n\n\n\n\n\n\\begin{align*}\n& x_1: \\text{ Anzahl amerikanischer Luftzeuge}\\\\\n& x_2: \\text{ Anzahl britischer Luftzeuge}\n\\end{align*}\n\n\n\n\n\n\n\n\n\n\nZielfunktion\n\n\n\n\n\nDas Frachtvolumen ist die Summe der Frachtvolumina der beiden Flugzeugtypen:\n\nz(x_1, x_2) = 3 x_1 + 2 x_2\n\n\n\n\n\n\n\n\n\n\nEinschränkungen\n\n\n\n\n\n\n\\begin{align*}\n& x_1 + x_2 \\leq 48 & \\text{ (Infrastruktur)} \\\\\n& 16 x_1 + 8 x_2 \\leq 512 & \\text{ (Personal)} \\\\\n& 9 x_1 + 5 x_2 \\leq 300 & \\text{ (Kosten)} \\\\\n& x_1  \\geq 0 &  \\\\\n& x_2 \\geq 0 &\n\\end{align*}\n\n\n\n\n\n\n\n\n\n\nDas ganze Modell\n\n\n\n\n\n\n\\begin{align*}\n& \\max z(x_1, x_2) = 3 x_1 + 2 x_2 \\\\\n& \\text{under den Bedingungen:} \\\\\n& x_1 + x_2 \\leq 48 \\\\\n& 16 x_1 + 8 x_2 \\leq 512 \\\\\n& 9 x_1 + 5 x_2 \\leq 300 \\\\\n& x_1  \\geq 0 \\\\\n& x_2 \\geq 0\n\\end{align*}\n\n\n\n\nBevor wir die Lösung des Problems diskutieren, lassen Sie uns die Aufgabe nur unter der ersten Beschränkung (Infrastruktur) betrachten.\n\n\\begin{align*}\n\\max 3 x_1 + 2 x_2 \\\\\nx_1 + x_2 \\leq 48 \\\\\nx_1 \\geq 0 \\\\\nx_2 \\geq 0\n\\end{align*}\n\nLösung:\n\n(x^*_1 = 48, x^*_2 = 0)",
+    "crumbs": [
+      "Die graphische Methode",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "03-Graphical-Method/01-Berlin-Airlift.html#zulässige-menge-feasible-set",
+    "href": "03-Graphical-Method/01-Berlin-Airlift.html#zulässige-menge-feasible-set",
+    "title": "6  Einführung",
+    "section": "6.5 Zulässige Menge (Feasible Set)",
+    "text": "6.5 Zulässige Menge (Feasible Set)\nZuerst werden wir die zulässige Menge graphisch darstellen, indem wir die Geraden zu jeder der fünf Beschränkungen (einschließlich der Nichtnegativitätsbeschränkungen) zeichnen. Um die Geraden zeichnen zu können, benötigen wir jeweils zwei Punkte. Die einfachste Möglichkeit, die Schnittpunkte mit den beiden Achsen (x_1 und x_2) zu finden.\nDie Gerade zur ersten Beschränkung (Infrastruktur) ist:\n\nx_1 + x_2 = 48\n\nSchnittpunkte mit den beiden Achsen:\n\nFür x_1 = 0 ist x_2 = 48\nFür x_2 = 0 ist x_1 + 0 = 48\n\nDie Gerade zur zweiten Beschränkung (Personal) ist:\n\n16 x_1 + 8 x_2 = 512\n\nDie Schnittpunkte mit den beiden Achsen:\n\nFür x_1 = 0: 16 \\cdot 0 + 8x_2 = 512 \\implies x_2 = 512 / 8 = 64\nFür x_2 = 0: 16 x_1 +8 \\cdot 0 = 512 \\implies x_1 = 512 / 16 = 32\n\nAuf die gleiche Weise können wir die Schnittpunkte für die dritte Beschränkung (Kosten) finden: (0, 300 / 5) и (300 / 9, 0).\n\nimport matplotlib.pyplot as plt\n\nfig, ax = plt.subplots()\n\nax.plot([0, 48], [48, 0], label=r'$x_1 + x_2 = 48 \\quad Infrastruktur$')\nax.plot([0, 32], [64, 0], label=r'$16 x_1 + 8 x_2 = 512\\quad Personal$')\nax.plot([0, 33.33], [60, 0], label=r'$9 x_1 + 5 x_2 = 300 \\quad Budget$')\n\nax.legend(loc=0)\n\n/tmp/ipykernel_263192/1610056778.py:10: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  fig.show()\n\n\n\n\n\n\n\n\n\n\nimport polytope as pc\nimport numpy as np\n\nA = np.array([[1, 1], [16, 8], [9, 5], [-1, 0], [0, -1]])\nb = np.array([48, 512, 300, 0, 0])\n\nP = pc.Polytope(A, b)\nP_extr = pc.extreme(P)\n\nP_extr\n\n`polytope` failed to import `cvxopt.glpk`.\nwill use `scipy.optimize.linprog`\n\n\narray([[32., -0.],\n       [20., 24.],\n       [15., 33.],\n       [-0., 48.],\n       [-0., -0.]])\n\n\nDie zulässige Menge ist durch die Eckpunkte (0, 0), (32, 0), (20, 24), (15, 33), (0, 48) beschrieben.\n\nfrom matplotlib import pyplot as plt\n\nplt.plot(P_extr[:, 0], P_extr[:, 1], '-o')\n\nfor i, p in enumerate(P_extr):\n    plt.text(p[0], p[1], f\"({p[0]:0.1f}, {p[1]:0.1f})\")\n\n\n\n\n\n\n\n\n\ndef z(x1, x2):\n    return 3 * x1 + 2 * x2\n\n# (0, 0)\nprint(\"z(0, 0) = \", z(0, 0))\n\n# (32, 0)\nprint(\"z(32, 0) = \", z(32, 0))\n\n# (20, 24)\nprint(\"z(20, 24) = \", z(20, 24))\n\n# (15, 33)\nprint(\"z(15, 33) = \", z(15, 33))\n\n# (0, 48)\nprint(\"z(0, 48) = \", z(0, 48))\n\nz(0, 0) =  0\nz(32, 0) =  96\nz(20, 24) =  108\nz(15, 33) =  111\nz(0, 48) =  96\n\n\nDie optimale Kombination von amerikanischen und britischen Flugzeugen ist (x^*_1 = 15, x^*_2 = 33). Dies ist die größtmögliche Ladung, die die Flugzeuge unter den gegebenen Beschränkungen transportieren können. Diese Ladung beträgt 30000 \\cdot 15 + 20000 \\cdot 33 = 1 110 000 Kubikfuß, die mit 15 amerikanischen und 33 britischen Flugzeugen transportiert werden.",
+    "crumbs": [
+      "Die graphische Methode",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "03-Graphical-Method/01-Berlin-Airlift.html#das-problem-mit-diesem-ansatz",
+    "href": "03-Graphical-Method/01-Berlin-Airlift.html#das-problem-mit-diesem-ansatz",
+    "title": "6  Einführung",
+    "section": "6.6 Das Problem mit diesem Ansatz",
+    "text": "6.6 Das Problem mit diesem Ansatz\nNun haben wir die Optimierungsaufgabe gelöst, indem wir die Eckpunkte der zulässigen Menge berechnet und die Zielfunktion in jedem von ihnen berechnet haben. Die Lösung des Maximierungsproblems war der Punkt mit dem höchsten Wert der Zielfunktion.\nLeider ist dieser Ansatz für praktische Zwecke unbrauchbar, denn die Anzahl der Eckpunkte der zulässigen Menge wächst mit der Anzahl der Beschränkungen und Variablen. Eine obere Schranke für die Anzahl der Eckpunkte der zulässigen Menge ist durch den binomischen Koeffizienten gegeben:\n\n\\binom{n}{k} = \\frac{n!}{k!(n-k)!}\n\ndabei ist n die Anzahl der Variablen und k die Anzahl der Beschränkungen. Wir können die obere Schranke für die Anzahl der Eckpunkte der zulässigen Menge für verschiedene Kombinationen von n und k berechnen:\n\nfrom scipy.special import comb\n\nprint(\"n = 20, k = 15, Maximale Anzahl von Eckpunkten = \", comb(20, 15))\nprint(\"n = 40, k = 25, Maximale Anzahl von Eckpunkten = \", comb(40, 25))\nprint(\"n = 50, k = 25, Maximale Anzahl von Eckpunkten = \", comb(50, 25))\n\nn = 20, k = 15, Максимален брой върхове =  15504.0\nn = 40, k = 25, Максимален брой върхове =  40225345056.0\nn = 50, k = 25, Максимален брой върхове =  126410606437752.05\n\n\nSelbst mit einem relativ kleinen Problem, das 80 Variablen und 40 Beschränkungen hat, ist die Anzahl der Eckpunkte der zulässigen Menge astronomisch. Nehmen wir an, daß ein Rechnerkern 1 Milliarde Eckpunkte pro Sekunde berechnen kann. Dann würde es ungefähr 1.8 Millionen Jahre dauern, um alle Operationen durchzuführen.\n\ncomb_n = comb(80, 45)\nprint(round(comb_n / (1e9 * 60 * 60 * 24 * 365), 1), \"Jahre\")\n\n1836016.6 години",
+    "crumbs": [
+      "Die graphische Methode",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "03-Graphical-Method/01-Berlin-Airlift.html#lösung-mit-excel",
+    "href": "03-Graphical-Method/01-Berlin-Airlift.html#lösung-mit-excel",
+    "title": "6  Einführung",
+    "section": "6.7 Lösung mit Excel",
+    "text": "6.7 Lösung mit Excel\nРешение на модела в Excel",
+    "crumbs": [
+      "Die graphische Methode",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "03-Graphical-Method/01-Berlin-Airlift.html#lösung-mit-gurobi-und-python",
+    "href": "03-Graphical-Method/01-Berlin-Airlift.html#lösung-mit-gurobi-und-python",
+    "title": "6  Einführung",
+    "section": "6.8 Lösung mit gurobi und Python",
+    "text": "6.8 Lösung mit gurobi und Python\n\nimport gurobipy as gp\nfrom gurobipy import GRB\nimport pandas as pd\n\n# New model instance\n\nm = gp.Model(\"Berlin Airlift\")\n\nx1 = m.addVar(vtype=GRB.INTEGER, lb = 0, name=\"American\")\nx2 = m.addVar(vtype=GRB.INTEGER, lb = 0, name=\"British\")\n\n# Objective function\n\nm.setObjective(3 * x1 + 2 * x2, GRB.MAXIMIZE)\n\n# Constraints\n\nm.addConstr(x1 + x2 &lt;= 48, \"Infrastructure\")\nm.addConstr(16 * x1 + 8 * x2 &lt;= 512, \"Staff\")\nm.addConstr(9 * x1 + 5 * x2 &lt;= 300, \"Budget\")\n\n# Non-negativity constraints are added automatically in addVar\n\n# Solving the model\nm.optimize()\n\n# Отпечатване на резултата\nfor v in m.getVars():\n    print(f\"{v.varName}: {v.x}\")\n\nSet parameter WLSAccessID\nSet parameter WLSSecret\nSet parameter LicenseID to value 943475\nAcademic license 943475 - for non-commercial use only - registered to am___@feb.uni-sofia.bg\nGurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - \"Ubuntu 20.04.6 LTS\")\n\nCPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]\nThread count: 12 physical cores, 12 logical processors, using up to 12 threads\n\nAcademic license 943475 - for non-commercial use only - registered to am___@feb.uni-sofia.bg\nOptimize a model with 3 rows, 2 columns and 6 nonzeros\nModel fingerprint: 0xbbfbd94b\nVariable types: 0 continuous, 2 integer (0 binary)\nCoefficient statistics:\n  Matrix range     [1e+00, 2e+01]\n  Objective range  [2e+00, 3e+00]\n  Bounds range     [0e+00, 0e+00]\n  RHS range        [5e+01, 5e+02]\nFound heuristic solution: objective 96.0000000\nPresolve time: 0.00s\nPresolved: 3 rows, 2 columns, 6 nonzeros\nVariable types: 0 continuous, 2 integer (0 binary)\n\nRoot relaxation: objective 1.110000e+02, 3 iterations, 0.00 seconds (0.00 work units)\n\n    Nodes    |    Current Node    |     Objective Bounds      |     Work\n Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time\n\n*    0     0               0     111.0000000  111.00000  0.00%     -    0s\n\nExplored 1 nodes (3 simplex iterations) in 0.01 seconds (0.00 work units)\nThread count was 12 (of 12 available processors)\n\nSolution count 2: 111 96 \n\nOptimal solution found (tolerance 1.00e-04)\nBest objective 1.110000000000e+02, best bound 1.110000000000e+02, gap 0.0000%\nAmerican: 15.0\nBritish: 33.0\n\n\n\ntmp = {v.varName: [v.x] for v in m.getVars()}\nres_df = pd.DataFrame(tmp)\nres_df.head()\n\n\n\n\n\n\n\n\n\nAmerican\nBritish\n\n\n\n\n0\n15.0\n33.0",
+    "crumbs": [
+      "Die graphische Methode",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "03-Graphical-Method/02-Blending.html",
+    "href": "03-Graphical-Method/02-Blending.html",
+    "title": "7  Kaffeemischung",
+    "section": "",
+    "text": "7.1 Zulässige Menge\nDer erste Schritt ist die (grafische) Bestimmung der zulässigen Menge. Dazu zeichnen wir die Geraden zu den Ungleichungen bilden.\n\\begin{align}\n0.5 x_1 + 0.25 x_2  & = 120 \\\\\n0.5 x_1 + 0.75 x_2  & = 160 \\\\\n0 \\cdot x_1 + x_2   & = 150 \\\\\nx_1  & = 0 \\\\\nx_2  & = 0\n\\end{align}\n\\tag{7.1}\nWir zeichnen all die Geraden, die zu den Gleichungen gehören. Wenn man das per Hand macht, ist es am leichtesten die Schnittpunkte jeder Gerade mit den Koordinatenachsen zu bestimmen.\nDie Geraden sind in ?fig-coffe-restr dargestellt.\nCode\nimport matplotlib.pyplot as plt\nimport numpy as np\nfrom IPython.display import display\n\nfig, ax = plt.subplots()\n\nax.plot([0, 240], [480, 0], label=r\"$0.5 x_1 + 0.25 x_2 = 120$ (Arabica)\")\nax.plot([0, 320], [213.33, 0], label=r\"$0.5 x_1 + 0.75 x_2 = 160$ (Robusta)\")\nax.plot([0, 400], [150, 150], label=r\"$x_2 = 150$ (Nachfrage Deluxe)\")\n\nax.set_xlim((0, 400))\nax.set_ylim((0, 500))\nax.set_xlabel(r'$x_1$ (Super, kg)')\nax.set_ylabel(r'$x_2$ (Deluxe, kg)')\nax.legend(loc=0)\n\n\n\n\n\n\n\n\nAbbildung 7.1: Прави на трите ограничения\nDie zulässige Menge ist durch die Schnittpunkte der Geraden definiert. In Abbildung 7.1 ist das Polygon definiert durch\nUm die Koordinaten des Schnittpunkts der Geraden zu “Super” und “Deluxe” zu finden, müssen wir das System der beiden Gleichungen lösen\n\\begin{align}\n0.5 x_1 + 0.25 x_2 & = 120 \\text{ (1: арабика)} \\\\\n0.5 x_1 + 0.75 x_2 & = 160 \\text{ (2: робуста)}\n\\end{align}\nZum Beispiel können wir die erste Gleichung von der zweiten subtrahieren, um x_1 zu eliminieren:\n\\begin{align}\n(0.75 - 0.25) x_2 & = 160 - 120 \\\\\n0.5 x_2 & = 40 \\\\\nx_2 & = 80\n\\end{align}\nEinsetzen mit x_2 = 80 in die erste Gleichung ergibt\n\\begin{align}\n0.5 x_1 + 0.25 \\cdot 80 & = 120\\\\\nx_1 & = 200.\n\\end{align}\nAm Ende erhalten wir (200, 80) als Lösung des Gleichungssystems und daher die Koordinaten des Schnittpunkts der Geraden zu “Super” und “Deluxe”.\nUm den Schnittpunkt der Geraden zu “Robusta” und “Nachfrage Deluxe” zu finden, müssen wir das System der beiden Gleichungen lösen\n\\begin{align}\n0.5x_1 + 0.75 x_2 & = & 160 \\text{ робуста}\\\\\n0 x_1 + x_2 & = & 150 \\text{ търсене на Делукс}\n\\end{align}\nAls Lösung erhalten wir (95, 150).\nAuf diese Art und weise haben wir alle Eckpunkte der zulässigen Menge bestimmt: (0, 0), (240, 0), (200, 80), (95, 150), (0, 150) (Abbildung 7.2).\nCode\nvertices = [\n    [0, 0],\n    [0, 150],\n    [95, 150],\n    [200, 80],    \n    [240, 0]\n]\n\nvertices_x = [v[0] for v in vertices]\nvertices_y = [v[1] for v in vertices]\n\nfor v in vertices:\n    ax.annotate(\n        f\"({v[0]}, {v[1]})\",\n        (v[0], v[1]),\n        textcoords=\"offset points\",\n        xytext=(0, 5)\n    )\n\nax.fill(vertices_x, vertices_y, color='grey', alpha=0.3)\n\ndisplay(fig)\n\n\n\n\n\n\n\n\nAbbildung 7.2: Zulässige Menge für die Kaffeeproduktion",
+    "crumbs": [
+      "Die graphische Methode",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Kaffeemischung</span>"
+    ]
+  },
+  {
+    "objectID": "03-Graphical-Method/02-Blending.html#zulässige-menge",
+    "href": "03-Graphical-Method/02-Blending.html#zulässige-menge",
+    "title": "7  Kaffeemischung",
+    "section": "",
+    "text": "0.5 x_1 + 0.25 x_2 = 120. Die Gerade schneidet die x_1-Achse bei x_1 = 120 / 0.5 = 240 und die x_2-Achse bei x_2 = 120 / 0.25 = 480.\n0.5 x_1 + 0.75 x_2 = 160. Die Gerade schneidet die x_1-Achse bei x_1 = 160 / 0.5 = 320 und die x_2-Achse bei x_2 = 160 / 0.75 = 213.33.\nx_2 = 150. Die Gerade schneidet die x_2-Achse bei x_2 = 150 und ist parallel zur x_1-Achse.\nx_1 = 0. Diese Gerade stimmt mit der x_2-Achse überein.\nx_2 = 0. Diese Gerade stimmt mit der x_1-Achse überein.\n\n\n\n\n\nDer Schnittpunkt der beiden Nichtnegativitätsbedingungen: (0, 0)\nDer Schnittpunkt der Nichtnegativitätsbedingung von Super (der x_1-Achse) und Arabica: (240, 0).\nDer Schnittpunkt der Geraden zu Arabica und Robusta: (200, 80).\nDer Schnittpunkt der Geraden zu Robusta und Nachfrage Deluxe: (95, 150).\nDer Schnittpunkt der Geraden zu Nachfrage Deluxe und der Nichtnegativitätsbedingung von Deluxe (der x_1-Achse): (0, 150).",
+    "crumbs": [
+      "Die graphische Methode",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Kaffeemischung</span>"
+    ]
+  },
+  {
+    "objectID": "03-Graphical-Method/02-Blending.html#die-zielfunktion",
+    "href": "03-Graphical-Method/02-Blending.html#die-zielfunktion",
+    "title": "7  Kaffeemischung",
+    "section": "7.2 Die Zielfunktion",
+    "text": "7.2 Die Zielfunktion\nUm den optimalen Plan zu bestimmen, werden wir die Zielfunktion in die Grafik einzeichnen. Die Zielfunktion z(x_1, x_2) = 40 x_1 + 50 x_2 ist in Abbildung 7.3 dargestellt. Die Zielfunktion ist eine Ebene im dreidimensionalen Raum.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom mpl_toolkits.mplot3d import Axes3D\nfrom mpl_toolkits.mplot3d.art3d import Poly3DCollection\n\n# Create the x, y, and z coordinate arrays\nx, y = np.meshgrid(np.linspace(0, 250, 20), np.linspace(0, 250, 20))\nz = 40 * x + 30 * y\n\n# Create a figure\nfig = plt.figure()\n\nax = fig.add_subplot(111, projection='3d')\n\n# Add a 3D subplot\nax.plot_surface(x, y, z, rstride=5, cstride=5, edgecolor='k', alpha=0.5)\nax.view_init(elev=25, azim=-120)\nax.set_xlabel(r\"$x_1$ (Super, kg)\")\nax.set_ylabel(r\"$x_2$ (Deluxe, kg)\")\nax.set_zlabel(r\"$z$ (Gewinn, kg)\")\n\nvertices_3d = [v + [0] for v in vertices]\n\n# Create a Poly3DCollection\npoly = Poly3DCollection([vertices_3d], alpha=.25, linewidths=1, edgecolors='r', facecolors='c')\n\n# Add the Poly3DCollection to the axes\nax.add_collection3d(poly)\n\n\n\n\n\n\n\n\nAbbildung 7.3: Целева функция\n\n\n\n\n\nDiese Visualisierung ist hilfreich, um zu verstehen, wie die Zielfunktion aussieht, aber sie hilft uns nicht, das Maximum innerhalb der zulässigen Menge zu finden. Daher werden wir die Projektion der Zielfunktion auf die Ebene der zulässigen Menge verwenden.\nFixieren wir ein paar (beliebige) Niveaus des Gewinns und zeichnen wir die Geraden, die sie repräsentieren. Nehmen wir an, dass diese Niveaus 5000, 10000 und 12000 sind. Um diese Geraden zu zeichnen, müssen wir die Schnittpunkte dieser Geraden mit den beiden Achsen finden.\nAlle Kombinationen von Super und Deluxe, die genau 5000 Gewinn erzielen, liegen auf einer Geraden, die durch die Gleichung\n\n40x_1 + 50x_2 = 5000\n\ngegeben sind.\nAlle Kombinationen von Super und Deluxe, die genau 10000 Gewinn erzielen, liegen auf einer Geraden, die durch die Gleichung\n\n40x_1 + 50x_2 = 10000\n\ngegeben sind.\nBeide Geraden verlaufen parallel zueinander, da der Anstieg der Geraden von den Koeffizienten von x_1 und x_2 in den Gleichungen abhängt und nicht von den Konstanten (5000 in der ersten Gleichung und 10000 in der zweiten).",
+    "crumbs": [
+      "Die graphische Methode",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Kaffeemischung</span>"
+    ]
+  },
+  {
+    "objectID": "03-Graphical-Method/02-Blending.html#der-normalvektor",
+    "href": "03-Graphical-Method/02-Blending.html#der-normalvektor",
+    "title": "7  Kaffeemischung",
+    "section": "7.3 Der Normalvektor",
+    "text": "7.3 Der Normalvektor\nAlle Geraden bei unterschiedlichem Gewinn haben denselben Normalvektor. Der Normalvektor ist der Vektor, der senkrecht einer Gerade steht. Der Normalvektor ist der Koeffizientenvektor der Variablen in der Zielfunktion. In unserem Fall ist der Normalvektor (40, 50).\nUm das zu begründen, betrachten wir die Gerade\n\n40x_1 + 50x_2 = 5000\n\nDiese Gerade schneidet die x_1-Achse bei x_1 = 5000 / 40 = 125 und die x_2-Achse bei x_2 = 5000 / 50 = 100. Aus diesen Zwei Punkten können wir die Parameterdarstellung der Geraden ableiten (für t \\in \\mathbb{R}).\nEine Gerade ist durch einen Punkt und eine Richtung definiert. Der Punkt ist der Schnittpunkt der Geraden mit der x_2-Achse, also (0, 100). Die Richtung ist der Vektor, der den Schnittpunkt der Geraden mit der x_1-Achse von dem Schnittpunkt der Geraden mit der x_2-Achse subtrahiert.\n\n\\begin{pmatrix}\nx_1 \\\\\nx_2\n\\end{pmatrix}\n= \\begin{pmatrix}\n0 \\\\\n100\n\\end{pmatrix}\n+ t \\left[\n\\begin{pmatrix}\n125 \\\\\n0\n\\end{pmatrix}\n-\n\\begin{pmatrix}\n0 \\\\\n100\n\\end{pmatrix}\n\\right]\n\nWir berechnen die Differenz und erhalten\n\n\\begin{pmatrix}\nx_1 \\\\\nx_2\n\\end{pmatrix}\n=\n\\begin{pmatrix}\n0 \\\\\n100\n\\end{pmatrix}\n+ t\n\\begin{pmatrix}\n125 \\\\\n-100\n\\end{pmatrix}\n\nZwei Vektoren sind orthogonal, wenn ihr Skalarprodukt 0 ist. Das Skalarprodukt zweier Vektoren ist die Summe der Produkte ihrer entsprechenden Koordinaten. So erhalten wir\n\n\\begin{pmatrix}\n40 \\\\\n50\n\\end{pmatrix}\n\\cdot\n\\begin{pmatrix}\n125 \\\\\n-100\n\\end{pmatrix}\n= 40 \\cdot 125 + 50 \\cdot (-100) = 0\n\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nA = np.array([0, 100])\nB = np.array([125, 0])\nC = B - A\n\n# Create a figure\nfig, ax = plt.subplots()\n\n# Plot the vectors\nax.quiver(0, 0, A[0], A[1], angles='xy', scale_units='xy', scale=1, color='r', label='A')\nax.quiver(0, 0, B[0], B[1], angles='xy', scale_units='xy', scale=1, color='b', label='B')\nax.quiver(A[0], A[1], C[0], C[1], angles='xy', scale_units='xy', scale=1, color='g', label='B-A')\n\n# Set the limits of the plot\nax.set_xlim([-2, 125])\nax.set_ylim([-2, 125])\n\n# Add a legend\nax.legend(loc=0)\n\n\nLasst und die Geraden für 5000, 10000 und 12000 Gewinn zeichnen. Abbildung 7.4 zeigt die zulässige Menge und die Geraden für 3000, 50000 und 12000 Gewinn.\n\n\nCode\nfig, ax = plt.subplots()\n\nax.fill(vertices_x, vertices_y, color='grey', alpha=0.3)\nfor v in vertices:\n    ax.annotate(\n        f\"({v[0]}, {v[1]})\",\n        (v[0], v[1]),\n        textcoords=\"offset points\",\n        xytext=(0, 5)\n    )\n\nax.plot([0, 3000 / 40], [3000 / 50, 0], label=r'$40 x_1 + 50 x_2 = 3000$')\nax.plot([0, 5000 / 40], [5000 / 50, 0], label=r'$40 x_1 + 50 x_2 = 5000$')\nax.plot([0, 12000 / 40], [12000 / 50, 0], label=r'$40 x_1 + 50 x_2 = 12000$')\n\nax.quiver(0, 0, 40, 50, angles='xy', scale_units='xy', scale=1, color='grey', label='Нормален вектор')\n\nax.set_xlim((0, 260))\nax.set_ylim((0, 260))\n\nax.legend(loc=0)\n\n\n\n\n\n\n\n\nAbbildung 7.4: Оптимален план\n\n\n\n\n\nDie Gerade, die die zulässige Menge gerade noch berührt ist diejenige, die den maximalen Gewinn darstellt. Der Schnittpunkt der Geraden für 12000 Gewinn mit der zulässigen Menge ist der optimale Plan. In dieser Aufgabe ist das der Punkt (x^*_1 = 200, x^*_2 = 80) bei dem das Café 200 kg Super und 80 kg Deluxe kaufen sollte, um den maximalen Gewinn von 12000 € zu erzielen.\nIn dem optimalen Plan werden die ersten zwei Ressourcen vollständig ausgeschöpft, während die dritte Ressource nicht ausgeschöpft wird. Wie viel von der Nachfrage nach Deluxe bleibt unerfüllt?\n\n0.5 \\cdot 200 + 0.25 \\cdot 80 = 120 \\text{ kg Arabica}\n\nund\n\n0.5 \\cdot 200 + 0.75 \\cdot 80 = 160 \\text{ kg Robusta}.",
+    "crumbs": [
+      "Die graphische Methode",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Kaffeemischung</span>"
+    ]
+  },
+  {
     "objectID": "Literature.html",
     "href": "Literature.html",
     "title": "Emfohlene Literatur",
