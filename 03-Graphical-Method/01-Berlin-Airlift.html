@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Einführung in die mathematische Optimierung - 6&nbsp; Einführung</title>
+<title>Einführung in die mathematische Optimierung - 6&nbsp; Die Berliner Luftbrücke</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -161,7 +161,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../03-Graphical-Method/01-Berlin-Airlift.html">Die graphische Methode</a></li><li class="breadcrumb-item"><a href="../03-Graphical-Method/01-Berlin-Airlift.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Einführung</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../03-Graphical-Method/01-Berlin-Airlift.html">Die graphische Methode</a></li><li class="breadcrumb-item"><a href="../03-Graphical-Method/01-Berlin-Airlift.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Die Berliner Luftbrücke</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -245,7 +245,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../03-Graphical-Method/01-Berlin-Airlift.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Die Berliner Luftbrücke</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -278,23 +278,22 @@ window.Quarto = {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#das-burrito-spiel" id="toc-das-burrito-spiel" class="nav-link active" data-scroll-target="#das-burrito-spiel"><span class="header-section-number">6.1</span> Das Burrito Spiel</a></li>
-  <li><a href="#die-berliner-luftbrücke" id="toc-die-berliner-luftbrücke" class="nav-link" data-scroll-target="#die-berliner-luftbrücke"><span class="header-section-number">6.2</span> Die Berliner Luftbrücke</a></li>
-  <li><a href="#problembeschreibung" id="toc-problembeschreibung" class="nav-link" data-scroll-target="#problembeschreibung"><span class="header-section-number">6.3</span> Problembeschreibung</a></li>
-  <li><a href="#das-mathematische-modell" id="toc-das-mathematische-modell" class="nav-link" data-scroll-target="#das-mathematische-modell"><span class="header-section-number">6.4</span> Das mathematische Modell</a></li>
-  <li><a href="#zulässige-menge-feasible-set" id="toc-zulässige-menge-feasible-set" class="nav-link" data-scroll-target="#zulässige-menge-feasible-set"><span class="header-section-number">6.5</span> Zulässige Menge (Feasible Set)</a></li>
-  <li><a href="#das-problem-mit-diesem-ansatz" id="toc-das-problem-mit-diesem-ansatz" class="nav-link" data-scroll-target="#das-problem-mit-diesem-ansatz"><span class="header-section-number">6.6</span> Das Problem mit diesem Ansatz</a></li>
-  <li><a href="#lösung-mit-excel" id="toc-lösung-mit-excel" class="nav-link" data-scroll-target="#lösung-mit-excel"><span class="header-section-number">6.7</span> Lösung mit Excel</a></li>
-  <li><a href="#lösung-mit-gurobi-und-python" id="toc-lösung-mit-gurobi-und-python" class="nav-link" data-scroll-target="#lösung-mit-gurobi-und-python"><span class="header-section-number">6.8</span> Lösung mit gurobi und Python</a></li>
+  <li><a href="#bevor-wir-anfangen" id="toc-bevor-wir-anfangen" class="nav-link active" data-scroll-target="#bevor-wir-anfangen"><span class="header-section-number">6.1</span> Bevor wir anfangen</a></li>
+  <li><a href="#problembeschreibung" id="toc-problembeschreibung" class="nav-link" data-scroll-target="#problembeschreibung"><span class="header-section-number">6.2</span> Problembeschreibung</a></li>
+  <li><a href="#das-mathematische-modell" id="toc-das-mathematische-modell" class="nav-link" data-scroll-target="#das-mathematische-modell"><span class="header-section-number">6.3</span> Das mathematische Modell</a></li>
+  <li><a href="#die-zulässige-menge-feasible-set" id="toc-die-zulässige-menge-feasible-set" class="nav-link" data-scroll-target="#die-zulässige-menge-feasible-set"><span class="header-section-number">6.4</span> Die zulässige Menge (Feasible Set)</a></li>
+  <li><a href="#das-problem-mit-diesem-ansatz" id="toc-das-problem-mit-diesem-ansatz" class="nav-link" data-scroll-target="#das-problem-mit-diesem-ansatz"><span class="header-section-number">6.5</span> Das Problem mit diesem Ansatz</a></li>
+  <li><a href="#lösung-mit-excel" id="toc-lösung-mit-excel" class="nav-link" data-scroll-target="#lösung-mit-excel"><span class="header-section-number">6.6</span> Lösung mit Excel</a></li>
+  <li><a href="#lösung-mit-gurobi-und-python" id="toc-lösung-mit-gurobi-und-python" class="nav-link" data-scroll-target="#lösung-mit-gurobi-und-python"><span class="header-section-number">6.7</span> Lösung mit gurobi und Python</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../03-Graphical-Method/01-Berlin-Airlift.html">Die graphische Methode</a></li><li class="breadcrumb-item"><a href="../03-Graphical-Method/01-Berlin-Airlift.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Einführung</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../03-Graphical-Method/01-Berlin-Airlift.html">Die graphische Methode</a></li><li class="breadcrumb-item"><a href="../03-Graphical-Method/01-Berlin-Airlift.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Die Berliner Luftbrücke</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Einführung</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Die Berliner Luftbrücke</span></h1>
 </div>
 
 
@@ -311,12 +310,9 @@ window.Quarto = {
 </header>
 
 
-<section id="das-burrito-spiel" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="das-burrito-spiel"><span class="header-section-number">6.1</span> Das Burrito Spiel</h2>
+<section id="bevor-wir-anfangen" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="bevor-wir-anfangen"><span class="header-section-number">6.1</span> Bevor wir anfangen</h2>
 <p><a href="https://www.gurobi.com/burrito-optimization-game/">https://www.gurobi.com/burrito-optimization-game/</a></p>
-</section>
-<section id="die-berliner-luftbrücke" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="die-berliner-luftbrücke"><span class="header-section-number">6.2</span> Die Berliner Luftbrücke</h2>
 <p>Nach dem Ende des Zweiten Weltkriegs wurde Deutschland in vier Besatzungszonen aufgeteilt: Amerikanisch, Britisch, Französisch und Sowjetisch. Berlin wurde ebenfalls in vier Zonen aufgeteilt, aber der Zugang zu ihm erfolgte ausschließlich über das Gebiet der sowjetischen Besatzungszone.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -332,8 +328,8 @@ window.Quarto = {
 </figure>
 </div>
 </section>
-<section id="problembeschreibung" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="problembeschreibung"><span class="header-section-number">6.3</span> Problembeschreibung</h2>
+<section id="problembeschreibung" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="problembeschreibung"><span class="header-section-number">6.2</span> Problembeschreibung</h2>
 <p>Der Einfachheit halber nehmen wir an, dass die Lieferungen nach Berlin mit zwei Arten von Flugzeugen erfolgen: amerikanischen, die bis zu 30.000 Kubikfuß Fracht (<span class="math inline">\approx 849 m^3</span>) aufnehmen können, und britischen Flugzeugen mit einer Kapazität von bis zu 20.000 Kubikfuß (<span class="math inline">\approx 566 m^3</span>).</p>
 <ul>
 <li>Aufgrund von Einschränkungen in der Infrastruktur können an einem Tag maximal 48 Flugzeuge (unabhängig von der Art) fliegen.</li>
@@ -342,8 +338,8 @@ window.Quarto = {
 </ul>
 <p>Wie viele Flugzeuge jeder Art sollten eingesetzt werden, um das Frachtvolumen zu maximieren?</p>
 </section>
-<section id="das-mathematische-modell" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="das-mathematische-modell"><span class="header-section-number">6.4</span> Das mathematische Modell</h2>
+<section id="das-mathematische-modell" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="das-mathematische-modell"><span class="header-section-number">6.3</span> Das mathematische Modell</h2>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -448,8 +444,8 @@ x_2 \geq 0
 (x^*_1 = 48, x^*_2 = 0)
 </span></p>
 </section>
-<section id="zulässige-menge-feasible-set" class="level2" data-number="6.5">
-<h2 data-number="6.5" class="anchored" data-anchor-id="zulässige-menge-feasible-set"><span class="header-section-number">6.5</span> Zulässige Menge (Feasible Set)</h2>
+<section id="die-zulässige-menge-feasible-set" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="die-zulässige-menge-feasible-set"><span class="header-section-number">6.4</span> Die zulässige Menge (Feasible Set)</h2>
 <p>Zuerst werden wir die zulässige Menge graphisch darstellen, indem wir die Geraden zu jeder der fünf Beschränkungen (einschließlich der Nichtnegativitätsbeschränkungen) zeichnen. Um die Geraden zeichnen zu können, benötigen wir jeweils zwei Punkte. Die einfachste Möglichkeit, die Schnittpunkte mit den beiden Achsen (<span class="math inline">x_1</span> und <span class="math inline">x_2</span>) zu finden.</p>
 <p>Die Gerade zur ersten Beschränkung (Infrastruktur) ist:</p>
 <p><span class="math display">
@@ -477,32 +473,28 @@ x_1 + x_2 = 48
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>ax.plot([<span class="dv">0</span>, <span class="dv">48</span>], [<span class="dv">48</span>, <span class="dv">0</span>], label<span class="op">=</span><span class="vs">r'$x_1 + x_2 = 48 \quad Infrastruktur$'</span>)</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>ax.plot([<span class="dv">0</span>, <span class="dv">32</span>], [<span class="dv">64</span>, <span class="dv">0</span>], label<span class="op">=</span><span class="vs">r'$16 x_1 + 8 x_2 = 512\quad Personal$'</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>ax.plot([<span class="dv">0</span>, <span class="fl">33.33</span>], [<span class="dv">60</span>, <span class="dv">0</span>], label<span class="op">=</span><span class="vs">r'$9 x_1 + 5 x_2 = 300 \quad Budget$'</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>ax.plot([<span class="dv">0</span>, <span class="fl">33.33</span>], [<span class="dv">60</span>, <span class="dv">0</span>], label<span class="op">=</span><span class="vs">r'$9 x_1 + 5 x_2 = 300 \quad Kosten$'</span>)</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>ax.legend(loc<span class="op">=</span><span class="dv">0</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>/tmp/ipykernel_263192/1610056778.py:10: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
-  fig.show()</code></pre>
-</div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="01-Berlin-Airlift_files/figure-html/cell-2-output-2.png" class="img-fluid figure-img"></p>
+<p><img src="01-Berlin-Airlift_files/figure-html/cell-2-output-1.png" width="571" height="411" class="figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 <div id="initial_id" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-01-22T21:22:16.553405813Z&quot;,&quot;start_time&quot;:&quot;2024-01-22T21:22:16.236304076Z&quot;}" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> polytope <span class="im">as</span> pc</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">16</span>, <span class="dv">8</span>], [<span class="dv">9</span>, <span class="dv">5</span>], [<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>]])</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.array([<span class="dv">48</span>, <span class="dv">512</span>, <span class="dv">300</span>, <span class="dv">0</span>, <span class="dv">0</span>])</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>P <span class="op">=</span> pc.Polytope(A, b)</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>P_extr <span class="op">=</span> pc.extreme(P)</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>P_extr</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> polytope <span class="im">as</span> pc</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">16</span>, <span class="dv">8</span>], [<span class="dv">9</span>, <span class="dv">5</span>], [<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>]])</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.array([<span class="dv">48</span>, <span class="dv">512</span>, <span class="dv">300</span>, <span class="dv">0</span>, <span class="dv">0</span>])</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>P <span class="op">=</span> pc.Polytope(A, b)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>P_extr <span class="op">=</span> pc.extreme(P)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>P_extr</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`polytope` failed to import `cvxopt.glpk`.
 will use `scipy.optimize.linprog`</code></pre>
@@ -517,38 +509,38 @@ will use `scipy.optimize.linprog`</code></pre>
 </div>
 <p>Die zulässige Menge ist durch die Eckpunkte (0, 0), (32, 0), (20, 24), (15, 33), (0, 48) beschrieben.</p>
 <div id="32ea0aef43589b4e" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>plt.plot(P_extr[:, <span class="dv">0</span>], P_extr[:, <span class="dv">1</span>], <span class="st">'-o'</span>)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, p <span class="kw">in</span> <span class="bu">enumerate</span>(P_extr):</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    plt.text(p[<span class="dv">0</span>], p[<span class="dv">1</span>], <span class="ss">f"(</span><span class="sc">{</span>p[<span class="dv">0</span>]<span class="sc">:0.1f}</span><span class="ss">, </span><span class="sc">{</span>p[<span class="dv">1</span>]<span class="sc">:0.1f}</span><span class="ss">)"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>plt.plot(P_extr[:, <span class="dv">0</span>], P_extr[:, <span class="dv">1</span>], <span class="st">'-o'</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, p <span class="kw">in</span> <span class="bu">enumerate</span>(P_extr):</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    plt.text(p[<span class="dv">0</span>], p[<span class="dv">1</span>], <span class="ss">f"(</span><span class="sc">{</span>p[<span class="dv">0</span>]<span class="sc">:0.1f}</span><span class="ss">, </span><span class="sc">{</span>p[<span class="dv">1</span>]<span class="sc">:0.1f}</span><span class="ss">)"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="01-Berlin-Airlift_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="01-Berlin-Airlift_files/figure-html/cell-4-output-1.png" width="617" height="413" class="figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 <div id="dcf3824008f58b10" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> z(x1, x2):</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">3</span> <span class="op">*</span> x1 <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> x2</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># (0, 0)</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"z(0, 0) = "</span>, z(<span class="dv">0</span>, <span class="dv">0</span>))</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># (32, 0)</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"z(32, 0) = "</span>, z(<span class="dv">32</span>, <span class="dv">0</span>))</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co"># (20, 24)</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"z(20, 24) = "</span>, z(<span class="dv">20</span>, <span class="dv">24</span>))</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="co"># (15, 33)</span></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"z(15, 33) = "</span>, z(<span class="dv">15</span>, <span class="dv">33</span>))</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="co"># (0, 48)</span></span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"z(0, 48) = "</span>, z(<span class="dv">0</span>, <span class="dv">48</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> z(x1, x2):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">3</span> <span class="op">*</span> x1 <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> x2</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># (0, 0)</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"z(0, 0) = "</span>, z(<span class="dv">0</span>, <span class="dv">0</span>))</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># (32, 0)</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"z(32, 0) = "</span>, z(<span class="dv">32</span>, <span class="dv">0</span>))</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co"># (20, 24)</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"z(20, 24) = "</span>, z(<span class="dv">20</span>, <span class="dv">24</span>))</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co"># (15, 33)</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"z(15, 33) = "</span>, z(<span class="dv">15</span>, <span class="dv">33</span>))</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="co"># (0, 48)</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"z(0, 48) = "</span>, z(<span class="dv">0</span>, <span class="dv">48</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>z(0, 0) =  0
 z(32, 0) =  96
@@ -559,8 +551,8 @@ z(0, 48) =  96</code></pre>
 </div>
 <p>Die optimale Kombination von amerikanischen und britischen Flugzeugen ist <span class="math inline">(x^*_1 = 15, x^*_2 = 33)</span>. Dies ist die größtmögliche Ladung, die die Flugzeuge unter den gegebenen Beschränkungen transportieren können. Diese Ladung beträgt <span class="math inline">30000 \cdot 15 + 20000 \cdot 33 = 1 110 000</span> Kubikfuß, die mit 15 amerikanischen und 33 britischen Flugzeugen transportiert werden.</p>
 </section>
-<section id="das-problem-mit-diesem-ansatz" class="level2" data-number="6.6">
-<h2 data-number="6.6" class="anchored" data-anchor-id="das-problem-mit-diesem-ansatz"><span class="header-section-number">6.6</span> Das Problem mit diesem Ansatz</h2>
+<section id="das-problem-mit-diesem-ansatz" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="das-problem-mit-diesem-ansatz"><span class="header-section-number">6.5</span> Das Problem mit diesem Ansatz</h2>
 <p>Nun haben wir die Optimierungsaufgabe gelöst, indem wir die Eckpunkte der zulässigen Menge berechnet und die Zielfunktion in jedem von ihnen berechnet haben. Die Lösung des Maximierungsproblems war der Punkt mit dem höchsten Wert der Zielfunktion.</p>
 <p>Leider ist dieser Ansatz für praktische Zwecke unbrauchbar, denn die Anzahl der Eckpunkte der zulässigen Menge wächst mit der Anzahl der Beschränkungen und Variablen. Eine obere Schranke für die Anzahl der Eckpunkte der zulässigen Menge ist durch den binomischen Koeffizienten gegeben:</p>
 <p><span class="math display">
@@ -568,73 +560,69 @@ z(0, 48) =  96</code></pre>
 </span></p>
 <p>dabei ist <span class="math inline">n</span> die Anzahl der Variablen und <span class="math inline">k</span> die Anzahl der Beschränkungen. Wir können die obere Schranke für die Anzahl der Eckpunkte der zulässigen Menge für verschiedene Kombinationen von <span class="math inline">n</span> und <span class="math inline">k</span> berechnen:</p>
 <div id="b219328f77a8df6f" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.special <span class="im">import</span> comb</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"n = 20, k = 15, Maximale Anzahl von Eckpunkten = "</span>, comb(<span class="dv">20</span>, <span class="dv">15</span>))</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"n = 40, k = 25, Maximale Anzahl von Eckpunkten = "</span>, comb(<span class="dv">40</span>, <span class="dv">25</span>))</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"n = 50, k = 25, Maximale Anzahl von Eckpunkten = "</span>, comb(<span class="dv">50</span>, <span class="dv">25</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.special <span class="im">import</span> comb</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"n = 20, k = 15, Maximale Anzahl von Eckpunkten = "</span>, comb(<span class="dv">20</span>, <span class="dv">15</span>))</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"n = 40, k = 25, Maximale Anzahl von Eckpunkten = "</span>, comb(<span class="dv">40</span>, <span class="dv">25</span>))</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"n = 50, k = 25, Maximale Anzahl von Eckpunkten = "</span>, comb(<span class="dv">50</span>, <span class="dv">25</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>n = 20, k = 15, Максимален брой върхове =  15504.0
-n = 40, k = 25, Максимален брой върхове =  40225345056.0
-n = 50, k = 25, Максимален брой върхове =  126410606437752.05</code></pre>
+<pre><code>n = 20, k = 15, Maximale Anzahl von Eckpunkten =  15504.0
+n = 40, k = 25, Maximale Anzahl von Eckpunkten =  40225345056.0
+n = 50, k = 25, Maximale Anzahl von Eckpunkten =  126410606437752.05</code></pre>
 </div>
 </div>
 <p>Selbst mit einem relativ kleinen Problem, das 80 Variablen und 40 Beschränkungen hat, ist die Anzahl der Eckpunkte der zulässigen Menge astronomisch. Nehmen wir an, daß ein Rechnerkern 1 Milliarde Eckpunkte pro Sekunde berechnen kann. Dann würde es ungefähr 1.8 Millionen Jahre dauern, um alle Operationen durchzuführen.</p>
 <div id="2712991ebc5be91a" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>comb_n <span class="op">=</span> comb(<span class="dv">80</span>, <span class="dv">45</span>)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(comb_n <span class="op">/</span> (<span class="fl">1e9</span> <span class="op">*</span> <span class="dv">60</span> <span class="op">*</span> <span class="dv">60</span> <span class="op">*</span> <span class="dv">24</span> <span class="op">*</span> <span class="dv">365</span>), <span class="dv">1</span>), <span class="st">"Jahre"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>comb_n <span class="op">=</span> comb(<span class="dv">80</span>, <span class="dv">45</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(comb_n <span class="op">/</span> (<span class="fl">1e9</span> <span class="op">*</span> <span class="dv">60</span> <span class="op">*</span> <span class="dv">60</span> <span class="op">*</span> <span class="dv">24</span> <span class="op">*</span> <span class="dv">365</span>), <span class="dv">1</span>), <span class="st">"Jahre"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>1836016.6 години</code></pre>
+<pre><code>1836016.6 Jahre</code></pre>
 </div>
 </div>
 </section>
-<section id="lösung-mit-excel" class="level2" data-number="6.7">
-<h2 data-number="6.7" class="anchored" data-anchor-id="lösung-mit-excel"><span class="header-section-number">6.7</span> Lösung mit Excel</h2>
+<section id="lösung-mit-excel" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="lösung-mit-excel"><span class="header-section-number">6.6</span> Lösung mit Excel</h2>
 <p><a href="https://github.com/febse/data/raw/main/opt/Berlin-Air-Example.xlsx">Решение на модела в Excel</a></p>
 </section>
-<section id="lösung-mit-gurobi-und-python" class="level2" data-number="6.8">
-<h2 data-number="6.8" class="anchored" data-anchor-id="lösung-mit-gurobi-und-python"><span class="header-section-number">6.8</span> Lösung mit gurobi und Python</h2>
+<section id="lösung-mit-gurobi-und-python" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="lösung-mit-gurobi-und-python"><span class="header-section-number">6.7</span> Lösung mit gurobi und Python</h2>
 <div id="f1e1f795ca3d09b1" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> gurobipy <span class="im">as</span> gp</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gurobipy <span class="im">import</span> GRB</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co"># New model instance</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> gp.Model(<span class="st">"Berlin Airlift"</span>)</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> m.addVar(vtype<span class="op">=</span>GRB.INTEGER, lb <span class="op">=</span> <span class="dv">0</span>, name<span class="op">=</span><span class="st">"American"</span>)</span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> m.addVar(vtype<span class="op">=</span>GRB.INTEGER, lb <span class="op">=</span> <span class="dv">0</span>, name<span class="op">=</span><span class="st">"British"</span>)</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Objective function</span></span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>m.setObjective(<span class="dv">3</span> <span class="op">*</span> x1 <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> x2, GRB.MAXIMIZE)</span>
-<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Constraints</span></span>
-<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>m.addConstr(x1 <span class="op">+</span> x2 <span class="op">&lt;=</span> <span class="dv">48</span>, <span class="st">"Infrastructure"</span>)</span>
-<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>m.addConstr(<span class="dv">16</span> <span class="op">*</span> x1 <span class="op">+</span> <span class="dv">8</span> <span class="op">*</span> x2 <span class="op">&lt;=</span> <span class="dv">512</span>, <span class="st">"Staff"</span>)</span>
-<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>m.addConstr(<span class="dv">9</span> <span class="op">*</span> x1 <span class="op">+</span> <span class="dv">5</span> <span class="op">*</span> x2 <span class="op">&lt;=</span> <span class="dv">300</span>, <span class="st">"Budget"</span>)</span>
-<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Non-negativity constraints are added automatically in addVar</span></span>
-<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Solving the model</span></span>
-<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>m.optimize()</span>
-<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Отпечатване на резултата</span></span>
-<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> v <span class="kw">in</span> m.getVars():</span>
-<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>v<span class="sc">.</span>varName<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>v<span class="sc">.</span>x<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> gurobipy <span class="im">as</span> gp</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gurobipy <span class="im">import</span> GRB</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co"># New model instance</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> gp.Model(<span class="st">"Berlin Airlift"</span>)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> m.addVar(vtype<span class="op">=</span>GRB.INTEGER, lb <span class="op">=</span> <span class="dv">0</span>, name<span class="op">=</span><span class="st">"American"</span>)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> m.addVar(vtype<span class="op">=</span>GRB.INTEGER, lb <span class="op">=</span> <span class="dv">0</span>, name<span class="op">=</span><span class="st">"British"</span>)</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Objective function</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>m.setObjective(<span class="dv">3</span> <span class="op">*</span> x1 <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> x2, GRB.MAXIMIZE)</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Constraints</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>m.addConstr(x1 <span class="op">+</span> x2 <span class="op">&lt;=</span> <span class="dv">48</span>, <span class="st">"Infrastructure"</span>)</span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>m.addConstr(<span class="dv">16</span> <span class="op">*</span> x1 <span class="op">+</span> <span class="dv">8</span> <span class="op">*</span> x2 <span class="op">&lt;=</span> <span class="dv">512</span>, <span class="st">"Staff"</span>)</span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>m.addConstr(<span class="dv">9</span> <span class="op">*</span> x1 <span class="op">+</span> <span class="dv">5</span> <span class="op">*</span> x2 <span class="op">&lt;=</span> <span class="dv">300</span>, <span class="st">"Budget"</span>)</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Non-negativity constraints are added automatically in addVar</span></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Solving the model</span></span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>m.optimize()</span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the solution</span></span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> v <span class="kw">in</span> m.getVars():</span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>v<span class="sc">.</span>varName<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>v<span class="sc">.</span>x<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Set parameter WLSAccessID
-Set parameter WLSSecret
-Set parameter LicenseID to value 943475
-Academic license 943475 - for non-commercial use only - registered to am___@feb.uni-sofia.bg
-Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.6 LTS")
+<pre><code>Restricted license - for non-production use only - expires 2025-11-24
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 22.04.4 LTS")
 
-CPU model: 12th Gen Intel(R) Core(TM) i5-1235U, instruction set [SSE2|AVX|AVX2]
-Thread count: 12 physical cores, 12 logical processors, using up to 12 threads
+CPU model: AMD EPYC 7763 64-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 2 physical cores, 4 logical processors, using up to 4 threads
 
-Academic license 943475 - for non-commercial use only - registered to am___@feb.uni-sofia.bg
 Optimize a model with 3 rows, 2 columns and 6 nonzeros
 Model fingerprint: 0xbbfbd94b
 Variable types: 0 continuous, 2 integer (0 binary)
@@ -656,7 +644,7 @@ Root relaxation: objective 1.110000e+02, 3 iterations, 0.00 seconds (0.00 work u
 *    0     0               0     111.0000000  111.00000  0.00%     -    0s
 
 Explored 1 nodes (3 simplex iterations) in 0.01 seconds (0.00 work units)
-Thread count was 12 (of 12 available processors)
+Thread count was 4 (of 4 available processors)
 
 Solution count 2: 111 96 
 
@@ -667,9 +655,9 @@ British: 33.0</code></pre>
 </div>
 </div>
 <div id="92aff19b" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>tmp <span class="op">=</span> {v.varName: [v.x] <span class="cf">for</span> v <span class="kw">in</span> m.getVars()}</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>res_df <span class="op">=</span> pd.DataFrame(tmp)</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>res_df.head()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>tmp <span class="op">=</span> {v.varName: [v.x] <span class="cf">for</span> v <span class="kw">in</span> m.getVars()}</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>res_df <span class="op">=</span> pd.DataFrame(tmp)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>res_df.head()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <div>
 <div>
