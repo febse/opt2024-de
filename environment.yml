@@ -14,4 +14,5 @@ dependencies:
   - pip
   - pip:
     - polytope
+    - otter-grader
 prefix: /home/amarov/anaconda3/envs/opt2024
