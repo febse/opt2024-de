@@ -24,6 +24,7 @@ book:
         - 03-Graphical-Method/01-Berlin-Airlift.ipynb
         - 03-Graphical-Method/02-Blending.ipynb
         # - 02-GraphischeMethode/02-Sensitivity.ipynb
+    - Homeworks.qmd
     - Literature.qmd
     - references.qmd
 
