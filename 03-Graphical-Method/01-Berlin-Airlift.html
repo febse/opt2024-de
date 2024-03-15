@@ -264,6 +264,12 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../Links.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resourcen</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../Literature.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Emfohlene Literatur</span></a>
   </div>
@@ -284,13 +290,12 @@ window.Quarto = {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#bevor-wir-anfangen" id="toc-bevor-wir-anfangen" class="nav-link active" data-scroll-target="#bevor-wir-anfangen"><span class="header-section-number">6.1</span> Bevor wir anfangen</a></li>
-  <li><a href="#problembeschreibung" id="toc-problembeschreibung" class="nav-link" data-scroll-target="#problembeschreibung"><span class="header-section-number">6.2</span> Problembeschreibung</a></li>
-  <li><a href="#das-mathematische-modell" id="toc-das-mathematische-modell" class="nav-link" data-scroll-target="#das-mathematische-modell"><span class="header-section-number">6.3</span> Das mathematische Modell</a></li>
-  <li><a href="#die-zulässige-menge-feasible-set" id="toc-die-zulässige-menge-feasible-set" class="nav-link" data-scroll-target="#die-zulässige-menge-feasible-set"><span class="header-section-number">6.4</span> Die zulässige Menge (Feasible Set)</a></li>
-  <li><a href="#das-problem-mit-diesem-ansatz" id="toc-das-problem-mit-diesem-ansatz" class="nav-link" data-scroll-target="#das-problem-mit-diesem-ansatz"><span class="header-section-number">6.5</span> Das Problem mit diesem Ansatz</a></li>
-  <li><a href="#lösung-mit-excel" id="toc-lösung-mit-excel" class="nav-link" data-scroll-target="#lösung-mit-excel"><span class="header-section-number">6.6</span> Lösung mit Excel</a></li>
-  <li><a href="#lösung-mit-gurobi-und-python" id="toc-lösung-mit-gurobi-und-python" class="nav-link" data-scroll-target="#lösung-mit-gurobi-und-python"><span class="header-section-number">6.7</span> Lösung mit gurobi und Python</a></li>
+  <li><a href="#problembeschreibung" id="toc-problembeschreibung" class="nav-link active" data-scroll-target="#problembeschreibung"><span class="header-section-number">6.1</span> Problembeschreibung</a></li>
+  <li><a href="#das-mathematische-modell" id="toc-das-mathematische-modell" class="nav-link" data-scroll-target="#das-mathematische-modell"><span class="header-section-number">6.2</span> Das mathematische Modell</a></li>
+  <li><a href="#die-zulässige-menge-feasible-set" id="toc-die-zulässige-menge-feasible-set" class="nav-link" data-scroll-target="#die-zulässige-menge-feasible-set"><span class="header-section-number">6.3</span> Die zulässige Menge (Feasible Set)</a></li>
+  <li><a href="#das-problem-mit-diesem-ansatz" id="toc-das-problem-mit-diesem-ansatz" class="nav-link" data-scroll-target="#das-problem-mit-diesem-ansatz"><span class="header-section-number">6.4</span> Das Problem mit diesem Ansatz</a></li>
+  <li><a href="#lösung-mit-excel" id="toc-lösung-mit-excel" class="nav-link" data-scroll-target="#lösung-mit-excel"><span class="header-section-number">6.5</span> Lösung mit Excel</a></li>
+  <li><a href="#lösung-mit-gurobi-und-python" id="toc-lösung-mit-gurobi-und-python" class="nav-link" data-scroll-target="#lösung-mit-gurobi-und-python"><span class="header-section-number">6.6</span> Lösung mit gurobi und Python</a></li>
   </ul>
 </nav>
     </div>
@@ -316,9 +321,6 @@ window.Quarto = {
 </header>
 
 
-<section id="bevor-wir-anfangen" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="bevor-wir-anfangen"><span class="header-section-number">6.1</span> Bevor wir anfangen</h2>
-<p><a href="https://www.gurobi.com/burrito-optimization-game/">https://www.gurobi.com/burrito-optimization-game/</a></p>
 <p>Nach dem Ende des Zweiten Weltkriegs wurde Deutschland in vier Besatzungszonen aufgeteilt: Amerikanisch, Britisch, Französisch und Sowjetisch. Berlin wurde ebenfalls in vier Zonen aufgeteilt, aber der Zugang zu ihm erfolgte ausschließlich über das Gebiet der sowjetischen Besatzungszone.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -333,9 +335,8 @@ window.Quarto = {
 <figcaption>Landung einer C-54 am Flughafen Tempelhof. Quelle: Wikipedia.</figcaption>
 </figure>
 </div>
-</section>
-<section id="problembeschreibung" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="problembeschreibung"><span class="header-section-number">6.2</span> Problembeschreibung</h2>
+<section id="problembeschreibung" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="problembeschreibung"><span class="header-section-number">6.1</span> Problembeschreibung</h2>
 <p>Der Einfachheit halber nehmen wir an, dass die Lieferungen nach Berlin mit zwei Arten von Flugzeugen erfolgen: amerikanischen, die bis zu 30.000 Kubikfuß Fracht (<span class="math inline">\approx 849 m^3</span>) aufnehmen können, und britischen Flugzeugen mit einer Kapazität von bis zu 20.000 Kubikfuß (<span class="math inline">\approx 566 m^3</span>).</p>
 <ul>
 <li>Aufgrund von Einschränkungen in der Infrastruktur können an einem Tag maximal 48 Flugzeuge (unabhängig von der Art) fliegen.</li>
@@ -344,8 +345,8 @@ window.Quarto = {
 </ul>
 <p>Wie viele Flugzeuge jeder Art sollten eingesetzt werden, um das Frachtvolumen zu maximieren?</p>
 </section>
-<section id="das-mathematische-modell" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="das-mathematische-modell"><span class="header-section-number">6.3</span> Das mathematische Modell</h2>
+<section id="das-mathematische-modell" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="das-mathematische-modell"><span class="header-section-number">6.2</span> Das mathematische Modell</h2>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -450,8 +451,8 @@ x_2 \geq 0
 (x^*_1 = 48, x^*_2 = 0)
 </span></p>
 </section>
-<section id="die-zulässige-menge-feasible-set" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="die-zulässige-menge-feasible-set"><span class="header-section-number">6.4</span> Die zulässige Menge (Feasible Set)</h2>
+<section id="die-zulässige-menge-feasible-set" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="die-zulässige-menge-feasible-set"><span class="header-section-number">6.3</span> Die zulässige Menge (Feasible Set)</h2>
 <p>Zuerst werden wir die zulässige Menge graphisch darstellen, indem wir die Geraden zu jeder der fünf Beschränkungen (einschließlich der Nichtnegativitätsbeschränkungen) zeichnen. Um die Geraden zeichnen zu können, benötigen wir jeweils zwei Punkte. Die einfachste Möglichkeit, die Schnittpunkte mit den beiden Achsen (<span class="math inline">x_1</span> und <span class="math inline">x_2</span>) zu finden.</p>
 <p>Die Gerade zur ersten Beschränkung (Infrastruktur) ist:</p>
 <p><span class="math display">
@@ -498,9 +499,9 @@ x_1 + x_2 = 48
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.array([<span class="dv">48</span>, <span class="dv">512</span>, <span class="dv">300</span>, <span class="dv">0</span>, <span class="dv">0</span>])</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>P <span class="op">=</span> pc.Polytope(A, b)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>P_extr <span class="op">=</span> pc.extreme(P)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>extreme_points <span class="op">=</span> pc.extreme(P)</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>P_extr</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>extreme_points</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`polytope` failed to import `cvxopt.glpk`.
 will use `scipy.optimize.linprog`</code></pre>
@@ -517,9 +518,9 @@ will use `scipy.optimize.linprog`</code></pre>
 <div id="32ea0aef43589b4e" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>plt.plot(P_extr[:, <span class="dv">0</span>], P_extr[:, <span class="dv">1</span>], <span class="st">'-o'</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>plt.plot(extreme_points[:, <span class="dv">0</span>], extreme_points[:, <span class="dv">1</span>], <span class="st">'-o'</span>)</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, p <span class="kw">in</span> <span class="bu">enumerate</span>(P_extr):</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, p <span class="kw">in</span> <span class="bu">enumerate</span>(extreme_points):</span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    plt.text(p[<span class="dv">0</span>], p[<span class="dv">1</span>], <span class="ss">f"(</span><span class="sc">{</span>p[<span class="dv">0</span>]<span class="sc">:0.1f}</span><span class="ss">, </span><span class="sc">{</span>p[<span class="dv">1</span>]<span class="sc">:0.1f}</span><span class="ss">)"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -557,9 +558,9 @@ z(0, 48) =  96</code></pre>
 </div>
 <p>Die optimale Kombination von amerikanischen und britischen Flugzeugen ist <span class="math inline">(x^*_1 = 15, x^*_2 = 33)</span>. Dies ist die größtmögliche Ladung, die die Flugzeuge unter den gegebenen Beschränkungen transportieren können. Diese Ladung beträgt <span class="math inline">30000 \cdot 15 + 20000 \cdot 33 = 1 110 000</span> Kubikfuß, die mit 15 amerikanischen und 33 britischen Flugzeugen transportiert werden.</p>
 </section>
-<section id="das-problem-mit-diesem-ansatz" class="level2" data-number="6.5">
-<h2 data-number="6.5" class="anchored" data-anchor-id="das-problem-mit-diesem-ansatz"><span class="header-section-number">6.5</span> Das Problem mit diesem Ansatz</h2>
-<p>Nun haben wir die Optimierungsaufgabe gelöst, indem wir die Eckpunkte der zulässigen Menge berechnet und die Zielfunktion in jedem von ihnen berechnet haben. Die Lösung des Maximierungsproblems war der Punkt mit dem höchsten Wert der Zielfunktion.</p>
+<section id="das-problem-mit-diesem-ansatz" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="das-problem-mit-diesem-ansatz"><span class="header-section-number">6.4</span> Das Problem mit diesem Ansatz</h2>
+<p>Nun haben wir die Optimierungsaufgabe gelöst, indem wir die Eckpunkte der zulässigen Menge berechnet und die Zielfunktion in jedem von ihnen berechnet haben. Die Lösung der Maximierungsproblems war der Punkt mit dem höchsten Wert der Zielfunktion.</p>
 <p>Leider ist dieser Ansatz für praktische Zwecke unbrauchbar, denn die Anzahl der Eckpunkte der zulässigen Menge wächst mit der Anzahl der Beschränkungen und Variablen. Eine obere Schranke für die Anzahl der Eckpunkte der zulässigen Menge ist durch den binomischen Koeffizienten gegeben:</p>
 <p><span class="math display">
 \binom{n}{k} = \frac{n!}{k!(n-k)!}
@@ -586,12 +587,12 @@ n = 50, k = 25, Maximale Anzahl von Eckpunkten =  126410606437752.05</code></pre
 </div>
 </div>
 </section>
-<section id="lösung-mit-excel" class="level2" data-number="6.6">
-<h2 data-number="6.6" class="anchored" data-anchor-id="lösung-mit-excel"><span class="header-section-number">6.6</span> Lösung mit Excel</h2>
+<section id="lösung-mit-excel" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="lösung-mit-excel"><span class="header-section-number">6.5</span> Lösung mit Excel</h2>
 <p><a href="https://github.com/febse/data/raw/main/opt/Berlin-Air-Example.xlsx">Решение на модела в Excel</a></p>
 </section>
-<section id="lösung-mit-gurobi-und-python" class="level2" data-number="6.7">
-<h2 data-number="6.7" class="anchored" data-anchor-id="lösung-mit-gurobi-und-python"><span class="header-section-number">6.7</span> Lösung mit gurobi und Python</h2>
+<section id="lösung-mit-gurobi-und-python" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="lösung-mit-gurobi-und-python"><span class="header-section-number">6.6</span> Lösung mit gurobi und Python</h2>
 <div id="f1e1f795ca3d09b1" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> gurobipy <span class="im">as</span> gp</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gurobipy <span class="im">import</span> GRB</span>
@@ -601,8 +602,8 @@ n = 50, k = 25, Maximale Anzahl von Eckpunkten =  126410606437752.05</code></pre
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> gp.Model(<span class="st">"Berlin Airlift"</span>)</span>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> m.addVar(vtype<span class="op">=</span>GRB.INTEGER, lb <span class="op">=</span> <span class="dv">0</span>, name<span class="op">=</span><span class="st">"American"</span>)</span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> m.addVar(vtype<span class="op">=</span>GRB.INTEGER, lb <span class="op">=</span> <span class="dv">0</span>, name<span class="op">=</span><span class="st">"British"</span>)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> m.addVar(vtype<span class="op">=</span>GRB.CONTINUOUS, lb <span class="op">=</span> <span class="dv">0</span>, name<span class="op">=</span><span class="st">"American"</span>)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> m.addVar(vtype<span class="op">=</span>GRB.CONTINUOUS, lb <span class="op">=</span> <span class="dv">0</span>, name<span class="op">=</span><span class="st">"British"</span>)</span>
 <span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Objective function</span></span>
 <span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a></span>
@@ -630,34 +631,23 @@ CPU model: AMD EPYC 7763 64-Core Processor, instruction set [SSE2|AVX|AVX2]
 Thread count: 2 physical cores, 4 logical processors, using up to 4 threads
 
 Optimize a model with 3 rows, 2 columns and 6 nonzeros
-Model fingerprint: 0xbbfbd94b
-Variable types: 0 continuous, 2 integer (0 binary)
+Model fingerprint: 0xbbf91f0b
 Coefficient statistics:
   Matrix range     [1e+00, 2e+01]
   Objective range  [2e+00, 3e+00]
   Bounds range     [0e+00, 0e+00]
   RHS range        [5e+01, 5e+02]
-Found heuristic solution: objective 96.0000000
 Presolve time: 0.00s
 Presolved: 3 rows, 2 columns, 6 nonzeros
-Variable types: 0 continuous, 2 integer (0 binary)
 
-Root relaxation: objective 1.110000e+02, 3 iterations, 0.00 seconds (0.00 work units)
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.7500000e+30   4.687500e+30   1.750000e+00      0s
+       3    1.1100000e+02   0.000000e+00   0.000000e+00      0s
 
-    Nodes    |    Current Node    |     Objective Bounds      |     Work
- Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
-
-*    0     0               0     111.0000000  111.00000  0.00%     -    0s
-
-Explored 1 nodes (3 simplex iterations) in 0.01 seconds (0.00 work units)
-Thread count was 4 (of 4 available processors)
-
-Solution count 2: 111 96 
-
-Optimal solution found (tolerance 1.00e-04)
-Best objective 1.110000000000e+02, best bound 1.110000000000e+02, gap 0.0000%
-American: 15.0
-British: 33.0</code></pre>
+Solved in 3 iterations and 0.01 seconds (0.00 work units)
+Optimal objective  1.110000000e+02
+American: 14.999999999999993
+British: 33.000000000000014</code></pre>
 </div>
 </div>
 <div id="92aff19b" class="cell" data-execution_count="8">
