@@ -361,8 +361,8 @@ Zielvariablen
 <div class="callout-body-container callout-body">
 <p><span class="math display">
 \begin{align*}
-&amp; x_1: \text{ Anzahl amerikanischer Luftzeuge}\\
-&amp; x_2: \text{ Anzahl britischer Luftzeuge}
+&amp; x_A: \text{ Anzahl amerikanischer Luftzeuge}\\
+&amp; x_B: \text{ Anzahl britischer Luftzeuge}
 \end{align*}
 </span></p>
 </div>
@@ -382,7 +382,7 @@ Zielfunktion
 <div class="callout-body-container callout-body">
 <p>Das Frachtvolumen ist die Summe der Frachtvolumina der beiden Flugzeugtypen:</p>
 <p><span class="math display">
-z(x_1, x_2) = 3 x_1 + 2 x_2
+z(x_A, x_B) = 3 x_A + 2 x_B
 </span></p>
 </div>
 </div>
@@ -401,11 +401,11 @@ Einschränkungen
 <div class="callout-body-container callout-body">
 <p><span class="math display">
 \begin{align*}
-&amp; x_1 + x_2 \leq 48 &amp; \text{ (Infrastruktur)} \\
-&amp; 16 x_1 + 8 x_2 \leq 512 &amp; \text{ (Personal)} \\
-&amp; 9 x_1 + 5 x_2 \leq 300 &amp; \text{ (Kosten)} \\
-&amp; x_1  \geq 0 &amp;  \\
-&amp; x_2 \geq 0 &amp;
+&amp; x_A + x_B \leq 48 &amp; \text{ (Infrastruktur)} \\
+&amp; 16 x_A + 8 x_B \leq 512 &amp; \text{ (Personal)} \\
+&amp; 9 x_A + 5 x_B \leq 300 &amp; \text{ (Kosten)} \\
+&amp; x_A  \geq 0 &amp;  \\
+&amp; x_B \geq 0 &amp;
 \end{align*}
 </span></p>
 </div>
@@ -425,13 +425,13 @@ Das ganze Modell
 <div class="callout-body-container callout-body">
 <p><span class="math display">
 \begin{align*}
-&amp; \max z(x_1, x_2) = 3 x_1 + 2 x_2 \\
+&amp; \max z(x_A, x_B) = 3 x_A + 2 x_B \\
 &amp; \text{under den Bedingungen:} \\
-&amp; x_1 + x_2 \leq 48 \\
-&amp; 16 x_1 + 8 x_2 \leq 512 \\
-&amp; 9 x_1 + 5 x_2 \leq 300 \\
-&amp; x_1  \geq 0 \\
-&amp; x_2 \geq 0
+&amp; x_A + x_B \leq 48 \\
+&amp; 16 x_A + 8 x_B \leq 512 \\
+&amp; 9 x_A + 5 x_B \leq 300 \\
+&amp; x_A  \geq 0 \\
+&amp; x_B \geq 0
 \end{align*}
 </span></p>
 </div>
@@ -440,37 +440,37 @@ Das ganze Modell
 <p>Bevor wir die Lösung des Problems diskutieren, lassen Sie uns die Aufgabe nur unter der ersten Beschränkung (Infrastruktur) betrachten.</p>
 <p><span class="math display">
 \begin{align*}
-\max 3 x_1 + 2 x_2 \\
-x_1 + x_2 \leq 48 \\
-x_1 \geq 0 \\
-x_2 \geq 0
+\max 3 x_A + 2 x_B \\
+x_A + x_B \leq 48 \\
+x_A \geq 0 \\
+x_B \geq 0
 \end{align*}
 </span></p>
 <p>Lösung:</p>
 <p><span class="math display">
-(x^*_1 = 48, x^*_2 = 0)
+(x_A^* = 48, x_B^* = 0)
 </span></p>
 </section>
 <section id="die-zulässige-menge-feasible-set" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="die-zulässige-menge-feasible-set"><span class="header-section-number">6.3</span> Die zulässige Menge (Feasible Set)</h2>
-<p>Zuerst werden wir die zulässige Menge graphisch darstellen, indem wir die Geraden zu jeder der fünf Beschränkungen (einschließlich der Nichtnegativitätsbeschränkungen) zeichnen. Um die Geraden zeichnen zu können, benötigen wir jeweils zwei Punkte. Die einfachste Möglichkeit, die Schnittpunkte mit den beiden Achsen (<span class="math inline">x_1</span> und <span class="math inline">x_2</span>) zu finden.</p>
+<p>Zuerst werden wir die zulässige Menge graphisch darstellen, indem wir die Geraden zu jeder der fünf Beschränkungen (einschließlich der Nichtnegativitätsbeschränkungen) zeichnen. Um die Geraden zeichnen zu können, benötigen wir jeweils zwei Punkte. Die einfachste Möglichkeit, die Schnittpunkte mit den beiden Achsen (<span class="math inline">x_A</span> und <span class="math inline">x_B</span>) zu finden.</p>
 <p>Die Gerade zur ersten Beschränkung (Infrastruktur) ist:</p>
 <p><span class="math display">
-x_1 + x_2 = 48
+x_A + x_B = 48
 </span></p>
 <p>Schnittpunkte mit den beiden Achsen:</p>
 <ul>
-<li>Für <span class="math inline">x_1 = 0</span> ist <span class="math inline">x_2 = 48</span></li>
-<li>Für <span class="math inline">x_2 = 0</span> ist <span class="math inline">x_1 + 0 = 48</span></li>
+<li>Für <span class="math inline">x_A = 0</span> ist <span class="math inline">x_B = 48</span></li>
+<li>Für <span class="math inline">x_B = 0</span> ist <span class="math inline">x_A + 0 = 48</span></li>
 </ul>
 <p>Die Gerade zur zweiten Beschränkung (Personal) ist:</p>
 <p><span class="math display">
-16 x_1 + 8 x_2 = 512
+16 x_A + 8 x_B = 512
 </span></p>
 <p>Die Schnittpunkte mit den beiden Achsen:</p>
 <ul>
-<li>Für <span class="math inline">x_1 = 0</span>: <span class="math inline">16 \cdot 0 + 8x_2 = 512 \implies x_2 = 512 / 8 = 64</span></li>
-<li>Für <span class="math inline">x_2 = 0</span>: <span class="math inline">16 x_1 +8 \cdot 0 = 512 \implies x_1 = 512 / 16 = 32</span></li>
+<li>Für <span class="math inline">x_A = 0</span>: <span class="math inline">16 \cdot 0 + 8x_B = 512 \implies x_B = 512 / 8 = 64</span></li>
+<li>Für <span class="math inline">x_B = 0</span>: <span class="math inline">16 x_A +8 \cdot 0 = 512 \implies x_A = 512 / 16 = 32</span></li>
 </ul>
 <p>Auf die gleiche Weise können wir die Schnittpunkte für die dritte Beschränkung (Kosten) finden: (0, 300 / 5) и (300 / 9, 0).</p>
 <div id="927b7083" class="cell" data-execution_count="1">
@@ -478,9 +478,9 @@ x_1 + x_2 = 48
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>ax.plot([<span class="dv">0</span>, <span class="dv">48</span>], [<span class="dv">48</span>, <span class="dv">0</span>], label<span class="op">=</span><span class="vs">r'$x_1 + x_2 = 48 \quad Infrastruktur$'</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>ax.plot([<span class="dv">0</span>, <span class="dv">32</span>], [<span class="dv">64</span>, <span class="dv">0</span>], label<span class="op">=</span><span class="vs">r'$16 x_1 + 8 x_2 = 512\quad Personal$'</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>ax.plot([<span class="dv">0</span>, <span class="fl">33.33</span>], [<span class="dv">60</span>, <span class="dv">0</span>], label<span class="op">=</span><span class="vs">r'$9 x_1 + 5 x_2 = 300 \quad Kosten$'</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>ax.plot([<span class="dv">0</span>, <span class="dv">48</span>], [<span class="dv">48</span>, <span class="dv">0</span>], label<span class="op">=</span><span class="vs">r'$x_A + x_B = 48 \quad Infrastruktur$'</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>ax.plot([<span class="dv">0</span>, <span class="dv">32</span>], [<span class="dv">64</span>, <span class="dv">0</span>], label<span class="op">=</span><span class="vs">r'$16 x_A + 8 x_B = 512\quad Personal$'</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>ax.plot([<span class="dv">0</span>, <span class="fl">33.33</span>], [<span class="dv">60</span>, <span class="dv">0</span>], label<span class="op">=</span><span class="vs">r'$9 x_A + 5 x_B = 300 \quad Kosten$'</span>)</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>ax.legend(loc<span class="op">=</span><span class="dv">0</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -531,8 +531,8 @@ will use `scipy.optimize.linprog`</code></pre>
 </div>
 </div>
 <div id="dcf3824008f58b10" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> z(x1, x2):</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">3</span> <span class="op">*</span> x1 <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> x2</span>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> z(x_A, x_B):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">3</span> <span class="op">*</span> x_A <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> x_B</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># (0, 0)</span></span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"z(0, 0) = "</span>, z(<span class="dv">0</span>, <span class="dv">0</span>))</span>
@@ -556,7 +556,7 @@ z(15, 33) =  111
 z(0, 48) =  96</code></pre>
 </div>
 </div>
-<p>Die optimale Kombination von amerikanischen und britischen Flugzeugen ist <span class="math inline">(x^*_1 = 15, x^*_2 = 33)</span>. Dies ist die größtmögliche Ladung, die die Flugzeuge unter den gegebenen Beschränkungen transportieren können. Diese Ladung beträgt <span class="math inline">30000 \cdot 15 + 20000 \cdot 33 = 1 110 000</span> Kubikfuß, die mit 15 amerikanischen und 33 britischen Flugzeugen transportiert werden.</p>
+<p>Die optimale Kombination von amerikanischen und britischen Flugzeugen ist <span class="math inline">(x_A^* = 15, x_B^* = 33)</span>. Dies ist die größtmögliche Ladung, die die Flugzeuge unter den gegebenen Beschränkungen transportieren können. Diese Ladung beträgt <span class="math inline">30000 \cdot 15 + 20000 \cdot 33 = 1 110 000</span> Kubikfuß, die mit 15 amerikanischen und 33 britischen Flugzeugen transportiert werden.</p>
 </section>
 <section id="das-problem-mit-diesem-ansatz" class="level2" data-number="6.4">
 <h2 data-number="6.4" class="anchored" data-anchor-id="das-problem-mit-diesem-ansatz"><span class="header-section-number">6.4</span> Das Problem mit diesem Ansatz</h2>
@@ -589,7 +589,7 @@ n = 50, k = 25, Maximale Anzahl von Eckpunkten =  126410606437752.05</code></pre
 </section>
 <section id="lösung-mit-excel" class="level2" data-number="6.5">
 <h2 data-number="6.5" class="anchored" data-anchor-id="lösung-mit-excel"><span class="header-section-number">6.5</span> Lösung mit Excel</h2>
-<p><a href="https://github.com/febse/data/raw/main/opt/Berlin-Air-Example.xlsx">Решение на модела в Excel</a></p>
+<p><a href="https://github.com/febse/data/raw/main/opt/Berlin-Air-Example.xlsx">Hier herunterladen</a></p>
 </section>
 <section id="lösung-mit-gurobi-und-python" class="level2" data-number="6.6">
 <h2 data-number="6.6" class="anchored" data-anchor-id="lösung-mit-gurobi-und-python"><span class="header-section-number">6.6</span> Lösung mit gurobi und Python</h2>
@@ -602,18 +602,18 @@ n = 50, k = 25, Maximale Anzahl von Eckpunkten =  126410606437752.05</code></pre
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> gp.Model(<span class="st">"Berlin Airlift"</span>)</span>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> m.addVar(vtype<span class="op">=</span>GRB.CONTINUOUS, lb <span class="op">=</span> <span class="dv">0</span>, name<span class="op">=</span><span class="st">"American"</span>)</span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> m.addVar(vtype<span class="op">=</span>GRB.CONTINUOUS, lb <span class="op">=</span> <span class="dv">0</span>, name<span class="op">=</span><span class="st">"British"</span>)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>x_A <span class="op">=</span> m.addVar(vtype<span class="op">=</span>GRB.CONTINUOUS, lb <span class="op">=</span> <span class="dv">0</span>, name<span class="op">=</span><span class="st">"American"</span>)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>x_B <span class="op">=</span> m.addVar(vtype<span class="op">=</span>GRB.CONTINUOUS, lb <span class="op">=</span> <span class="dv">0</span>, name<span class="op">=</span><span class="st">"British"</span>)</span>
 <span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Objective function</span></span>
 <span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>m.setObjective(<span class="dv">3</span> <span class="op">*</span> x1 <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> x2, GRB.MAXIMIZE)</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>m.setObjective(<span class="dv">3</span> <span class="op">*</span> x_A <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> x_B, GRB.MAXIMIZE)</span>
 <span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Constraints</span></span>
 <span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>m.addConstr(x1 <span class="op">+</span> x2 <span class="op">&lt;=</span> <span class="dv">48</span>, <span class="st">"Infrastructure"</span>)</span>
-<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>m.addConstr(<span class="dv">16</span> <span class="op">*</span> x1 <span class="op">+</span> <span class="dv">8</span> <span class="op">*</span> x2 <span class="op">&lt;=</span> <span class="dv">512</span>, <span class="st">"Staff"</span>)</span>
-<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>m.addConstr(<span class="dv">9</span> <span class="op">*</span> x1 <span class="op">+</span> <span class="dv">5</span> <span class="op">*</span> x2 <span class="op">&lt;=</span> <span class="dv">300</span>, <span class="st">"Budget"</span>)</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>m.addConstr(x_A <span class="op">+</span> x_B <span class="op">&lt;=</span> <span class="dv">48</span>, <span class="st">"Infrastructure"</span>)</span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>m.addConstr(<span class="dv">16</span> <span class="op">*</span> x_A <span class="op">+</span> <span class="dv">8</span> <span class="op">*</span> x_B <span class="op">&lt;=</span> <span class="dv">512</span>, <span class="st">"Staff"</span>)</span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>m.addConstr(<span class="dv">9</span> <span class="op">*</span> x_A <span class="op">+</span> <span class="dv">5</span> <span class="op">*</span> x_B <span class="op">&lt;=</span> <span class="dv">300</span>, <span class="st">"Budget"</span>)</span>
 <span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Non-negativity constraints are added automatically in addVar</span></span>
 <span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a></span>
@@ -644,7 +644,7 @@ Iteration    Objective       Primal Inf.    Dual Inf.      Time
        0    1.7500000e+30   4.687500e+30   1.750000e+00      0s
        3    1.1100000e+02   0.000000e+00   0.000000e+00      0s
 
-Solved in 3 iterations and 0.00 seconds (0.00 work units)
+Solved in 3 iterations and 0.01 seconds (0.00 work units)
 Optimal objective  1.110000000e+02
 American: 14.999999999999993
 British: 33.000000000000014</code></pre>
