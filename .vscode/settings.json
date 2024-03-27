@@ -45,6 +45,7 @@
     "quicksum",
     "Regressionsmodell",
     "Robusta",
-    "toolsai"
+    "toolsai",
+    "vtype"
   ]
 }
