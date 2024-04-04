@@ -346,7 +346,7 @@ Das mathematische Modell
 \begin{align}
 0.5 x_1 + 0.25 x_2 &amp; \leq 120 \text{ (Arabica)}\\
 0.5 x_1 + 0.75 x_2 &amp; \leq 160 \text{ (Robusta)} \\
-0 \cdot x_1 + x_2 &amp; \leq 150 \text{ (Nachfrage Delux)}\\
+0 \cdot x_1 + x_2 &amp; \leq 150 \text{ (Nachfrage Deluxe)}\\
 x_1 &amp; \geq 0 \\
 x_2 &amp; \geq 0
 \end{align}
@@ -495,32 +495,31 @@ Abbildung&nbsp;7.2: Zulässige Menge für die Kaffeeproduktion
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d.art3d <span class="im">import</span> Poly3DCollection</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the x, y, and z coordinate arrays</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>x, y <span class="op">=</span> np.meshgrid(np.linspace(<span class="dv">0</span>, <span class="dv">250</span>, <span class="dv">20</span>), np.linspace(<span class="dv">0</span>, <span class="dv">250</span>, <span class="dv">20</span>))</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="dv">40</span> <span class="op">*</span> x <span class="op">+</span> <span class="dv">30</span> <span class="op">*</span> y</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a figure</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.add_subplot(<span class="dv">111</span>, projection<span class="op">=</span><span class="st">'3d'</span>)</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a 3D subplot</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>ax.plot_surface(x, y, z, rstride<span class="op">=</span><span class="dv">5</span>, cstride<span class="op">=</span><span class="dv">5</span>, edgecolor<span class="op">=</span><span class="st">'k'</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>ax.view_init(elev<span class="op">=</span><span class="dv">25</span>, azim<span class="op">=-</span><span class="dv">120</span>)</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="vs">r"$x_1$ (Super, kg)"</span>)</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="vs">r"$x_2$ (Deluxe, kg)"</span>)</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>ax.set_zlabel(<span class="vs">r"$z$ (Gewinn, kg)"</span>)</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>vertices_3d <span class="op">=</span> [v <span class="op">+</span> [<span class="dv">0</span>] <span class="cf">for</span> v <span class="kw">in</span> vertices]</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a Poly3DCollection</span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>poly <span class="op">=</span> Poly3DCollection([vertices_3d], alpha<span class="op">=</span><span class="fl">.25</span>, linewidths<span class="op">=</span><span class="dv">1</span>, edgecolors<span class="op">=</span><span class="st">'r'</span>, facecolors<span class="op">=</span><span class="st">'c'</span>)</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Add the Poly3DCollection to the axes</span></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>ax.add_collection3d(poly)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d.art3d <span class="im">import</span> Poly3DCollection</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the x, y, and z coordinate arrays</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>x, y <span class="op">=</span> np.meshgrid(np.linspace(<span class="dv">0</span>, <span class="dv">250</span>, <span class="dv">20</span>), np.linspace(<span class="dv">0</span>, <span class="dv">250</span>, <span class="dv">20</span>))</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="dv">40</span> <span class="op">*</span> x <span class="op">+</span> <span class="dv">30</span> <span class="op">*</span> y</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a figure</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.add_subplot(<span class="dv">111</span>, projection<span class="op">=</span><span class="st">'3d'</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a 3D subplot</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>ax.plot_surface(x, y, z, rstride<span class="op">=</span><span class="dv">5</span>, cstride<span class="op">=</span><span class="dv">5</span>, edgecolor<span class="op">=</span><span class="st">'k'</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>ax.view_init(elev<span class="op">=</span><span class="dv">25</span>, azim<span class="op">=-</span><span class="dv">120</span>)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="vs">r"$x_1$ (Super, kg)"</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="vs">r"$x_2$ (Deluxe, kg)"</span>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>ax.set_zlabel(<span class="vs">r"$z$ (Gewinn, kg)"</span>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>vertices_3d <span class="op">=</span> [v <span class="op">+</span> [<span class="dv">0</span>] <span class="cf">for</span> v <span class="kw">in</span> vertices]</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a Poly3DCollection</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>poly <span class="op">=</span> Poly3DCollection([vertices_3d], alpha<span class="op">=</span><span class="fl">.25</span>, linewidths<span class="op">=</span><span class="dv">1</span>, edgecolors<span class="op">=</span><span class="st">'r'</span>, facecolors<span class="op">=</span><span class="st">'c'</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Add the Poly3DCollection to the axes</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>ax.add_collection3d(poly)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div id="fig-coffee-objective" class="quarto-figure quarto-figure-center quarto-float anchored">
@@ -699,50 +698,33 @@ Abbildung&nbsp;7.4: Die graphische Lösung des Kaffeeproblems
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new model</span></span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> gp.Model(<span class="st">"Coffee Blending"</span>)</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create variables</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>super_espresso <span class="op">=</span> m.addVar(name<span class="op">=</span><span class="st">"super_espresso"</span>)</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>deluxe_espresso <span class="op">=</span> m.addVar(name<span class="op">=</span><span class="st">"deluxe_espresso"</span>)</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Set objective</span></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>m.setObjective(<span class="dv">40</span> <span class="op">*</span> super_espresso <span class="op">+</span> <span class="dv">50</span> <span class="op">*</span> deluxe_espresso, GRB.MAXIMIZE)</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Add constraints</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>m.addConstr(<span class="fl">0.5</span> <span class="op">*</span> super_espresso <span class="op">+</span> <span class="fl">0.25</span> <span class="op">*</span> deluxe_espresso <span class="op">&lt;=</span> <span class="dv">120</span>, <span class="st">"Arabica"</span>)</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>m.addConstr(<span class="fl">0.5</span> <span class="op">*</span> super_espresso <span class="op">+</span> <span class="fl">0.75</span> <span class="op">*</span> deluxe_espresso <span class="op">&lt;=</span> <span class="dv">160</span>, <span class="st">"Robusta"</span>)</span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>m.addConstr(deluxe_espresso <span class="op">&lt;=</span> <span class="dv">150</span>, <span class="st">"Nachfrage Deluxe"</span>)</span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Optimize model</span></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>m.optimize()</span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the solution</span></span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> v <span class="kw">in</span> m.getVars():</span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>v<span class="sc">.</span>varName<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>v<span class="sc">.</span>x<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>m.Params.LogToConsole <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Create variables</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>super_espresso <span class="op">=</span> m.addVar(name<span class="op">=</span><span class="st">"super_espresso"</span>)</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>deluxe_espresso <span class="op">=</span> m.addVar(name<span class="op">=</span><span class="st">"deluxe_espresso"</span>)</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Set objective</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>m.setObjective(<span class="dv">40</span> <span class="op">*</span> super_espresso <span class="op">+</span> <span class="dv">50</span> <span class="op">*</span> deluxe_espresso, GRB.MAXIMIZE)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Add constraints</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>m.addConstr(<span class="fl">0.5</span> <span class="op">*</span> super_espresso <span class="op">+</span> <span class="fl">0.25</span> <span class="op">*</span> deluxe_espresso <span class="op">&lt;=</span> <span class="dv">120</span>, <span class="st">"Arabica"</span>)</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>m.addConstr(<span class="fl">0.5</span> <span class="op">*</span> super_espresso <span class="op">+</span> <span class="fl">0.75</span> <span class="op">*</span> deluxe_espresso <span class="op">&lt;=</span> <span class="dv">160</span>, <span class="st">"Robusta"</span>)</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>m.addConstr(deluxe_espresso <span class="op">&lt;=</span> <span class="dv">150</span>, <span class="st">"Nachfrage Deluxe"</span>)</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Optimize model</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>m.optimize()</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Optimal objective value: </span><span class="sc">{</span>m<span class="sc">.</span>objVal<span class="sc">}</span><span class="ss"> EUR"</span>)</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the solution</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> v <span class="kw">in</span> m.getVars():</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>v<span class="sc">.</span>varName<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>v<span class="sc">.</span>x<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Restricted license - for non-production use only - expires 2025-11-24
-Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 22.04.4 LTS")
-
-CPU model: AMD EPYC 7763 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 2 physical cores, 4 logical processors, using up to 4 threads
-
-Optimize a model with 3 rows, 2 columns and 5 nonzeros
-Model fingerprint: 0xb45dd709
-Coefficient statistics:
-  Matrix range     [2e-01, 1e+00]
-  Objective range  [4e+01, 5e+01]
-  Bounds range     [0e+00, 0e+00]
-  RHS range        [1e+02, 2e+02]
-Presolve removed 1 rows and 0 columns
-Presolve time: 0.00s
-Presolved: 2 rows, 2 columns, 4 nonzeros
-
-Iteration    Objective       Primal Inf.    Dual Inf.      Time
-       0    2.4000000e+04   1.325000e+02   0.000000e+00      0s
-       2    1.2000000e+04   0.000000e+00   0.000000e+00      0s
-
-Solved in 2 iterations and 0.01 seconds (0.00 work units)
-Optimal objective  1.200000000e+04
+Optimal objective value: 12000.0 EUR
 super_espresso, 200.0
 deluxe_espresso, 80.0</code></pre>
 </div>
@@ -757,7 +739,7 @@ deluxe_espresso, 80.0</code></pre>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the data</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the objective function coefficients</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>obj_c <span class="op">=</span> pd.Series([<span class="dv">40</span>, <span class="dv">50</span>], index<span class="op">=</span>[<span class="st">"Super"</span>, <span class="st">"Deluxe"</span>], name<span class="op">=</span><span class="st">"Gewinn"</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>objective_coefficients <span class="op">=</span> pd.Series([<span class="dv">40</span>, <span class="dv">50</span>], index<span class="op">=</span>[<span class="st">"Super"</span>, <span class="st">"Deluxe"</span>])</span>
 <span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the production constraints</span></span>
 <span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>production_constraints <span class="op">=</span> pd.DataFrame(</span>
@@ -817,187 +799,209 @@ deluxe_espresso, 80.0</code></pre>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gurobipy <span class="im">import</span> GRB</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> gp.Model(<span class="st">"Coffee Blending"</span>)</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Create variables</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co"># The data is given as a pandas DataFrame</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co"># With as many columns as there are espresso types</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co"># and one column for the right-hand side</span></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co"># All constraints are of the form a_1 * x_1 + a_2 * x_2 + ... &lt;= RHS</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>n_vars <span class="op">=</span> <span class="bu">len</span>(obj_c)</span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>espresso <span class="op">=</span> m.addVars(n_vars, name<span class="op">=</span><span class="st">"espresso"</span>)</span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Set objective</span></span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>m.setObjective(gp.quicksum([obj_c.iloc[i] <span class="op">*</span> espresso[i] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n_vars)]), GRB.MAXIMIZE)</span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Add constraints</span></span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> row <span class="kw">in</span> production_constraints.itertuples():</span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>    m.addConstr(</span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>        gp.quicksum([row[i <span class="op">+</span> <span class="dv">1</span>] <span class="op">*</span> espresso[i] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n_vars)]) <span class="op">&lt;=</span> row.Available,</span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>        row.Index</span>
-<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>m.optimize()</span>
-<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the solution</span></span>
-<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> v <span class="kw">in</span> m.getVars():</span>
-<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>v<span class="sc">.</span>varName<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>v<span class="sc">.</span>x<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>m.Params.LogToConsole <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create variables</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co"># The data is given as a pandas DataFrame</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co"># With as many columns as there are espresso types</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co"># and one column for the right-hand side</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co"># All constraints are of the form a_1 * x_1 + a_2 * x_2 + ... &lt;= RHS</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>n_vars <span class="op">=</span> <span class="bu">len</span>(objective_coefficients)</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>espresso <span class="op">=</span> m.addVars(n_vars, name<span class="op">=</span><span class="st">"espresso"</span>)</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Set objective</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>m.setObjective(gp.quicksum([objective_coefficients.iloc[i] <span class="op">*</span> espresso[i] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n_vars)]), GRB.MAXIMIZE)</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Add constraints</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> row <span class="kw">in</span> production_constraints.itertuples():</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    m.addConstr(</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>        gp.quicksum([row[i <span class="op">+</span> <span class="dv">1</span>] <span class="op">*</span> espresso[i] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n_vars)]) <span class="op">&lt;=</span> row.Available,</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>        row.Index</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>m.optimize()</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Optimal objective value:"</span>, m.objVal, <span class="st">"EUR"</span>)</span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Es ist bequem, die Ergebnisse für die Variablen in einem DataFrame zu speichern</span></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Dasselbe gilt für die Ergebnisse der Nebenbedingungen</span></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>vars_df <span class="op">=</span> pd.DataFrame(columns<span class="op">=</span>[<span class="st">'Variable'</span>, <span class="st">'Value'</span>, <span class="st">'RC'</span>], data<span class="op">=</span>[(v.VarName, v.X, v.RC) <span class="cf">for</span> v <span class="kw">in</span> m.getVars()])</span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>constr_df <span class="op">=</span> pd.DataFrame(columns<span class="op">=</span>[<span class="st">'Constraint'</span>, <span class="st">'Shadow Price'</span>, <span class="st">'Lower'</span>, <span class="st">'Upper'</span>], data<span class="op">=</span>[(c.ConstrName, c.Pi, c.SARHSLow, c.SARHSUp) <span class="cf">for</span> c <span class="kw">in</span> m.getConstrs()])</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 22.04.4 LTS")
-
-CPU model: AMD EPYC 7763 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 2 physical cores, 4 logical processors, using up to 4 threads
-
-Optimize a model with 3 rows, 2 columns and 5 nonzeros
-Model fingerprint: 0xb45dd709
-Coefficient statistics:
-  Matrix range     [2e-01, 1e+00]
-  Objective range  [4e+01, 5e+01]
-  Bounds range     [0e+00, 0e+00]
-  RHS range        [1e+02, 2e+02]
-Presolve removed 1 rows and 0 columns
-Presolve time: 0.00s
-Presolved: 2 rows, 2 columns, 4 nonzeros
-
-Iteration    Objective       Primal Inf.    Dual Inf.      Time
-       0    2.4000000e+04   1.325000e+02   0.000000e+00      0s
-       2    1.2000000e+04   0.000000e+00   0.000000e+00      0s
-
-Solved in 2 iterations and 0.01 seconds (0.00 work units)
-Optimal objective  1.200000000e+04
-espresso[0], 200.0
-espresso[1], 80.0</code></pre>
+<pre><code>Optimal objective value: 12000.0 EUR</code></pre>
 </div>
 </div>
 <div id="cell-16" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> gurobipy <span class="im">as</span> gp</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gurobipy <span class="im">import</span> GRB</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> build_espresso_blending_model(name: <span class="bu">str</span>, objective_coefficients: pd.Series, constr: pd.DataFrame) <span class="op">-&gt;</span> gp.Model:</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co">    Builds an espresso blending optimization model using Gurobi.</span></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters:</span></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co">    - name (str): The name of the optimization model.</span></span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="co">    - objective_coefficients (pd.Series): The coefficients of the objective function.</span></span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="co">    - constr (pd.DataFrame): The constraints for the optimization problem.</span></span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="co">    - mod (gurobipy.Model): The built optimization model.</span></span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Setup the model</span></span>
-<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>    mod <span class="op">=</span> gp.Model(name)</span>
-<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create variables</span></span>
-<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The data is given as a pandas DataFrame</span></span>
-<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># With as many columns as there are espresso types</span></span>
-<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># and one column for the right-hand side called "Available"</span></span>
-<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># All constraints are of the form a_1 * x_1 + a_2 * x_2 + ... &lt;= Available</span></span>
-<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>    n_vars <span class="op">=</span> <span class="bu">len</span>(objective_coefficients)</span>
-<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>    espresso <span class="op">=</span> mod.addVars(n_vars, name<span class="op">=</span><span class="st">"espresso"</span>)</span>
-<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set objective</span></span>
-<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>    mod.setObjective(</span>
-<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>        gp.quicksum([objective_coefficients.iloc[i] <span class="op">*</span> espresso[i] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n_vars)]),</span>
-<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a>        GRB.MAXIMIZE</span>
-<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add constraints</span></span>
-<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> row <span class="kw">in</span> constr.itertuples():</span>
-<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a>        mod.addConstr(</span>
-<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a>            gp.quicksum([row[i <span class="op">+</span> <span class="dv">1</span>] <span class="op">*</span> espresso[i]</span>
-<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n_vars)]) <span class="op">&lt;=</span> row.Available,</span>
-<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a>            row.Index</span>
-<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Return the model</span></span>
-<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> mod</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>vars_df</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<div>
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Variable</th>
+<th data-quarto-table-cell-role="th">Value</th>
+<th data-quarto-table-cell-role="th">RC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>espresso[0]</td>
+<td>200.0</td>
+<td>0.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>espresso[1]</td>
+<td>80.0</td>
+<td>0.0</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
 </div>
 <div id="cell-17" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>m0 <span class="op">=</span> build_espresso_blending_model(<span class="st">"Coffee Blending"</span>, obj_c, production_constraints)</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>m0.optimize()</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the solution</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> v <span class="kw">in</span> m0.getVars():</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>v<span class="sc">.</span>varName<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>v<span class="sc">.</span>x<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 22.04.4 LTS")
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>constr_df</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="10">
+<div>
+<div>
 
-CPU model: AMD EPYC 7763 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 2 physical cores, 4 logical processors, using up to 4 threads
 
-Optimize a model with 3 rows, 2 columns and 5 nonzeros
-Model fingerprint: 0xb45dd709
-Coefficient statistics:
-  Matrix range     [2e-01, 1e+00]
-  Objective range  [4e+01, 5e+01]
-  Bounds range     [0e+00, 0e+00]
-  RHS range        [1e+02, 2e+02]
-Presolve removed 1 rows and 0 columns
-Presolve time: 0.00s
-Presolved: 2 rows, 2 columns, 4 nonzeros
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Constraint</th>
+<th data-quarto-table-cell-role="th">Shadow Price</th>
+<th data-quarto-table-cell-role="th">Lower</th>
+<th data-quarto-table-cell-role="th">Upper</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Arabica</td>
+<td>20.0</td>
+<td>85.0</td>
+<td>160.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Robusta</td>
+<td>60.0</td>
+<td>120.0</td>
+<td>195.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Nachfrage Deluxe</td>
+<td>0.0</td>
+<td>80.0</td>
+<td>inf</td>
+</tr>
+</tbody>
+</table>
 
-Iteration    Objective       Primal Inf.    Dual Inf.      Time
-       0    2.4000000e+04   1.325000e+02   0.000000e+00      0s
-       2    1.2000000e+04   0.000000e+00   0.000000e+00      0s
-
-Solved in 2 iterations and 0.01 seconds (0.00 work units)
-Optimal objective  1.200000000e+04
-espresso[0], 200.0
-espresso[1], 80.0</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div id="cell-18" class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>obj_c_1 <span class="op">=</span> pd.Series([<span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">45</span>], index<span class="op">=</span>[</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Super"</span>, <span class="st">"Deluxe"</span>, <span class="st">"Exotic"</span>], name<span class="op">=</span><span class="st">"Gewinn"</span>)</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>production_constraints_1 <span class="op">=</span> pd.DataFrame(</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    [</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>        [<span class="fl">0.5</span>, <span class="fl">0.25</span>, <span class="fl">0.4</span>, <span class="dv">120</span>],</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>        [<span class="fl">0.5</span>, <span class="fl">0.75</span>, <span class="fl">0.6</span>, <span class="dv">160</span>],</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>        [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>,        <span class="dv">150</span>],</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>        [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>,        <span class="dv">150</span>]</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    ],</span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    columns<span class="op">=</span>[<span class="st">"Super"</span>, <span class="st">"Deluxe"</span>, <span class="st">"Exotic"</span>, <span class="st">"Available"</span>],</span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    index<span class="op">=</span>[<span class="st">"Arabica"</span>, <span class="st">"Robusta"</span>, <span class="st">"Nachfrage Deluxe"</span>,</span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>           <span class="st">"Nachfrage Deluxe and Exotic"</span>]</span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>m1 <span class="op">=</span> build_espresso_blending_model(</span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Coffee Blending"</span>, obj_c_1, production_constraints_1)</span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>m1.optimize()</span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the solution</span></span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> v <span class="kw">in</span> m1.getVars():</span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>v<span class="sc">.</span>varName<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>v<span class="sc">.</span>x<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> gurobipy <span class="im">as</span> gp</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gurobipy <span class="im">import</span> GRB</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> build_espresso_blending_model(name: <span class="bu">str</span>, objective_coefficients: pd.Series, constr: pd.DataFrame) <span class="op">-&gt;</span> gp.Model:</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co">    Builds an espresso blending optimization model using Gurobi.</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters:</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co">    - name (str): The name of the optimization model.</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="co">    - objective_coefficients (pd.Series): The coefficients of the objective function.</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="co">    - constr (pd.DataFrame): The constraints for the optimization problem.</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="co">    - mod (gurobipy.Model): The built optimization model.</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Setup the model</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>    mod <span class="op">=</span> gp.Model(name)</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>    mod.Params.LogToConsole <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create variables</span></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The data is given as a pandas DataFrame</span></span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># With as many columns as there are espresso types</span></span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># and one column for the right-hand side called "Available"</span></span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># All constraints are of the form a_1 * x_1 + a_2 * x_2 + ... &lt;= Available</span></span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>    n_vars <span class="op">=</span> <span class="bu">len</span>(objective_coefficients)</span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>    espresso <span class="op">=</span> mod.addVars(n_vars, name<span class="op">=</span><span class="st">"espresso"</span>)</span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set objective</span></span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>    mod.setObjective(</span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a>        gp.quicksum([objective_coefficients.iloc[i] <span class="op">*</span> espresso[i]</span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n_vars)]),</span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a>        GRB.MAXIMIZE</span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add constraints</span></span>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> row <span class="kw">in</span> constr.itertuples():</span>
+<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a>        mod.addConstr(</span>
+<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a>            gp.quicksum(</span>
+<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a>                [row[i <span class="op">+</span> <span class="dv">1</span>] <span class="op">*</span> espresso[i] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n_vars)]) <span class="op">&lt;=</span> row.Available,</span>
+<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a>            row.Index</span>
+<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-47"><a href="#cb13-47" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Return the model</span></span>
+<span id="cb13-48"><a href="#cb13-48" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> mod</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-19" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>m0 <span class="op">=</span> build_espresso_blending_model(<span class="st">"Coffee Blending"</span>, objective_coefficients, production_constraints)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>m0.optimize()</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the solution</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> v <span class="kw">in</span> m0.getVars():</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>v<span class="sc">.</span>varName<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>v<span class="sc">.</span>x<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 22.04.4 LTS")
-
-CPU model: AMD EPYC 7763 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 2 physical cores, 4 logical processors, using up to 4 threads
-
-Optimize a model with 4 rows, 3 columns and 9 nonzeros
-Model fingerprint: 0x2e57ceef
-Coefficient statistics:
-  Matrix range     [2e-01, 1e+00]
-  Objective range  [4e+01, 5e+01]
-  Bounds range     [0e+00, 0e+00]
-  RHS range        [1e+02, 2e+02]
-Presolve removed 1 rows and 0 columns
-Presolve time: 0.00s
-Presolved: 3 rows, 3 columns, 8 nonzeros
-
-Iteration    Objective       Primal Inf.    Dual Inf.      Time
-       0    2.4000000e+04   1.325000e+02   0.000000e+00      0s
-       3    1.1666667e+04   0.000000e+00   0.000000e+00      0s
-
-Solved in 3 iterations and 0.01 seconds (0.00 work units)
-Optimal objective  1.166666667e+04
-espresso[0], 150.0
+<pre><code>espresso[0], 200.0
+espresso[1], 80.0</code></pre>
+</div>
+</div>
+<div id="cell-20" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>obj_c_1 <span class="op">=</span> pd.Series([<span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">45</span>], index<span class="op">=</span>[<span class="st">"Super"</span>, <span class="st">"Deluxe"</span>, <span class="st">"Exotic"</span>], name<span class="op">=</span><span class="st">"Gewinn"</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>production_constraints_1 <span class="op">=</span> pd.DataFrame(</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    [</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>        [<span class="fl">0.5</span>, <span class="fl">0.25</span>, <span class="fl">0.4</span>, <span class="dv">120</span>],</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>        [<span class="fl">0.5</span>, <span class="fl">0.75</span>, <span class="fl">0.6</span>, <span class="dv">160</span>],</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>        [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>,        <span class="dv">150</span>],</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>        [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>,        <span class="dv">150</span>]</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    columns<span class="op">=</span>[<span class="st">"Super"</span>, <span class="st">"Deluxe"</span>, <span class="st">"Exotic"</span>, <span class="st">"Available"</span>],</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>    index<span class="op">=</span>[<span class="st">"Arabica"</span>, <span class="st">"Robusta"</span>, <span class="st">"Nachfrage Deluxe"</span>,</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>           <span class="st">"Nachfrage Deluxe and Exotic"</span>]</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>m1 <span class="op">=</span> build_espresso_blending_model(</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Coffee Blending"</span>, obj_c_1, production_constraints_1)</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>m1.optimize()</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the solution</span></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> v <span class="kw">in</span> m1.getVars():</span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>v<span class="sc">.</span>varName<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>v<span class="sc">.</span>x<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>espresso[0], 150.0
 espresso[1], 113.33333333333333
 espresso[2], 0.0</code></pre>
 </div>
