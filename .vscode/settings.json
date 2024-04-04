@@ -30,6 +30,7 @@
     "codespaces",
     "debugpy",
     "github",
+    "Gurobi",
     "gurobipy",
     "hosten",
     "ipynb",
