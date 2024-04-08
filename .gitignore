@@ -214,3 +214,4 @@ _quarto/
 _book/
 
 **.OTTER_LOG
+*.lp
