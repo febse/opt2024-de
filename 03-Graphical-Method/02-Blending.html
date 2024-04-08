@@ -947,7 +947,7 @@ deluxe_espresso, 80.0</code></pre>
 <span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>    n_vars <span class="op">=</span> <span class="bu">len</span>(objective_coefficients)</span>
 <span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>    espresso <span class="op">=</span> mod.addVars(n_vars, name<span class="op">=</span><span class="st">"espresso"</span>)</span>
-<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set objective</span></span>
 <span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>    mod.setObjective(</span>
 <span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a>        gp.quicksum([objective_coefficients.iloc[i] <span class="op">*</span> espresso[i]</span>
